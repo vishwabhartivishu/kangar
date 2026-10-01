@@ -182,10 +182,13 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   :root{--k-navy:#0a1530;--k-navy-2:#132752;--k-gold:#c9a961;--k-ivory:#f7f0e4;--k-muted:#6b7a99;--k-line:#e6ebf2;}
   .evd-page{background:#fff;color:#1a2540;}
   /* Hero: full-bleed cover with navy gradient */
-  .evd-hero{position:relative;min-height:540px;background:#0a1530;color:#fff;overflow:hidden;padding:40px 0 180px;display:flex;align-items:flex-end;}
+  .evd-hero{position:relative;min-height:560px;background:#0a1530;color:#fff;overflow:hidden;padding:50px 0 190px;display:flex;align-items:flex-end;}
   .evd-hero-bg{position:absolute;inset:0;z-index:0;}
-  .evd-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
-  .evd-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,21,48,.4) 0%,rgba(10,21,48,.3) 40%,rgba(10,21,48,.85) 85%,rgba(10,21,48,.98) 100%),linear-gradient(90deg,rgba(10,21,48,.5),transparent 60%);}
+  .evd-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.65) saturate(1.1);}
+  .evd-hero-bg::before{content:"";position:absolute;inset:0;background:rgba(10,21,48,.55);}
+  .evd-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,21,48,.75) 0%,rgba(10,21,48,.5) 35%,rgba(10,21,48,.92) 80%,rgba(10,21,48,1) 100%),linear-gradient(90deg,rgba(10,21,48,.85) 0%,rgba(10,21,48,.4) 55%,transparent 100%);}
+  .evd-h1{text-shadow:0 2px 20px rgba(0,0,0,.5);}
+  .evd-sub{text-shadow:0 2px 12px rgba(0,0,0,.5);}
   .evd-hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 32px;width:100%;}
   .evd-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:.82rem;font-weight:600;letter-spacing:.02em;text-decoration:none;padding:9px 16px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:999px;transition:all .25s;margin-bottom:36px;}
   .evd-back:hover{background:var(--k-gold);border-color:var(--k-gold);color:#0a1530;}

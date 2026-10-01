@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kangar Guides | UAE Property, Business & Residency</title>
+<meta name="description" content="Downloadable guides on buying property, renting, setting up a UAE company and residency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<style>
+  /* ---------- Guides page scoped styles ---------- */
+
+  /* Hero */
+  .g-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#f8f4ea 0%,#fff 100%);border-bottom:1px solid var(--line)}
+  .g-hero-bg{position:absolute;inset:0;background:
+    radial-gradient(circle at 82% 30%,rgba(197,155,81,.18),transparent 55%),
+    radial-gradient(circle at 12% 85%,rgba(10,25,41,.05),transparent 50%);
+    pointer-events:none}
+  .g-hero-inner{max-width:1280px;margin:0 auto;padding:60px 24px 80px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;position:relative;z-index:2}
+  .g-hero-copy .k-crumbs{margin-bottom:18px}
+  .g-hero-pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);color:var(--ink);padding:8px 16px;border-radius:999px;font-size:.75rem;font-weight:600;letter-spacing:.06em;margin-bottom:20px;box-shadow:var(--shadow-sm)}
+  .g-hero-pill i{color:var(--gold)}
+  .g-hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,3.8vw,3.2rem);color:var(--ink);font-weight:700;line-height:1.08;margin:0 0 18px;letter-spacing:-.015em}
+  .g-hero h1 .accent{color:var(--gold);font-style:italic;font-weight:600}
+  .g-hero p{color:var(--muted);font-size:1.05rem;line-height:1.65;margin:0 0 28px;max-width:540px}
+  .g-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+  .g-btn-primary{background:var(--ink);color:#fff;padding:14px 24px;border-radius:10px;font-weight:700;font-size:.88rem;letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px;text-decoration:none;transition:all .25s ease;border:1px solid var(--ink)}
+  .g-btn-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+  .g-btn-outline{background:#fff;color:var(--ink);padding:14px 24px;border-radius:10px;font-weight:700;font-size:.88rem;letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px;text-decoration:none;border:1px solid var(--line);transition:all .25s ease}
+  .g-btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+  .g-hero-strip{display:grid;grid-template-columns:repeat(4,auto);gap:36px;padding-top:28px;border-top:1px solid var(--line);max-width:520px}
+  .g-hero-strip div{display:flex;flex-direction:column;gap:4px}
+  .g-hero-strip b{font-family:var(--font-serif);font-size:1.55rem;font-weight:700;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:6px}
+  .g-hero-strip b i{color:var(--gold);font-size:.9rem}
+  .g-hero-strip span{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  /* Hero stage &mdash; book composition */
+  .g-hero-stage{position:relative;height:460px;display:flex;align-items:center;justify-content:center}
+  .g-hero-glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(197,155,81,.25),transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(20px)}
+  .g-hero-book{position:absolute;width:230px;aspect-ratio:3/4;border-radius:14px;box-shadow:0 40px 80px rgba(10,25,41,.35),0 0 0 1px rgba(255,255,255,.08);overflow:hidden;transition:transform .4s ease}
+  .g-hero-book::after{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent)}
+  .g-hero-book-inner{padding:26px 22px;height:100%;display:flex;flex-direction:column;justify-content:space-between;color:#fff;position:relative;z-index:2}
+  .g-hero-book-brand{font-size:.62rem;font-weight:700;letter-spacing:.22em;color:var(--gold-bright);text-transform:uppercase}
+  .g-hero-book-title{font-family:var(--font-serif);font-size:1.35rem;line-height:1.15;font-weight:700}
+  .g-hero-book-title em{font-style:italic;color:var(--gold-bright);font-weight:500;display:block;margin-top:4px}
+  .g-hero-book-foot{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;justify-content:space-between;align-items:center}
+  .g-hero-book-foot i{color:var(--gold-bright);font-size:1rem}
+  .book-1{background:linear-gradient(160deg,#1a3560,#0a1929);transform:translate(-110px,-20px) rotate(-10deg);z-index:1}
+  .book-2{background:linear-gradient(160deg,#f5efe3,#e8ddc4);transform:translate(0,20px) rotate(2deg);z-index:3}
+  .book-3{background:linear-gradient(160deg,#3d2b1f,#1a1108);transform:translate(110px,-20px) rotate(9deg);z-index:2}
+  .g-hero-stage:hover .book-1{transform:translate(-135px,-30px) rotate(-13deg)}
+  .g-hero-stage:hover .book-3{transform:translate(135px,-30px) rotate(12deg)}
+  .g-hero-badge{position:absolute;top:14px;right:0;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 20px 40px rgba(10,25,41,.15);display:flex;align-items:center;gap:12px;z-index:5;border:1px solid var(--line)}
+  .g-hero-badge-num{font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+  .g-hero-badge-lbl{font-size:.7rem;font-weight:600;color:var(--muted);line-height:1.35;letter-spacing:.04em}
+  .g-hero-dot{position:absolute;border-radius:50%}
+  .dot-a{width:14px;height:14px;background:var(--gold);top:20%;left:8%;box-shadow:0 0 20px rgba(197,155,81,.6)}
+  .dot-b{width:8px;height:8px;background:var(--ink);bottom:12%;right:10%;opacity:.4}
+
+  .g-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:-10px 0 40px}
+  .g-chip{border:1px solid var(--line);background:#fff;color:var(--ink);padding:10px 18px;border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:all .2s ease;display:inline-flex;align-items:center;gap:8px}
+  .g-chip i{font-size:.75rem;color:var(--gold)}
+  .g-chip:hover{border-color:var(--gold);color:var(--gold)}
+  .g-chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .g-chip.active i{color:var(--gold-bright)}
+
+  /* Featured guide */
+  .g-featured{background:linear-gradient(135deg,#0a1929 0%,#132752 100%);border-radius:var(--radius-lg);overflow:hidden;color:#fff;display:grid;grid-template-columns:1.15fr 1fr;gap:0;box-shadow:var(--shadow-lg);margin-bottom:60px;position:relative}
+  .g-featured::before{content:"";position:absolute;top:0;left:0;right:55%;bottom:0;background:radial-gradient(circle at 20% 30%,rgba(197,155,81,.18),transparent 60%);pointer-events:none}
+  .g-featured-copy{padding:56px 56px 56px 56px;position:relative;z-index:2}
+  .g-tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .g-tag{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(197,155,81,.16);color:var(--gold-bright);border:1px solid rgba(197,155,81,.35)}
+  .g-tag.light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
+  .g-featured h2{font-family:var(--font-serif);font-size:2.6rem;line-height:1.08;font-weight:700;margin:0 0 18px;letter-spacing:-.01em;color:#fff}
+  .g-featured *{color:inherit}
+  .g-featured .g-meta-lbl{color:rgba(255,255,255,.55)}
+  .g-featured .g-meta-num{color:var(--gold-bright)}
+  .g-featured p{color:rgba(255,255,255,.78)}
+  .g-featured h2 em{font-style:italic;color:var(--gold-bright);font-weight:600}
+  .g-featured p{color:rgba(255,255,255,.75);font-size:1.02rem;line-height:1.65;margin:0 0 28px;max-width:52ch}
+  .g-meta-row{display:flex;flex-wrap:wrap;gap:26px;margin-bottom:30px;padding:20px 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+  .g-meta{display:flex;flex-direction:column;gap:4px}
+  .g-meta-num{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--gold-bright);line-height:1}
+  .g-meta-lbl{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .g-featured-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .g-btn-gold{background:var(--gold);color:#0a1929;padding:14px 26px;border-radius:10px;font-weight:700;font-size:.9rem;letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px;text-decoration:none;transition:all .25s ease}
+  .g-btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
+  .g-btn-ghost{background:transparent;color:#fff;padding:14px 26px;border-radius:10px;font-weight:600;font-size:.9rem;letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px;text-decoration:none;border:1px solid rgba(255,255,255,.25);transition:all .25s ease}
+  .g-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .g-featured-visual{position:relative;background:linear-gradient(180deg,rgba(197,155,81,.08),transparent);display:flex;align-items:center;justify-content:center;padding:40px}
+  .g-cover{position:relative;width:100%;max-width:340px;aspect-ratio:3/4;border-radius:12px;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06);transform:rotate(-4deg);overflow:hidden;background:linear-gradient(160deg,#1a3560,#0a1929)}
+  .g-cover::after{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent)}
+  .g-cover-inner{padding:34px 30px;height:100%;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+  .g-cover-brand{font-size:.65rem;font-weight:700;letter-spacing:.24em;color:var(--gold-bright);text-transform:uppercase}
+  .g-cover-title{font-family:var(--font-serif);font-size:1.55rem;line-height:1.15;font-weight:700}
+  .g-cover-title span{color:var(--gold-bright);font-style:italic;font-weight:500;display:block;margin-top:4px}
+  .g-cover-foot{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;align-items:center}
+  .g-cover-foot i{color:var(--gold-bright);font-size:1rem}
+  .g-cover-2{position:absolute;right:-30px;bottom:20px;width:100px;height:130px;border-radius:8px;background:linear-gradient(160deg,#c59b51,#8a6a2f);transform:rotate(8deg);box-shadow:0 20px 40px rgba(0,0,0,.4);z-index:-1;opacity:.55}
+
+  /* Section heading */
+  .g-sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+  .g-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .g-sec-head h2{font-family:var(--font-serif);font-size:2.4rem;line-height:1.1;font-weight:700;margin:0 0 12px;color:var(--ink)}
+  .g-sec-head h2 em{font-style:italic;color:var(--gold);font-weight:600}
+  .g-sec-head p{color:var(--muted);font-size:1.02rem;line-height:1.6;margin:0}
+
+  /* Guide cards grid */
+  .g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .g-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:all .3s ease;display:flex;flex-direction:column;position:relative}
+  .g-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+  .g-card-top{position:relative;height:170px;background:linear-gradient(135deg,#0a1929,#132752);overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px}
+  .g-card:nth-child(2) .g-card-top{background:linear-gradient(135deg,#3d2b1f,#5a3d24)}
+  .g-card:nth-child(3) .g-card-top{background:linear-gradient(135deg,#1f3d2b,#2a5a3d)}
+  .g-card:nth-child(4) .g-card-top{background:linear-gradient(135deg,#3d1f38,#5a2a52)}
+  .g-card:nth-child(5) .g-card-top{background:linear-gradient(135deg,#2b3d1f,#3d5a2a)}
+  .g-card:nth-child(6) .g-card-top{background:linear-gradient(135deg,#1f2f3d,#2a4a5a)}
+  .g-card-top::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(197,155,81,.2),transparent 60%);pointer-events:none}
+  .g-card-badge{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.14);color:#fff;padding:5px 11px;border-radius:999px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(8px);z-index:2}
+  .g-card-badge.new{background:var(--gold);color:#0a1929}
+  .g-card-mini{width:110px;aspect-ratio:3/4;border-radius:6px;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);padding:16px 12px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;transform:rotate(-3deg);box-shadow:0 12px 24px rgba(0,0,0,.35);position:relative;z-index:1}
+  .g-card-mini-brand{font-size:.55rem;font-weight:700;letter-spacing:.2em;color:var(--gold-bright);text-transform:uppercase}
+  .g-card-mini-title{font-family:var(--font-serif);font-size:.85rem;line-height:1.15;font-weight:600}
+  .g-card-mini-foot{font-size:.55rem;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.55);text-transform:uppercase}
+  .g-card-body{padding:24px 24px 22px;flex:1;display:flex;flex-direction:column}
+  .g-cat{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .g-card h4{font-family:var(--font-serif);font-size:1.3rem;line-height:1.2;font-weight:700;margin:0 0 10px;color:var(--ink)}
+  .g-card-body > p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:0 0 18px;flex:1}
+  .g-card-meta{display:flex;gap:16px;padding:14px 0;border-top:1px dashed var(--line);margin-bottom:16px;font-size:.75rem;color:var(--muted)}
+  .g-card-meta span{display:inline-flex;align-items:center;gap:6px}
+  .g-card-meta i{color:var(--gold);font-size:.78rem}
+  .g-card-cta{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .g-card-cta a{color:var(--ink);font-weight:700;font-size:.85rem;letter-spacing:.02em;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color .2s ease}
+  .g-card-cta a:hover{color:var(--gold)}
+  .g-card-cta a i{transition:transform .2s ease}
+  .g-card-cta a:hover i{transform:translateX(3px)}
+  .g-card-pill{font-size:.7rem;font-weight:600;color:var(--muted);background:var(--ivory);padding:5px 10px;border-radius:999px}
+
+  /* What's inside */
+  .g-inside{background:var(--ivory);border-radius:var(--radius-lg);padding:60px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:20px}
+  .g-inside-list{display:flex;flex-direction:column;gap:22px}
+  .g-inside-item{display:flex;gap:18px;align-items:flex-start}
+  .g-inside-num{flex:0 0 44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:700;color:var(--gold);font-size:1.1rem}
+  .g-inside-item h5{font-family:var(--font-serif);font-size:1.18rem;font-weight:700;margin:0 0 6px;color:var(--ink)}
+  .g-inside-item p{color:var(--muted);font-size:.92rem;line-height:1.6;margin:0}
+
+  /* Learning paths */
+  .g-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .g-path{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;transition:all .3s ease;position:relative;overflow:hidden}
+  .g-path::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .g-path:hover{border-color:transparent;box-shadow:var(--shadow-md);transform:translateY(-4px)}
+  .g-path:hover::before{transform:scaleX(1)}
+  .g-path-ico{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;margin-bottom:20px}
+  .g-path h4{font-family:var(--font-serif);font-size:1.32rem;font-weight:700;margin:0 0 10px;color:var(--ink)}
+  .g-path p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:0 0 20px}
+  .g-path ul{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px}
+  .g-path li{font-size:.86rem;color:var(--ink-2);display:flex;align-items:center;gap:10px}
+  .g-path li i{color:var(--gold);font-size:.75rem}
+  .g-path-foot{padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:.78rem}
+  .g-path-foot b{font-family:var(--font-serif);color:var(--gold);font-size:1.1rem;font-weight:700}
+  .g-path-foot span{color:var(--muted)}
+
+  /* Trust strip */
+  .g-trust{background:#0a1929;color:#fff;border-radius:var(--radius-lg);padding:44px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;align-items:center;margin-bottom:60px}
+  .g-trust *{color:inherit}
+  .g-trust-copy h3{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;margin:0 0 6px;color:#fff}
+  .g-trust-copy p{color:rgba(255,255,255,.65)!important;margin:0;font-size:.9rem}
+  .g-trust-stat{text-align:center;border-left:1px solid rgba(255,255,255,.1);padding-left:32px}
+  .g-trust-stat b{display:block;font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--gold-bright);line-height:1}
+  .g-trust-stat span{display:block;margin-top:6px;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+  /* Request block */
+  .g-request{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:48px 44px;display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center;box-shadow:var(--shadow-sm)}
+  .g-request h3{font-family:var(--font-serif);font-size:1.9rem;font-weight:700;margin:0 0 12px;color:var(--ink);line-height:1.15}
+  .g-request h3 em{color:var(--gold);font-style:italic;font-weight:600}
+  .g-request p{color:var(--muted);margin:0 0 20px;font-size:.98rem;line-height:1.6}
+  .g-req-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .g-req-form input,.g-req-form select,.g-req-form textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:10px;font-family:var(--font-sans);font-size:.9rem;color:var(--ink);background:#fff;transition:border-color .2s ease}
+  .g-req-form input:focus,.g-req-form select:focus,.g-req-form textarea:focus{outline:none;border-color:var(--gold)}
+  .g-req-form .full{grid-column:1/-1}
+  .g-req-form textarea{min-height:96px;resize:vertical;font-family:var(--font-sans)}
+  .g-req-form button{background:var(--ink);color:#fff;border:none;padding:15px 24px;border-radius:10px;font-weight:700;font-size:.9rem;cursor:pointer;letter-spacing:.02em;transition:background .2s ease;display:inline-flex;align-items:center;justify-content:center;gap:10px}
+  .g-req-form button:hover{background:var(--gold)}
+
+  @media (max-width:960px){
+    .g-hero-inner{grid-template-columns:1fr;gap:32px;padding:40px 20px 60px}
+    .g-hero-stage{height:360px;transform:scale(.85)}
+    .g-hero-strip{grid-template-columns:repeat(2,1fr);gap:20px;max-width:100%}
+    .g-hero-badge{top:0;right:-10px;padding:12px 16px}
+    .g-hero-badge-num{font-size:1.7rem}
+    .g-featured{grid-template-columns:1fr}
+    .g-featured-copy{padding:40px 30px}
+    .g-featured h2{font-size:2rem}
+    .g-featured-visual{padding:20px 20px 46px}
+    .g-grid{grid-template-columns:1fr}
+    .g-inside{grid-template-columns:1fr;padding:40px 26px;gap:32px}
+    .g-paths{grid-template-columns:1fr}
+    .g-trust{grid-template-columns:1fr;text-align:center;padding:36px 26px;gap:24px}
+    .g-trust-stat{border-left:none;border-top:1px solid rgba(255,255,255,.1);padding:20px 0 0}
+    .g-request{grid-template-columns:1fr;padding:36px 26px}
+    .g-req-form{grid-template-columns:1fr}
+  }
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent">Rent</a>
+      <a href="commercial">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog" style="color:var(--gold);">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<section class="g-hero">
+  <div class="g-hero-bg"></div>
+  <div class="g-hero-inner">
+    <div class="g-hero-copy">
+      <div class="k-crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Guides</span></div>
+      <div class="g-hero-pill"><i class="fas fa-book-open"></i> Free PDF Library &middot; Updated Q1 2026</div>
+      <h1>Practical Kangar <span class="accent">guides</span> for every UAE move.</h1>
+      <p>Plain-English walkthroughs on buying, renting, business setup and residency in the UAE &mdash; written by our advisors, updated every quarter.</p>
+      <div class="g-hero-actions">
+        <a href="#library" class="g-btn-primary"><i class="fas fa-th"></i> Browse the Library</a>
+        <a href="#request" class="g-btn-outline"><i class="fas fa-envelope-open-text"></i> Request a Custom Guide</a>
+      </div>
+      <div class="g-hero-strip">
+        <div><b>18+</b><span>Guides</span></div>
+        <div><b>20k</b><span>Downloads</span></div>
+        <div><b>4.9<i class="fas fa-star"></i></b><span>Rating</span></div>
+        <div><b>Free</b><span>Always</span></div>
+      </div>
+    </div>
+
+    <div class="g-hero-stage">
+      <div class="g-hero-glow"></div>
+      <div class="g-hero-book book-1">
+        <div class="g-hero-book-inner">
+          <span class="g-hero-book-brand">Kangar &middot; 2026</span>
+          <div class="g-hero-book-title">Setting Up<br><em>a UAE Company</em></div>
+          <div class="g-hero-book-foot"><span>56 pages</span><i class="fas fa-award"></i></div>
+        </div>
+      </div>
+      <div class="g-hero-book book-2">
+        <div class="g-hero-book-inner">
+          <span class="g-hero-book-brand" style="color:#0a1929">Kangar</span>
+          <div class="g-hero-book-title" style="color:#0a1929">First-Time<br><em style="color:#8a6a2f">UAE Buyer</em></div>
+          <div class="g-hero-book-foot" style="color:rgba(10,25,41,.55)"><span>42 pages</span><i class="fas fa-star" style="color:#c59b51"></i></div>
+        </div>
+      </div>
+      <div class="g-hero-book book-3">
+        <div class="g-hero-book-inner">
+          <span class="g-hero-book-brand">Kangar</span>
+          <div class="g-hero-book-title">Golden<br><em>Residency</em></div>
+          <div class="g-hero-book-foot"><span>34 pages</span><i class="fas fa-id-card"></i></div>
+        </div>
+      </div>
+      <div class="g-hero-badge">
+        <div class="g-hero-badge-num">42</div>
+        <div class="g-hero-badge-lbl">Pages<br>of playbook</div>
+      </div>
+      <div class="g-hero-dot dot-a"></div>
+      <div class="g-hero-dot dot-b"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured guide -->
+<section class="k-section" style="padding-top:60px">
+  <div class="k-container">
+    <div class="g-featured">
+      <div class="g-featured-copy">
+        <div class="g-tag-row">
+          <span class="g-tag"><i class="fas fa-star"></i> Guide of the Month</span>
+          <span class="g-tag light">Updated Sep 2026</span>
+        </div>
+        <h2>The First-Time <em>UAE Buyer</em> Playbook.</h2>
+        <p>A 42-page walkthrough of everything an international buyer needs before signing an SPA &mdash; from DLD fees and NOC timelines to mortgage prep, escrow protection and handover checks.</p>
+        <div class="g-meta-row">
+          <div class="g-meta"><span class="g-meta-num">42</span><span class="g-meta-lbl">Pages</span></div>
+          <div class="g-meta"><span class="g-meta-num">18m</span><span class="g-meta-lbl">Read Time</span></div>
+          <div class="g-meta"><span class="g-meta-num">12</span><span class="g-meta-lbl">Checklists</span></div>
+          <div class="g-meta"><span class="g-meta-num">4.9<i class="fas fa-star" style="font-size:.9rem;margin-left:6px"></i></span><span class="g-meta-lbl">Reader Rating</span></div>
+        </div>
+        <div class="g-featured-actions">
+          <a href="contact" class="g-btn-gold"><i class="fas fa-download"></i> Download Free PDF</a>
+          <a href="#" class="g-btn-ghost"><i class="far fa-eye"></i> Preview Sample</a>
+        </div>
+      </div>
+      <div class="g-featured-visual">
+        <div class="g-cover">
+          <div class="g-cover-2"></div>
+          <div class="g-cover-inner">
+            <div>
+              <div class="g-cover-brand">Kangar &middot; 2026</div>
+            </div>
+            <div class="g-cover-title">The First-Time<br><span>UAE Buyer</span></div>
+            <div class="g-cover-foot"><span>42 pages</span><i class="fas fa-award"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Library -->
+<section class="k-section" id="library" style="padding-top:20px">
+  <div class="k-container">
+    <div class="g-sec-head">
+      <div class="g-eyebrow">The Library</div>
+      <h2>Every guide, <em>filed by topic.</em></h2>
+      <p>Filter by what you're working on. Every guide is a downloadable PDF with worked examples, cost tables and a printable checklist.</p>
+    </div>
+
+    <div class="g-filters">
+      <button class="g-chip active"><i class="fas fa-th"></i> All Guides</button>
+      <button class="g-chip"><i class="fas fa-key"></i> Buying</button>
+      <button class="g-chip"><i class="fas fa-home"></i> Renting</button>
+      <button class="g-chip"><i class="fas fa-briefcase"></i> Business</button>
+      <button class="g-chip"><i class="fas fa-id-card"></i> Residency</button>
+      <button class="g-chip"><i class="fas fa-file-invoice-dollar"></i> Tax & Legal</button>
+    </div>
+
+    <div class="g-grid">
+      <div class="g-card">
+        <div class="g-card-top">
+          <span class="g-card-badge new">New</span>
+          <div class="g-card-mini">
+            <div class="g-card-mini-brand">Kangar</div>
+            <div class="g-card-mini-title">First-Time<br>UAE Buyer</div>
+            <div class="g-card-mini-foot">Buying</div>
+          </div>
+        </div>
+        <div class="g-card-body">
+          <div class="g-cat">Buying &middot; Residential</div>
+          <h4>The First-Time UAE Buyer</h4>
+          <p>DLD fees, NOCs, financing, escrow and handover checks &mdash; the full flow, decoded.</p>
+          <div class="g-card-meta">
+            <span><i class="fas fa-file-pdf"></i> 42 pages</span>
+            <span><i class="far fa-clock"></i> 18 min</span>
+            <span><i class="fas fa-download"></i> 3.2k</span>
+          </div>
+          <div class="g-card-cta">
+            <a href="contact">Request PDF <i class="fas fa-arrow-right"></i></a>
+            <span class="g-card-pill">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-card">
+        <div class="g-card-top">
+          <span class="g-card-badge">2026 Edition</span>
+          <div class="g-card-mini">
+            <div class="g-card-mini-brand">Kangar</div>
+            <div class="g-card-mini-title">Renting<br>in Dubai</div>
+            <div class="g-card-mini-foot">Renting</div>
+          </div>
+        </div>
+        <div class="g-card-body">
+          <div class="g-cat">Renting &middot; Tenant</div>
+          <h4>Renting in Dubai</h4>
+          <p>Ejari, DEWA, tenancy law and the questions to ask before you sign the contract.</p>
+          <div class="g-card-meta">
+            <span><i class="fas fa-file-pdf"></i> 28 pages</span>
+            <span><i class="far fa-clock"></i> 12 min</span>
+            <span><i class="fas fa-download"></i> 2.1k</span>
+          </div>
+          <div class="g-card-cta">
+            <a href="contact">Request PDF <i class="fas fa-arrow-right"></i></a>
+            <span class="g-card-pill">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-card">
+        <div class="g-card-top">
+          <span class="g-card-badge">Popular</span>
+          <div class="g-card-mini">
+            <div class="g-card-mini-brand">Kangar</div>
+            <div class="g-card-mini-title">Setting Up<br>a UAE Company</div>
+            <div class="g-card-mini-foot">Business</div>
+          </div>
+        </div>
+        <div class="g-card-body">
+          <div class="g-cat">Business Setup</div>
+          <h4>Setting Up a UAE Company</h4>
+          <p>Mainland vs. free zone, activity mapping, banking prep and realistic timelines.</p>
+          <div class="g-card-meta">
+            <span><i class="fas fa-file-pdf"></i> 56 pages</span>
+            <span><i class="far fa-clock"></i> 24 min</span>
+            <span><i class="fas fa-download"></i> 4.6k</span>
+          </div>
+          <div class="g-card-cta">
+            <a href="contact">Request PDF <i class="fas fa-arrow-right"></i></a>
+            <span class="g-card-pill">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-card">
+        <div class="g-card-top">
+          <span class="g-card-badge">Trending</span>
+          <div class="g-card-mini">
+            <div class="g-card-mini-brand">Kangar</div>
+            <div class="g-card-mini-title">Golden<br>Residency</div>
+            <div class="g-card-mini-foot">Residency</div>
+          </div>
+        </div>
+        <div class="g-card-body">
+          <div class="g-cat">Residency &middot; Visa</div>
+          <h4>Golden Residency</h4>
+          <p>Eligibility pathways, thresholds, dependant coverage and the application flow.</p>
+          <div class="g-card-meta">
+            <span><i class="fas fa-file-pdf"></i> 34 pages</span>
+            <span><i class="far fa-clock"></i> 15 min</span>
+            <span><i class="fas fa-download"></i> 5.4k</span>
+          </div>
+          <div class="g-card-cta">
+            <a href="contact">Request PDF <i class="fas fa-arrow-right"></i></a>
+            <span class="g-card-pill">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-card">
+        <div class="g-card-top">
+          <span class="g-card-badge">Investor Pick</span>
+          <div class="g-card-mini">
+            <div class="g-card-mini-brand">Kangar</div>
+            <div class="g-card-mini-title">Off-Plan<br>Payment Plans</div>
+            <div class="g-card-mini-foot">Buying</div>
+          </div>
+        </div>
+        <div class="g-card-body">
+          <div class="g-cat">Buying &middot; Off-Plan</div>
+          <h4>Off-Plan Payment Plans</h4>
+          <p>How construction milestones, escrow safeguards and hand-back options actually work.</p>
+          <div class="g-card-meta">
+            <span><i class="fas fa-file-pdf"></i> 38 pages</span>
+            <span><i class="far fa-clock"></i> 16 min</span>
+            <span><i class="fas fa-download"></i> 2.8k</span>
+          </div>
+          <div class="g-card-cta">
+            <a href="contact">Request PDF <i class="fas fa-arrow-right"></i></a>
+            <span class="g-card-pill">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-card">
+        <div class="g-card-top">
+          <span class="g-card-badge new">2026</span>
+          <div class="g-card-mini">
+            <div class="g-card-mini-brand">Kangar</div>
+            <div class="g-card-mini-title">Corporate<br>Tax UAE</div>
+            <div class="g-card-mini-foot">Tax</div>
+          </div>
+        </div>
+        <div class="g-card-body">
+          <div class="g-cat">Tax &middot; Compliance</div>
+          <h4>Corporate Tax in the UAE</h4>
+          <p>Who is in scope, free-zone qualifying income and the filing calendar you cannot miss.</p>
+          <div class="g-card-meta">
+            <span><i class="fas fa-file-pdf"></i> 46 pages</span>
+            <span><i class="far fa-clock"></i> 20 min</span>
+            <span><i class="fas fa-download"></i> 1.9k</span>
+          </div>
+          <div class="g-card-cta">
+            <a href="contact">Request PDF <i class="fas fa-arrow-right"></i></a>
+            <span class="g-card-pill">Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What's inside a Kangar guide -->
+<section class="k-section" style="padding-top:20px">
+  <div class="k-container">
+    <div class="g-inside">
+      <div>
+        <div class="g-eyebrow">What's Inside</div>
+        <h2 style="font-family:var(--font-serif);font-size:2.2rem;line-height:1.12;font-weight:700;margin:0 0 16px;color:var(--ink)">Every guide follows the same <em style="color:var(--gold);font-weight:600">clear structure.</em></h2>
+        <p style="color:var(--muted);font-size:1rem;line-height:1.65;margin:0 0 24px">No filler, no jargon. Every Kangar guide is built to be scanned first and studied second &mdash; so you can act on it the same day.</p>
+        <a href="#request" class="k-btn k-btn-gold">Request a Guide</a>
+      </div>
+      <div class="g-inside-list">
+        <div class="g-inside-item">
+          <div class="g-inside-num">01</div>
+          <div>
+            <h5>The 60-second summary</h5>
+            <p>Every guide opens with a plain-English executive summary you can read in a minute.</p>
+          </div>
+        </div>
+        <div class="g-inside-item">
+          <div class="g-inside-num">02</div>
+          <div>
+            <h5>Costs and timelines &mdash; upfront</h5>
+            <p>Real number ranges, not "it depends". Sourced from live 2026 transactions.</p>
+          </div>
+        </div>
+        <div class="g-inside-item">
+          <div class="g-inside-num">03</div>
+          <div>
+            <h5>Worked examples &amp; scenarios</h5>
+            <p>End-to-end walkthroughs so you know exactly what happens at each step.</p>
+          </div>
+        </div>
+        <div class="g-inside-item">
+          <div class="g-inside-num">04</div>
+          <div>
+            <h5>Printable checklists</h5>
+            <p>Documents, signatures, transfers &mdash; ticked off in the order you actually need them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Learning paths -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="g-sec-head">
+      <div class="g-eyebrow">Learning Paths</div>
+      <h2>Not sure where to <em>start?</em></h2>
+      <p>Pick the path that matches your goal. We'll bundle the right guides together and send them as one download pack.</p>
+    </div>
+
+    <div class="g-paths">
+      <div class="g-path">
+        <div class="g-path-ico"><i class="fas fa-key"></i></div>
+        <h4>The Buyer Pack</h4>
+        <p>For first-time UAE property buyers moving from overseas.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> First-Time UAE Buyer</li>
+          <li><i class="fas fa-check"></i> Off-Plan Payment Plans</li>
+          <li><i class="fas fa-check"></i> Golden Residency</li>
+          <li><i class="fas fa-check"></i> Financing &amp; Mortgage Prep</li>
+        </ul>
+        <div class="g-path-foot">
+          <b>4 guides</b>
+          <span>~70 min read</span>
+        </div>
+      </div>
+      <div class="g-path">
+        <div class="g-path-ico"><i class="fas fa-briefcase"></i></div>
+        <h4>The Founder Pack</h4>
+        <p>For entrepreneurs setting up their first UAE entity.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Setting Up a UAE Company</li>
+          <li><i class="fas fa-check"></i> Mainland vs. Free Zone</li>
+          <li><i class="fas fa-check"></i> Corporate Tax in the UAE</li>
+          <li><i class="fas fa-check"></i> UAE Business Banking</li>
+        </ul>
+        <div class="g-path-foot">
+          <b>4 guides</b>
+          <span>~85 min read</span>
+        </div>
+      </div>
+      <div class="g-path">
+        <div class="g-path-ico"><i class="fas fa-chart-line"></i></div>
+        <h4>The Investor Pack</h4>
+        <p>For yield-focused investors building a Dubai portfolio.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Off-Plan Payment Plans</li>
+          <li><i class="fas fa-check"></i> Rental Yields by Community</li>
+          <li><i class="fas fa-check"></i> Short-Term Let Compliance</li>
+          <li><i class="fas fa-check"></i> Exit &amp; Resale Strategy</li>
+        </ul>
+        <div class="g-path-foot">
+          <b>4 guides</b>
+          <span>~65 min read</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="k-section" style="padding-top:20px">
+  <div class="k-container">
+    <div class="g-trust">
+      <div class="g-trust-copy">
+        <h3>Trusted by clients across three continents.</h3>
+        <p>Every guide is written by advisors closing UAE transactions every week.</p>
+      </div>
+      <div class="g-trust-stat"><b>20k+</b><span>Downloads</span></div>
+      <div class="g-trust-stat"><b>4.9<i class="fas fa-star" style="font-size:1rem;color:var(--gold-bright);margin-left:6px"></i></b><span>Avg. Rating</span></div>
+      <div class="g-trust-stat"><b>Q1&nbsp;'26</b><span>Last Updated</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Request custom -->
+<section class="k-section" id="request" style="padding-top:0">
+  <div class="k-container">
+    <div class="g-request">
+      <div>
+        <div class="g-eyebrow">Custom Request</div>
+        <h3>Need something <em>specific?</em></h3>
+        <p>Tell us your situation &mdash; buying, moving, setting up &mdash; and we'll email you a curated PDF pack within one business day.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:.86rem;color:var(--ink-2)">
+          <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:8px"></i>Free of charge</span>
+          <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:8px"></i>Reply within 24h</span>
+          <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:8px"></i>No spam, ever</span>
+        </div>
+      </div>
+      <form class="g-req-form" onsubmit="event.preventDefault();this.querySelector('button').innerText='Request Sent';this.querySelector('button').style.background='var(--success)';">
+        <input type="text" placeholder="Full name" required>
+        <input type="email" placeholder="Email address" required>
+        <input type="tel" placeholder="Phone (optional)">
+        <select required>
+          <option value="" disabled selected>I'm interested in&hellip;</option>
+          <option>Buying property</option>
+          <option>Renting property</option>
+          <option>Business setup</option>
+          <option>Golden Residency</option>
+          <option>Tax &amp; compliance</option>
+        </select>
+        <textarea class="full" placeholder="Tell us briefly about your situation&hellip;"></textarea>
+        <button type="submit" class="full"><i class="fas fa-paper-plane"></i> Send Me the Guides</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="k-section" style="padding-top:0"><div class="k-container"><div class="k-newsletter"><h3>Stay in the loop.</h3><p>Quarterly UAE property market updates and new-launch alerts &mdash; straight to your inbox.</p><form onsubmit="event.preventDefault();this.querySelector('button').innerText='Subscribed';"><input type="email" placeholder="your@email.com" required><button type="submit">Subscribe</button></form></div></div></section>
+
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-user-tie"></i></div>
+      <div><b>Ready to take the next step?</b><span>Book a free consultation with our experts today.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="contact" class="k-btn k-btn-gold">Book a Consultation</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+<script>
+document.querySelectorAll('.k-acc-head').forEach(h=>{h.addEventListener('click',()=>{h.parentElement.classList.toggle('open');});});
+document.querySelectorAll('.g-chip').forEach(c=>{c.addEventListener('click',()=>{document.querySelectorAll('.g-chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');});});
+</script>
+</body>
+</html>

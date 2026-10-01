@@ -1,0 +1,686 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Disclaimer | Kangar Dubai Experts</title>
+<meta name="description" content="Important disclaimers relating to information published by Kangar Dubai Experts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<style>
+  /* ---------- Disclaimer page ---------- */
+
+  /* Hero */
+  .d-hero{position:relative;background:linear-gradient(135deg,#0a1929 0%,#132752 100%);color:#fff;overflow:hidden;padding:70px 0 90px}
+  .d-hero *{color:inherit}
+  .d-hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 85% 25%,rgba(197,155,81,.22),transparent 55%),
+    radial-gradient(circle at 12% 90%,rgba(255,255,255,.04),transparent 45%);
+    pointer-events:none}
+  .d-hero-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+  .d-hero .k-crumbs{margin-bottom:18px;color:rgba(255,255,255,.55)}
+  .d-hero .k-crumbs a{color:rgba(255,255,255,.75)}
+  .d-hero .k-crumbs a:hover{color:var(--gold-bright)}
+  .d-hero .k-crumbs .sep{color:rgba(255,255,255,.3)}
+  .d-hero-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(197,155,81,.16);color:var(--gold-bright);border:1px solid rgba(197,155,81,.35);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+  .d-hero h1{font-family:var(--font-serif);font-size:clamp(2.4rem,4.2vw,3.6rem);font-weight:700;line-height:1.05;margin:0 0 18px;letter-spacing:-.015em;color:#fff}
+  .d-hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:600}
+  .d-hero-lead{font-size:1.1rem;line-height:1.65;color:rgba(255,255,255,.78);margin:0 0 30px;max-width:56ch}
+  .d-hero-meta{display:flex;flex-wrap:wrap;gap:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+  .d-hero-meta div{display:flex;align-items:center;gap:10px;font-size:.86rem;color:rgba(255,255,255,.75)}
+  .d-hero-meta i{color:var(--gold-bright);font-size:1rem}
+
+  .d-hero-card{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+  .d-hero-card::before{content:"";position:absolute;top:-1px;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-bright),transparent)}
+  .d-hero-card-badge{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));display:flex;align-items:center;justify-content:center;color:#0a1929;font-size:1.4rem;margin-bottom:18px;box-shadow:0 10px 24px rgba(197,155,81,.4)}
+  .d-hero-card h4{font-family:var(--font-serif);font-size:1.25rem;font-weight:700;margin:0 0 8px;color:#fff}
+  .d-hero-card p{font-size:.88rem;color:rgba(255,255,255,.7);margin:0 0 22px;line-height:1.6}
+  .d-hero-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+  .d-hero-card li{display:flex;align-items:center;gap:14px;font-size:.9rem;color:rgba(255,255,255,.9)}
+  .d-hero-card li i{width:32px;height:32px;flex-shrink:0;border-radius:9px;background:rgba(197,155,81,.15);color:var(--gold-bright);display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
+
+  /* Alert banner */
+  .d-alert-strip{background:#fdf6e6;border-top:1px solid #f0dfa8;border-bottom:1px solid #f0dfa8;padding:18px 0}
+  .d-alert-strip-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;font-size:.92rem;color:#7a5b1c;font-weight:500}
+  .d-alert-strip-inner i{width:36px;height:36px;flex-shrink:0;background:#c9a961;color:#fff;border-radius:10px;display:inline-flex;align-items:center;justify-content:center}
+  .d-alert-strip-inner strong{color:#5a4212;font-weight:700}
+
+  /* Body */
+  .d-body{padding:70px 0 40px;background:#fff}
+  .d-shell{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:flex-start}
+
+  /* TOC */
+  .d-toc{position:sticky;top:24px;background:var(--ivory);border-radius:16px;padding:28px 26px;border:1px solid var(--line)}
+  .d-toc-lbl{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .d-toc ol{list-style:none;padding:0;margin:0;counter-reset:toc}
+  .d-toc li{counter-increment:toc;margin-bottom:2px}
+  .d-toc a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:.85rem;font-weight:500;transition:all .2s ease;border-left:2px solid transparent}
+  .d-toc a::before{content:counter(toc,decimal-leading-zero);font-family:var(--font-serif);font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.05em}
+  .d-toc a:hover,.d-toc a.active{background:#fff;color:var(--ink);border-left-color:var(--gold);box-shadow:var(--shadow-sm)}
+  .d-toc a:hover::before,.d-toc a.active::before{color:var(--gold)}
+  .d-toc-foot{margin-top:20px;padding-top:20px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);line-height:1.5}
+  .d-toc-foot a{color:var(--gold);text-decoration:none;font-weight:600}
+
+  /* Main */
+  .d-main{max-width:820px}
+  .d-intro{padding:28px 32px;background:linear-gradient(135deg,#f7f0e4,#faf5ea);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;margin-bottom:44px;display:flex;gap:20px;align-items:flex-start}
+  .d-intro i{color:var(--gold);font-size:1.3rem;margin-top:2px}
+  .d-intro div{flex:1}
+  .d-intro strong{color:var(--ink);font-weight:700}
+  .d-intro p{margin:0;color:var(--ink-2);font-size:1rem;line-height:1.7}
+
+  .d-sec{margin-bottom:48px;scroll-margin-top:24px}
+  .d-sec-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .d-sec-icon{width:48px;height:48px;flex-shrink:0;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 8px 20px rgba(197,155,81,.3)}
+  .d-sec h2{font-family:var(--font-serif);font-size:1.7rem;font-weight:700;color:var(--ink);margin:0;line-height:1.2;letter-spacing:-.01em}
+  .d-sec p{color:var(--ink-2);font-size:1rem;line-height:1.75;margin:0 0 16px}
+  .d-sec ul{list-style:none;padding:0;margin:0 0 20px}
+  .d-sec ul li{position:relative;padding:8px 0 8px 28px;color:var(--ink-2);font-size:.96rem;line-height:1.6}
+  .d-sec ul li::before{content:"";position:absolute;left:6px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .d-sec ul li strong{color:var(--ink);font-weight:700}
+
+  /* Callout */
+  .d-callout{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:20px 0;display:flex;gap:16px;align-items:flex-start}
+  .d-callout i{font-size:1.15rem;margin-top:2px}
+  .d-callout.warn{border-left-color:#c9a961;background:linear-gradient(135deg,#fdf6e6,#fff)}
+  .d-callout.warn i{color:#c9a961}
+  .d-callout.info{border-left-color:#1F5D42;background:linear-gradient(135deg,#f0f7f4,#fff)}
+  .d-callout.info i{color:#1F5D42}
+  .d-callout.risk{border-left-color:#9B1C1C;background:linear-gradient(135deg,#fbeaea,#fff)}
+  .d-callout.risk i{color:#9B1C1C}
+  .d-callout div{flex:1}
+  .d-callout b{display:block;font-family:var(--font-serif);color:var(--ink);font-size:1rem;font-weight:700;margin-bottom:4px}
+  .d-callout p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.6}
+
+  /* Fact grid */
+  .d-fact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0 20px}
+  .d-fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+  .d-fact-num{font-family:var(--font-serif);font-size:1.6rem;color:var(--gold);font-weight:700;line-height:1;margin-bottom:8px}
+  .d-fact b{display:block;font-family:var(--font-serif);color:var(--ink);font-size:.98rem;margin-bottom:4px;font-weight:700}
+  .d-fact span{color:var(--muted);font-size:.82rem;line-height:1.55;display:block}
+
+  /* Chips */
+  .d-chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+  .d-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:var(--ivory);border:1px solid var(--line);border-radius:999px;font-size:.8rem;font-weight:600;color:var(--ink-2)}
+  .d-chip i{color:var(--gold);font-size:.75rem}
+
+  /* Assumption box (photo/floor plan disclaimer visual) */
+  .d-photo-note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin:16px 0 20px;display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center}
+  .d-photo-stamp{aspect-ratio:1;border-radius:12px;background:linear-gradient(135deg,#0a1929,#132752);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;position:relative;overflow:hidden}
+  .d-photo-stamp::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(197,155,81,.3),transparent 60%)}
+  .d-photo-stamp i{color:var(--gold-bright);font-size:1.4rem;margin-bottom:8px;position:relative}
+  .d-photo-stamp span{font-family:var(--font-serif);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.12em;line-height:1.2;position:relative}
+  .d-photo-note h5{font-family:var(--font-serif);color:var(--ink);font-size:1.05rem;font-weight:700;margin:0 0 6px}
+  .d-photo-note p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.6}
+
+  /* Regulatory strip */
+  .d-reg{background:linear-gradient(135deg,#0a1929,#132752);color:#fff;border-radius:18px;padding:36px 34px;margin:20px 0;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center}
+  .d-reg *{color:inherit}
+  .d-reg-crest{width:64px;height:64px;border-radius:16px;background:rgba(197,155,81,.16);border:1px solid rgba(197,155,81,.35);display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:1.6rem;flex-shrink:0}
+  .d-reg-copy h4{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;margin:0 0 6px;color:#fff}
+  .d-reg-copy p{margin:0;color:rgba(255,255,255,.7);font-size:.94rem;line-height:1.55}
+  .d-reg-flag{display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;font-size:.85rem;font-weight:600}
+  .d-reg-flag img{width:22px;border-radius:3px}
+
+  /* Verify with adviser CTA */
+  .d-verify{background:var(--ivory);border:1px solid var(--line);border-radius:18px;padding:36px 32px;margin-top:32px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+  .d-verify h4{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;margin:0 0 10px;color:var(--ink);line-height:1.15}
+  .d-verify h4 em{color:var(--gold);font-style:italic;font-weight:600}
+  .d-verify p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.6}
+  .d-verify-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .d-verify-actions .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.88rem;letter-spacing:.02em;transition:all .25s ease}
+  .d-verify-actions .btn-primary{background:var(--ink);color:#fff}
+  .d-verify-actions .btn-primary:hover{background:var(--gold);transform:translateY(-2px)}
+  .d-verify-actions .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .d-verify-actions .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  @media (max-width:960px){
+    .d-hero-inner{grid-template-columns:1fr;gap:36px}
+    .d-shell{grid-template-columns:1fr;gap:32px}
+    .d-toc{position:static;order:2}
+    .d-main{order:1;max-width:100%}
+    .d-fact-grid{grid-template-columns:1fr}
+    .d-photo-note{grid-template-columns:1fr;text-align:center}
+    .d-photo-stamp{max-width:100px;margin:0 auto}
+    .d-reg{grid-template-columns:1fr;text-align:center;padding:28px 22px}
+    .d-reg-crest{margin:0 auto}
+    .d-verify{grid-template-columns:1fr;padding:28px 22px;text-align:center}
+    .d-verify-actions{justify-content:center}
+    .d-alert-strip-inner{flex-direction:column;text-align:center}
+  }
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent">Rent</a>
+      <a href="commercial">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<!-- Hero -->
+<section class="d-hero">
+  <div class="d-hero-inner">
+    <div>
+      <div class="k-crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Disclaimer</span></div>
+      <div class="d-hero-pill"><i class="fas fa-exclamation-triangle"></i> Important Notice</div>
+      <h1>Website <em>Disclaimer.</em></h1>
+      <p class="d-hero-lead">What our published prices, listings, floor plans, market data and regulatory notes mean &mdash; and what they don't mean &mdash; before you rely on them.</p>
+      <div class="d-hero-meta">
+        <div><i class="far fa-calendar-alt"></i> Last updated: 14 September 2026</div>
+        <div><i class="fas fa-file-alt"></i> Applies to all content</div>
+        <div><i class="fas fa-user-tie"></i> Verify with an adviser</div>
+      </div>
+    </div>
+    <div class="d-hero-card">
+      <div class="d-hero-card-badge"><i class="fas fa-info-circle"></i></div>
+      <h4>Read this first.</h4>
+      <p>The 30-second summary of what to keep in mind while browsing our site.</p>
+      <ul>
+        <li><i class="fas fa-tag"></i> Prices are indicative, not fixed</li>
+        <li><i class="fas fa-image"></i> Photos &amp; plans are for reference</li>
+        <li><i class="fas fa-chart-line"></i> Market data has no guarantees</li>
+        <li><i class="fas fa-landmark"></i> UAE rules can change anytime</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Alert strip -->
+<div class="d-alert-strip">
+  <div class="d-alert-strip-inner">
+    <i class="fas fa-exclamation"></i>
+    <div><strong>Always verify before committing.</strong> No information on this website should be treated as a firm offer, a professional opinion, or a substitute for direct confirmation with a Kangar adviser or the relevant UAE authority.</div>
+  </div>
+</div>
+
+<!-- Body -->
+<section class="d-body">
+  <div class="d-shell">
+
+    <!-- TOC -->
+    <aside class="d-toc">
+      <div class="d-toc-lbl">On This Page</div>
+      <ol>
+        <li><a href="#pricing" class="active">Illustrative pricing</a></li>
+        <li><a href="#listings">Property listings</a></li>
+        <li><a href="#photos">Photos &amp; floor plans</a></li>
+        <li><a href="#market">Market data</a></li>
+        <li><a href="#calc">Calculator estimates</a></li>
+        <li><a href="#regulatory">Regulatory information</a></li>
+        <li><a href="#forward">Forward-looking statements</a></li>
+        <li><a href="#external">External links</a></li>
+      </ol>
+      <div class="d-toc-foot">
+        Need this signed?<br>
+        <a href="contact">Request a PDF copy <i class="fas fa-arrow-right" style="font-size:.7rem;margin-left:4px"></i></a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="d-main">
+      <div class="d-intro">
+        <i class="fas fa-quote-left"></i>
+        <div>
+          <p>This disclaimer applies to <strong>every page, listing, guide, market report and calculator</strong> published on kangarrealestate.com. It sits alongside our <a href="terms" style="color:var(--gold);font-weight:600">Terms &amp; Conditions</a> and <a href="privacy-policy" style="color:var(--gold);font-weight:600">Privacy Policy</a>, and is here so you can rely on our content with the right context.</p>
+        </div>
+      </div>
+
+      <div class="d-sec" id="pricing">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-tag"></i></div>
+          <h2>Illustrative pricing</h2>
+        </div>
+        <p>Prices, payment plans and booking terms shown across this website &mdash; whether on a project page, buyer guide or comparison table &mdash; are indicative. They reflect the best information available at the time of publication.</p>
+        <p>Final terms depend on live unit availability, the developer's pricing at the time of booking, the applicable payment schedule, and any government or DLD fees that apply on the transfer date.</p>
+        <div class="d-callout warn">
+          <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <b>Pricing can change without notice.</b>
+            <p>Always confirm the current unit price, service charge and payment schedule with a Kangar adviser before reserving or transferring any funds.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-sec" id="listings">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-building"></i></div>
+          <h2>Property listings</h2>
+        </div>
+        <p>Every listing on this site is presented in good faith and refreshed regularly. However, the UAE market moves quickly &mdash; a unit shown as available may already be under offer, and specifications, layouts or handover dates may be updated by the developer without prior notice.</p>
+        <div class="d-chip-row">
+          <span class="d-chip"><i class="fas fa-sync-alt"></i> Updated weekly</span>
+          <span class="d-chip"><i class="fas fa-eye"></i> Availability may vary</span>
+          <span class="d-chip"><i class="fas fa-map-marker-alt"></i> Site visit recommended</span>
+        </div>
+      </div>
+
+      <div class="d-sec" id="photos">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-camera"></i></div>
+          <h2>Photos &amp; floor plans</h2>
+        </div>
+        <p>Photography, computer-generated renders, floor plans, virtual tours and unit specifications are for reference only. Actual finish, layout, view, orientation and dimensions may vary from what is shown. Renders in particular are the developer's artistic impression and may differ materially from the built product.</p>
+        <div class="d-photo-note">
+          <div class="d-photo-stamp">
+            <i class="fas fa-image"></i>
+            <span>Reference<br>Only</span>
+          </div>
+          <div>
+            <h5>Always view before committing.</h5>
+            <p>For ready and secondary units we recommend an in-person viewing. For off-plan, ask our team for the latest developer-issued materials and site progress photos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-sec" id="market">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-chart-line"></i></div>
+          <h2>Market data</h2>
+        </div>
+        <p>Our market reports, community insights, rental-yield tables and price-per-sq-ft benchmarks are compiled from a combination of DLD-published transactions, developer disclosures and Kangar's own broker-side data. They are provided in good faith to help you frame a decision &mdash; not as a guarantee of future performance.</p>
+        <div class="d-fact-grid">
+          <div class="d-fact"><div class="d-fact-num">DLD</div><b>Primary source</b><span>Official Dubai Land Department transactions</span></div>
+          <div class="d-fact"><div class="d-fact-num">Q</div><b>Refresh cycle</b><span>Reports issued each calendar quarter</span></div>
+          <div class="d-fact"><div class="d-fact-num">&plusmn;5%</div><b>Typical variance</b><span>Between reported and street-level pricing</span></div>
+        </div>
+      </div>
+
+      <div class="d-sec" id="calc">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-calculator"></i></div>
+          <h2>Calculator estimates</h2>
+        </div>
+        <p>Any mortgage, ROI, service-charge, DLD-fee or business-setup calculator on this site produces an estimate based on the inputs you supply and current UAE market assumptions. Actual figures depend on your specific circumstances, lender approval, live government fees and the terms agreed at the point of transaction.</p>
+        <div class="d-callout info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <b>Estimates are a starting point.</b>
+            <p>Use them to compare scenarios &mdash; then let a Kangar adviser produce a live, sourced cost sheet for your specific unit or setup.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-sec" id="regulatory">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-landmark"></i></div>
+          <h2>Regulatory information</h2>
+        </div>
+        <p>UAE regulations covering property ownership, visa eligibility, corporate tax, free-zone activities, banking KYC and cross-border remittance are updated frequently by the relevant federal and emirate-level authorities. While we make every effort to keep our content current, the version you read here may already have been superseded.</p>
+        <div class="d-reg">
+          <div class="d-reg-crest"><i class="fas fa-shield-alt"></i></div>
+          <div class="d-reg-copy">
+            <h4>Confirm the current rule before you rely on it.</h4>
+            <p>Our advisers cross-check with DLD, DED, GDRFA, FTA and the relevant free-zone authority in real time.</p>
+          </div>
+          <div class="d-reg-flag"><img src="https://flagcdn.com/w40/ae.png" alt=""> UAE</div>
+        </div>
+      </div>
+
+      <div class="d-sec" id="forward">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-magic"></i></div>
+          <h2>Forward-looking statements</h2>
+        </div>
+        <p>Statements about future market direction, rental yields, capital appreciation, tourism inflow, population growth or regulatory trends are inherently uncertain. They reflect a considered view at the time of writing &mdash; they are not promises, predictions or investment recommendations.</p>
+        <div class="d-callout risk">
+          <i class="fas fa-shield-alt"></i>
+          <div>
+            <b>Property is a long-term commitment.</b>
+            <p>Past performance is not a reliable indicator of future results. Take independent financial advice before committing capital.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-sec" id="external">
+        <div class="d-sec-head">
+          <div class="d-sec-icon"><i class="fas fa-external-link-alt"></i></div>
+          <h2>External links</h2>
+        </div>
+        <p>Where our content links to a developer website, government portal, bank calculator, mapping tool or news article, we do so because it added useful context at the time of publication. Kangar does not control the content of external sites, and their inclusion does not constitute an endorsement of their operator, offering or ongoing accuracy.</p>
+        <div class="d-chip-row">
+          <span class="d-chip"><i class="fas fa-globe"></i> Third-party sites</span>
+          <span class="d-chip"><i class="fas fa-shield-alt"></i> No endorsement implied</span>
+          <span class="d-chip"><i class="fas fa-user-secret"></i> Review their own policies</span>
+        </div>
+      </div>
+
+      <!-- Verify CTA -->
+      <div class="d-verify">
+        <div>
+          <h4>When in doubt, <em>ask us.</em></h4>
+          <p>Every claim on this site can be verified with a live source. If something matters to your decision, a two-minute call is worth more than a paragraph you read online.</p>
+        </div>
+        <div class="d-verify-actions">
+          <a href="contact" class="btn btn-primary"><i class="fas fa-comments"></i> Talk to an Adviser</a>
+          <a href="tel:+971555495276" class="btn btn-ghost"><i class="fas fa-phone"></i> +971 55 549 5276</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-user-tie"></i></div>
+      <div><b>Ready to take the next step?</b><span>Book a free consultation with our experts today.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="contact" class="k-btn k-btn-gold">Book a Consultation</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+
+<script>
+  const links=document.querySelectorAll('.d-toc a');
+  const sections=[...document.querySelectorAll('.d-sec')];
+  links.forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)window.scrollTo({top:t.offsetTop-24,behavior:'smooth'});
+  }));
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY+120;
+    let cur=sections[0];
+    sections.forEach(s=>{if(s.offsetTop<=y)cur=s;});
+    links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id));
+  });
+</script>
+</body>
+</html>

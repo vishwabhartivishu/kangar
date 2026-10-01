@@ -1,0 +1,631 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commercial Property in Dubai | Offices, Retail, F&amp;B, Warehouse | Kangar</title>
+<meta name="description" content="Offices, retail, F&B and warehouse units for lease or sale in Dubai. Kangar matches space to your licence, activity and visa requirements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<style>
+.cm-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0d1b3d 0%,#132752 100%);padding:70px 0 90px;color:#fff;}
+.cm-hero::before{content:"";position:absolute;top:-30%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(201,169,97,.2),transparent 70%);border-radius:50%;}
+.cm-hero::after{content:"";position:absolute;bottom:-50%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,169,97,.1),transparent 70%);border-radius:50%;}
+.cm-hero-grid{position:relative;max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;z-index:2;}
+.cm-hero .k-crumbs{color:#a8b2c8;margin-bottom:16px;}
+.cm-hero .k-crumbs a{color:#a8b2c8;}
+.cm-hero .k-crumbs .sep{color:rgba(255,255,255,.2);}
+.cm-hero .k-crumbs span{color:var(--k-gold);}
+.cm-hero h1{font-family:'Inter',system-ui,sans-serif;font-size:clamp(2rem,3.8vw,3rem);color:#fff;font-weight:700;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em;}
+.cm-hero h1 .accent{color:var(--k-gold);}
+.cm-hero .lead{color:#c8d1e3;font-size:1.05rem;line-height:1.6;margin:0 0 28px;max-width:520px;}
+.cm-hero .k-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+.cm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);max-width:520px;}
+.cms b{display:block;font-family:'Inter',system-ui,sans-serif;font-size:1.6rem;color:var(--k-gold);font-weight:700;line-height:1;}
+.cms span{color:#a8b2c8;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px;display:block;font-weight:600;}
+.cm-hero-visual{position:relative;height:520px;}
+.cmv-big{position:absolute;top:0;right:0;width:82%;height:76%;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35);}
+.cmv-big img{width:100%;height:100%;object-fit:cover;}
+.cmv-small{position:absolute;bottom:0;left:0;width:52%;height:44%;border-radius:14px;overflow:hidden;border:6px solid #0d1b3d;box-shadow:0 20px 40px rgba(0,0,0,.35);}
+.cmv-small img{width:100%;height:100%;object-fit:cover;}
+.cmv-tag{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.95);padding:12px 18px;border-radius:10px;display:flex;align-items:center;gap:10px;z-index:3;box-shadow:0 12px 24px rgba(0,0,0,.25);}
+.cmv-tag i{width:36px;height:36px;border-radius:50%;background:var(--k-gold);color:#fff;display:grid;place-items:center;font-size:.9rem;}
+.cmv-tag .t{font-size:.78rem;color:var(--k-navy);line-height:1.2;}
+.cmv-tag .t b{display:block;font-family:'Inter',system-ui,sans-serif;font-size:.95rem;}
+
+/* Category pills */
+.cm-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1280px;margin:-50px auto 40px;padding:0 24px;position:relative;z-index:10;}
+.cmc{background:#fff;border-radius:14px;padding:24px;box-shadow:0 14px 40px rgba(10,21,48,.1);text-decoration:none;color:var(--k-navy);transition:all .25s;border:1px solid var(--k-line);text-align:left;display:block;}
+.cmc:hover{border-color:var(--k-gold);transform:translateY(-4px);box-shadow:0 20px 40px rgba(10,21,48,.15);}
+.cmc-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--k-navy) 0%,#1a2b52 100%);color:var(--k-gold);display:grid;place-items:center;margin-bottom:14px;font-size:20px;}
+.cmc h4{font-family:'Inter',system-ui,sans-serif;font-size:1.1rem;margin:0 0 4px;font-weight:700;}
+.cmc p{color:var(--k-muted);font-size:.83rem;margin:0 0 10px;line-height:1.4;}
+.cmc .cmc-count{font-size:.78rem;color:var(--k-gold);font-weight:700;letter-spacing:.1em;}
+
+/* Filter */
+.cm-filter{max-width:1280px;margin:0 auto 40px;padding:0 24px;}
+.cm-filter-inner{background:#fff;border:1px solid var(--k-line);border-radius:12px;padding:22px;box-shadow:0 6px 18px rgba(10,21,48,.05);}
+.cm-filter-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
+.cmt{padding:8px 18px;background:transparent;border:0;border-radius:999px;font-weight:600;font-size:.88rem;color:var(--k-muted);cursor:pointer;font-family:'Inter',sans-serif;}
+.cmt.active{background:var(--k-navy);color:#fff;}
+.cmt:not(.active):hover{background:#f4f7fc;color:var(--k-navy);}
+
+/* Listings */
+.cm-listings{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.cm-listings .k-prop-card{border-radius:12px;}
+.cm-listings .k-prop-img{height:210px;}
+.cm-listings .k-prop-body{padding:20px;}
+.cm-listings .k-prop-tag{background:var(--k-navy);}
+.cm-listings .k-prop-tag.retail{background:var(--k-gold);}
+.cm-listings .k-prop-tag.fnb{background:#dc2626;}
+.cm-listings .k-prop-tag.wh{background:#4b5563;}
+
+/* Match section */
+.cm-match{background:#fff;border:1px solid var(--k-line);border-radius:16px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.cm-match img{width:100%;border-radius:12px;}
+.cm-match-copy .k-eyebrow{text-align:left;}
+.cm-match-copy h2{font-family:'Inter',system-ui,sans-serif;font-size:1.9rem;color:var(--k-navy);font-weight:700;margin:0 0 14px;line-height:1.2;}
+.cm-match-copy p{color:#4a5a7a;line-height:1.65;font-size:.98rem;margin-bottom:16px;}
+
+/* Feature grid */
+.cm-features{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.cmf{display:flex;gap:16px;padding:20px;background:#fff;border:1px solid var(--k-line);border-radius:12px;transition:all .2s;}
+.cmf:hover{border-color:var(--k-gold);transform:translateY(-2px);box-shadow:0 12px 28px rgba(10,21,48,.06);}
+.cmf-icon{width:52px;height:52px;border-radius:12px;background:rgba(201,169,97,.12);color:var(--k-gold);display:grid;place-items:center;flex-shrink:0;font-size:20px;}
+.cmf h4{color:var(--k-navy);font-family:'Inter',system-ui,sans-serif;font-size:1.1rem;margin:0 0 6px;font-weight:700;}
+.cmf p{color:#4a5a7a;font-size:.9rem;line-height:1.55;margin:0;}
+
+/* Districts map */
+.cm-districts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.cmd{position:relative;height:240px;border-radius:12px;overflow:hidden;cursor:pointer;}
+.cmd img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.cmd:hover img{transform:scale(1.06);}
+.cmd::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,21,48,.9));}
+.cmd-info{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;z-index:2;}
+.cmd-info small{color:var(--k-gold);font-size:.7rem;letter-spacing:.15em;font-weight:700;text-transform:uppercase;}
+.cmd-info h4{color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:1.3rem;margin:4px 0 4px;}
+.cmd-info .cmd-meta{color:#e6ebf2;font-size:.82rem;display:flex;gap:10px;flex-wrap:wrap;}
+.cmd-info .cmd-meta span{display:inline-flex;align-items:center;gap:4px;}
+
+/* Setup CTA */
+.cm-setup-cta{position:relative;background:linear-gradient(135deg,#0a1929 0%,#132752 55%,#0a1929 100%);border:1px solid rgba(201,169,97,.28);border-radius:24px;padding:52px 56px;color:#fff;display:grid;grid-template-columns:1.35fr 1fr;gap:52px;align-items:center;overflow:hidden;box-shadow:0 34px 70px -30px rgba(10,25,41,.55);}
+.cm-setup-cta *{color:inherit;}
+.cm-setup-cta::before{content:"";position:absolute;top:-40%;right:-8%;width:520px;height:520px;background:radial-gradient(circle,rgba(201,169,97,.25),transparent 65%);border-radius:50%;pointer-events:none;}
+.cm-setup-cta::after{content:"";position:absolute;bottom:-45%;left:-10%;width:420px;height:420px;background:radial-gradient(circle,rgba(201,169,97,.12),transparent 65%);border-radius:50%;pointer-events:none;}
+.cm-setup-cta > *{position:relative;z-index:2;}
+.cm-setup-cta .cm-setup-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(201,169,97,.16);color:var(--k-gold);border:1px solid rgba(201,169,97,.35);font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px;}
+.cm-setup-cta .cm-setup-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--k-gold);box-shadow:0 0 0 0 rgba(201,169,97,.6);animation:cmSetupPulse 1.8s ease-out infinite;}
+@keyframes cmSetupPulse{0%{box-shadow:0 0 0 0 rgba(201,169,97,.6)}100%{box-shadow:0 0 0 10px rgba(201,169,97,0)}}
+.cm-setup-cta h3{font-family:'Inter',system-ui,sans-serif;font-size:clamp(1.9rem,3vw,2.4rem);margin:0 0 14px;color:#fff;line-height:1.12;letter-spacing:-.015em;font-weight:700;}
+.cm-setup-cta h3 em{font-style:italic;color:var(--k-gold);font-weight:600;}
+.cm-setup-cta p{color:rgba(255,255,255,.72);margin:0 0 22px;line-height:1.7;font-size:1rem;max-width:560px;}
+.cm-setup-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;}
+.cm-setup-chips span{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.88);font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:6px 12px;border-radius:999px;transition:all .3s ease;}
+.cm-setup-chips span:hover{background:rgba(201,169,97,.18);border-color:var(--k-gold);color:#fff;}
+.cm-setup-cta .cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.cm-setup-cta .cta-actions .k-btn{padding:14px 26px;font-size:.85rem;letter-spacing:.02em;}
+.cm-setup-cta .k-btn-primary{background:var(--k-gold)!important;color:#0a1929!important;border-color:var(--k-gold)!important;}
+.cm-setup-cta .k-btn-primary:hover{background:#d4b96a!important;border-color:#d4b96a!important;box-shadow:0 12px 26px -12px rgba(201,169,97,.55);}
+.cm-setup-cta .k-btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:transparent;}
+.cm-setup-cta .k-btn-outline:hover{background:rgba(255,255,255,.08);border-color:#fff;}
+.cm-setup-visual{position:relative;padding:34px 30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);text-align:center;}
+.cm-setup-visual::before{content:"";position:absolute;top:-1px;left:22%;right:22%;height:1px;background:linear-gradient(90deg,transparent,var(--k-gold),transparent);}
+.cm-setup-visual .big-num{font-family:'Inter',system-ui,sans-serif;font-size:clamp(4rem,7vw,5.6rem);line-height:1;font-weight:800;background:linear-gradient(135deg,#f0d97a 0%,#e6c98a 40%,#c9a961 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.03em;}
+.cm-setup-visual .big-lbl{color:#fff;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;margin-top:10px;font-weight:700;line-height:1.4;}
+.cm-setup-visual .divider{width:44px;height:1px;background:rgba(201,169,97,.55);margin:18px auto;}
+.cm-setup-visual .sub{font-size:.85rem;color:rgba(255,255,255,.66);line-height:1.6;margin:0;}
+.cm-setup-visual .cm-setup-mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;padding-top:20px;border-top:1px dashed rgba(255,255,255,.14);}
+.cm-setup-visual .cm-setup-mini div{display:flex;flex-direction:column;gap:2px;}
+.cm-setup-visual .cm-setup-mini b{font-family:'Inter',sans-serif;color:var(--k-gold);font-size:1.2rem;font-weight:700;line-height:1;}
+.cm-setup-visual .cm-setup-mini span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600;}
+@media (max-width:960px){.cm-setup-cta{padding:36px 28px;}}
+
+@media (max-width:1024px){
+  .cm-hero-grid,.cm-match{grid-template-columns:1fr;gap:30px;}
+  .cm-hero-visual{height:360px;}
+  .cm-cats,.cm-listings,.cm-districts,.cm-features{grid-template-columns:repeat(2,1fr);}
+  .cm-setup-cta{grid-template-columns:1fr;padding:28px;text-align:center;}
+  .cm-stats{max-width:100%;}
+}
+@media (max-width:640px){
+  .cm-cats,.cm-listings,.cm-districts,.cm-features,.cm-stats{grid-template-columns:1fr;}
+}
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent">Rent</a>
+      <a href="commercial" style="color:var(--gold);">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<!-- HERO -->
+<section class="cm-hero">
+  <div class="cm-hero-grid">
+    <div>
+      <div class="k-crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Commercial</span></div>
+      <h1>Commercial space that fits <span class="accent">how you actually operate.</span></h1>
+      <p class="lead">Offices, retail, F&amp;B and warehouse units matched to your licence, activity, visa allocation and inspection requirements &mdash; not just square footage on a listing.</p>
+      <div class="k-actions">
+        <a href="#listings" class="k-btn k-btn-gold">Browse Units <i class="fas fa-arrow-right"></i></a>
+        <a href="business-setup" class="k-btn k-btn-outline" style="border-color:#fff;color:#fff;background:transparent;">Business Setup <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <div class="cm-stats">
+        <div class="cms"><b>500+</b><span>Commercial Units</span></div>
+        <div class="cms"><b>DIFC</b><span>Certified Broker</span></div>
+        <div class="cms"><b>7 Days</b><span>Typical Handover</span></div>
+      </div>
+    </div>
+    <div class="cm-hero-visual">
+      <div class="cmv-tag"><i class="fas fa-shield-alt"></i><div class="t"><b>Licence-matched</b>Not just square-footage</div></div>
+      <div class="cmv-big"><img src="assets/images/properties/nobles-business-bay/00.png" alt="Nobles Business Bay office tower"></div>
+      <div class="cmv-small"><img src="assets/images/properties/new-commercial-tower-shahrukhz-by-danube/01.png" alt="Shahrukhz Commercial Tower interior"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY QUICK PICKS (overlapping hero) -->
+<div class="cm-cats">
+  <a class="cmc" href="#office"><div class="cmc-icon"><i class="fas fa-city"></i></div><h4>Office</h4><p>Grade A, serviced &amp; free-zone flexi-desks.</p><span class="cmc-count">180+ UNITS</span></a>
+  <a class="cmc" href="#retail"><div class="cmc-icon"><i class="fas fa-store"></i></div><h4>Retail</h4><p>Mall, high-street and kiosk spaces.</p><span class="cmc-count">120+ UNITS</span></a>
+  <a class="cmc" href="#fnb"><div class="cmc-icon"><i class="fas fa-utensils"></i></div><h4>F&amp;B</h4><p>Vent-ready kitchens and outdoor seating.</p><span class="cmc-count">60+ UNITS</span></a>
+  <a class="cmc" href="#warehouse"><div class="cmc-icon"><i class="fas fa-warehouse"></i></div><h4>Warehouse</h4><p>Logistics, chilled and industrial units.</p><span class="cmc-count">90+ UNITS</span></a>
+</div>
+
+<!-- FILTER -->
+<div class="cm-filter">
+  <div class="cm-filter-inner">
+    <div class="cm-filter-tabs">
+      <button class="cmt active">Lease</button>
+      <button class="cmt">Sale</button>
+      <button class="cmt">Shell &amp; Core</button>
+      <button class="cmt">Fitted</button>
+    </div>
+    <div class="k-filter-row">
+      <div><div class="k-label">Location</div><select class="k-select"><option>Any area</option><option>DIFC</option><option>Downtown</option><option>Business Bay</option><option>JLT</option><option>Al Quoz</option><option>DIP</option><option>JAFZA</option></select></div>
+      <div><div class="k-label">Type</div><select class="k-select"><option>Any</option><option>Office</option><option>Retail</option><option>F&amp;B</option><option>Warehouse</option><option>Showroom</option></select></div>
+      <div><div class="k-label">Size (sq.ft)</div><select class="k-select"><option>Any</option><option>Under 500</option><option>500 &ndash; 1,500</option><option>1,500 &ndash; 5,000</option><option>5,000 &ndash; 10,000</option><option>10,000+</option></select></div>
+      <div><div class="k-label">Annual Budget</div><select class="k-select"><option>Any</option><option>Under AED 200K</option><option>AED 200K &ndash; 500K</option><option>AED 500K &ndash; 1M</option><option>AED 1M+</option></select></div>
+      <button class="k-btn k-btn-primary" type="button"><i class="fas fa-search"></i> Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- LISTINGS -->
+<section class="k-section" id="listings" style="padding-top:0;">
+  <div class="k-container">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;flex-wrap:wrap;gap:12px;">
+      <div>
+        <div class="k-eyebrow" style="text-align:left;">Available Commercial Units</div>
+        <h2 class="k-h2" style="text-align:left;margin:0;">Live listings across Dubai.</h2>
+      </div>
+      <a href="contact" class="k-btn k-btn-outline" style="padding:10px 22px;font-size:.85rem;">Request Custom Shortlist <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="cm-listings">
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/new-commercial-tower-shahrukhz-by-danube/00.png" alt="Shahrukhz Commercial Tower by Danube"><span class="k-prop-tag retail">COMMERCIAL TOWER</span></div><div class="k-prop-body"><h3>Shahrukhz Commercial Tower</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Al Furjan &middot; Danube</div><div class="k-prop-meta"><span><i class="fas fa-building"></i> Retail &amp; Office</span><span><i class="fas fa-check"></i> Off-Plan</span><span><i class="fas fa-star"></i> Featured</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=new-commercial-tower-shahrukhz-by-danube">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/nobles-business-bay/00.png" alt="Nobles Business Bay"><span class="k-prop-tag">OFFICE</span></div><div class="k-prop-body"><h3>Nobles Business Bay</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Business Bay</div><div class="k-prop-meta"><span><i class="fas fa-building"></i> Grade A</span><span><i class="fas fa-check"></i> Fitted</span><span><i class="fas fa-users"></i> Multi-visa</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=nobles-business-bay">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/damac-district/00.png" alt="DAMAC District"><span class="k-prop-tag fnb">F&amp;B / RETAIL</span></div><div class="k-prop-body"><h3>DAMAC District</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> DAMAC Hills</div><div class="k-prop-meta"><span><i class="fas fa-utensils"></i> Vent-ready</span><span><i class="fas fa-store"></i> Retail units</span><span><i class="fas fa-couch"></i> Outdoor</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=damac-district">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/alba-tower/00.png" alt="Alba Tower"><span class="k-prop-tag">OFFICE</span></div><div class="k-prop-body"><h3>Alba Tower</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Business Bay</div><div class="k-prop-meta"><span><i class="fas fa-building"></i> Grade A</span><span><i class="fas fa-check"></i> Shell &amp; Core</span><span><i class="fas fa-users"></i> Visa-eligible</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=alba-tower">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/renad-tower/00.png" alt="Renad Tower"><span class="k-prop-tag">OFFICE</span></div><div class="k-prop-body"><h3>Renad Tower</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Al Reem Island</div><div class="k-prop-meta"><span><i class="fas fa-building"></i> Grade A</span><span><i class="fas fa-concierge-bell"></i> Serviced</span><span><i class="fas fa-users"></i> Multi-visa</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=renad-tower">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/tiger-altai-tower/00.png" alt="Tiger Altai Tower"><span class="k-prop-tag">OFFICE</span></div><div class="k-prop-body"><h3>Tiger Altai Tower</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Business Bay</div><div class="k-prop-meta"><span><i class="fas fa-building"></i> Grade A</span><span><i class="fas fa-check"></i> Fitted</span><span><i class="fas fa-users"></i> Multi-visa</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=tiger-altai-tower">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/volga-tower-jvt/00.png" alt="Volga Tower JVT"><span class="k-prop-tag retail">RETAIL &amp; OFFICE</span></div><div class="k-prop-body"><h3>Volga Tower &mdash; JVT</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Jumeirah Village Triangle</div><div class="k-prop-meta"><span><i class="fas fa-store"></i> Ground retail</span><span><i class="fas fa-building"></i> Office floors</span><span><i class="fas fa-check"></i> Off-Plan</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=volga-tower-jvt">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/seahaven-tower-b/00.png" alt="Seahaven Tower B"><span class="k-prop-tag fnb">F&amp;B</span></div><div class="k-prop-body"><h3>Seahaven Tower B</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Dubai Maritime City</div><div class="k-prop-meta"><span><i class="fas fa-utensils"></i> Vent-ready</span><span><i class="fas fa-couch"></i> Waterfront seating</span><span><i class="fas fa-eye"></i> High footfall</span></div><div class="k-prop-foot"><span class="k-prop-price">Enquire for pricing</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="property-detail?p=seahaven-tower-b">View</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATCH-TO-LICENCE -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="cm-match">
+      <img src="assets/images/properties/binghatti-hillcrest/00.webp" alt="">
+      <div class="cm-match-copy">
+        <div class="k-eyebrow">Why We Ask More Questions</div>
+        <h2>Space matched to your licence, activity and visas &mdash; not the other way around.</h2>
+        <p>Most commercial searches start with square footage. Ours start with your trade licence. Because the wrong location can block your visa quota, the wrong ceiling height can void your food licence, and the wrong free-zone can restrict your invoicing.</p>
+        <ul class="k-check-list">
+          <li>Ceiling height and power capacity verified for your activity.</li>
+          <li>Visa quota confirmed against unit size and free-zone rules.</li>
+          <li>Municipality inspection risks flagged before you sign.</li>
+          <li>Ejari and licence-linking done in parallel with lease.</li>
+        </ul>
+        <a href="contact" class="k-btn k-btn-primary" style="margin-top:14px;">Request an Assessment <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BY TYPE FEATURE GRID -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="k-eyebrow">Choose by Type</div>
+    <h2 class="k-h2">Which space is right for you?</h2>
+    <p class="k-h2-sub">Every type has its own tenancy, licensing and inspection rhythm. Here&rsquo;s what to look out for.</p>
+    <div class="cm-features" style="margin-top:26px;">
+      <div class="cmf" id="office"><div class="cmf-icon"><i class="fas fa-city"></i></div><div><h4>Office &mdash; Grade A / Serviced / Flexi</h4><p>DIFC, Downtown, Business Bay towers and free-zone flexi-desks. Matched to visa quotas, inspection type and licence category.</p></div></div>
+      <div class="cmf" id="retail"><div class="cmf-icon"><i class="fas fa-store"></i></div><div><h4>Retail &mdash; Mall / Street / Kiosk</h4><p>Mall units, high-street retail and short-lease kiosks. Footfall data and tenant-mix analysis before you commit.</p></div></div>
+      <div class="cmf" id="fnb"><div class="cmf-icon"><i class="fas fa-utensils"></i></div><div><h4>F&amp;B &mdash; Licensed &amp; Vent-Ready</h4><p>Kitchen extraction, food-licence readiness, outdoor seating and alcohol licence considered upfront.</p></div></div>
+      <div class="cmf" id="warehouse"><div class="cmf-icon"><i class="fas fa-warehouse"></i></div><div><h4>Warehouse &amp; Logistics</h4><p>Al Quoz, DIP, JAFZA and DAFZA &mdash; power, height, loading bays and municipality inspection tier matched to activity.</p></div></div>
+      <div class="cmf"><div class="cmf-icon"><i class="fas fa-industry"></i></div><div><h4>Showroom &amp; Auto</h4><p>Car showrooms, workshops and industrial-service outlets with the right inspection permissions.</p></div></div>
+      <div class="cmf"><div class="cmf-icon"><i class="fas fa-hospital"></i></div><div><h4>Medical &amp; Wellness</h4><p>DHA-approved clinical spaces, wellness centres and pharmacy shells prepared for regulator inspection.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DISTRICTS -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">Districts</div>
+    <h2 class="k-h2">Where Dubai does business.</h2>
+    <p class="k-h2-sub">Rent, visa yield and licensing profile differ sharply across districts. We match location to what you&rsquo;re actually building.</p>
+    <div class="cm-districts" style="margin-top:26px;">
+      <div class="cmd"><img src="assets/images/properties/mercedes-benz-places-new/00.png" alt=""><div class="cmd-info"><small>FINANCIAL</small><h4>DIFC</h4><div class="cmd-meta"><span><i class="fas fa-tag"></i> Prime</span><span><i class="fas fa-shield-alt"></i> DFSA</span></div></div></div>
+      <div class="cmd"><img src="assets/images/properties/the-heights-by-emaar/00.png" alt=""><div class="cmd-info"><small>CENTRAL</small><h4>Downtown</h4><div class="cmd-meta"><span><i class="fas fa-tag"></i> Premium</span><span><i class="fas fa-store"></i> Retail-strong</span></div></div></div>
+      <div class="cmd"><img src="assets/images/properties/nobles-business-bay/00.png" alt=""><div class="cmd-info"><small>URBAN</small><h4>Business Bay</h4><div class="cmd-meta"><span><i class="fas fa-tag"></i> Mid</span><span><i class="fas fa-building"></i> Modern</span></div></div></div>
+      <div class="cmd"><img src="assets/images/properties/volga-tower-jvt/00.png" alt=""><div class="cmd-info"><small>MIXED-USE</small><h4>JLT</h4><div class="cmd-meta"><span><i class="fas fa-tag"></i> Value</span><span><i class="fas fa-globe"></i> Free Zone</span></div></div></div>
+      <div class="cmd"><img src="assets/images/properties/damac-district/00.png" alt=""><div class="cmd-info"><small>INDUSTRIAL</small><h4>Al Quoz</h4><div class="cmd-meta"><span><i class="fas fa-warehouse"></i> Logistics</span><span><i class="fas fa-industry"></i> Light Ind.</span></div></div></div>
+      <div class="cmd"><img src="assets/images/properties/tiger-altai-tower/00.png" alt=""><div class="cmd-info"><small>LOGISTICS</small><h4>DIP / JAFZA</h4><div class="cmd-meta"><span><i class="fas fa-truck"></i> Distribution</span><span><i class="fas fa-shipping-fast"></i> Import-Export</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP CROSS-SELL -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="cm-setup-cta">
+      <div>
+        <span class="cm-setup-eyebrow"><span class="dot"></span> Business Setup Add-On</span>
+        <h3>Space and licence &mdash; <em>sorted in parallel.</em></h3>
+        <p>Renting a commercial unit before your trade licence is issued? We coordinate mainland or free-zone licensing, visa quota and Ejari together &mdash; so the lease and licence go live on the same timeline.</p>
+        <div class="cm-setup-chips">
+          <span>IFZA</span>
+          <span>Meydan</span>
+          <span>DMCC</span>
+          <span>DIFC</span>
+          <span>JAFZA</span>
+          <span>DED Mainland</span>
+          <span>DAFZA</span>
+          <span>Sharjah Media City</span>
+        </div>
+        <div class="cta-actions">
+          <a href="business-setup" class="k-btn k-btn-primary">Explore Business Setup <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="k-btn k-btn-outline">Book Discovery Call</a>
+        </div>
+      </div>
+      <div class="cm-setup-visual">
+        <div class="big-num">50+</div>
+        <div class="big-lbl">Free Zones<br>Compared</div>
+        <div class="divider"></div>
+        <div class="sub">From IFZA and Meydan to DMCC, DIFC and JAFZA &mdash; matched to your activity, cost and banking profile.</div>
+        <div class="cm-setup-mini">
+          <div><b>7 days</b><span>Avg. Licence</span></div>
+          <div><b>1:1</b><span>Adviser Owned</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">Client Stories</div>
+    <h2 class="k-h2">Businesses that landed the right space.</h2>
+    <div class="k-testimonials" style="margin-top:30px;">
+      <div class="k-testimonial"><div class="k-t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="k-t-text">Kangar found us a DIFC office in a week and coordinated the licence in parallel. Space and licence went live the same day.</p><div class="k-t-who"><div class="k-t-avatar" style="background-image:url('https://i.pravatar.cc/80?img=17')"></div><div><div class="k-t-name">Nasser K.</div><div class="k-t-role">MD &middot; Consulting &middot; DIFC</div></div></div></div>
+      <div class="k-testimonial"><div class="k-t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="k-t-text">Retail unit at JBR with footfall data upfront was a game-changer for lease negotiation. We saved 12% on the ask.</p><div class="k-t-who"><div class="k-t-avatar" style="background-image:url('https://i.pravatar.cc/80?img=41')"></div><div><div class="k-t-name">Lin S.</div><div class="k-t-role">Owner &middot; Retail &middot; JBR</div></div></div></div>
+      <div class="k-testimonial"><div class="k-t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="k-t-text">Warehouse specs matched exactly to our logistics activity. Height, power and loading bays &mdash; no back-and-forth.</p><div class="k-t-who"><div class="k-t-avatar" style="background-image:url('https://i.pravatar.cc/80?img=8')"></div><div><div class="k-t-name">Raj P.</div><div class="k-t-role">Ops &middot; Logistics &middot; DIP</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP + FOOTER -->
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-briefcase"></i></div>
+      <div><b>Ready to find your commercial space?</b><span>Book a consultation with a Kangar commercial adviser.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="contact" class="k-btn k-btn-gold">Book a Consultation</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>

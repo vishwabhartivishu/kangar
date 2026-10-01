@@ -1,0 +1,18 @@
+# Sensitive credentials — NEVER commit
+config/eventbrite.php
+
+# Server-side cache
+cache/
+
+# Backup / old zips
+*.zip
+index.backup-*.html
+index.old.html
+index.new-design.html
+
+# OS / editor
+Thumbs.db
+.DS_Store
+*.log
+.vscode/
+.idea/

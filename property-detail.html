@@ -1,0 +1,1197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Property Details | Kangar Dubai Experts</title>
+<meta name="description" content="Verified Dubai property listing with images, price, floor plan, amenities, location and investment insights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<style>
+  :root{--pd-ink:#0a1929;--pd-navy:#132752;--pd-gold:#c9a961;--pd-gold-2:#d4b96a;--pd-cream:#faf5ea;--pd-line:#e8e6df;--pd-muted:#6b7684;--pd-text:#3a4b6b}
+
+  /* ============ BREADCRUMB BAR ============ */
+  .pd-crumb{background:#fff;border-bottom:1px solid var(--pd-line);padding:16px 0}
+  .pd-crumb-in{max-width:1360px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .pd-crumb-nav{font-size:.82rem;color:var(--pd-muted);display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .pd-crumb-nav a{color:var(--pd-muted);text-decoration:none}
+  .pd-crumb-nav a:hover{color:var(--pd-gold)}
+  .pd-crumb-nav .sep{color:var(--pd-line)}
+  .pd-crumb-nav b{color:var(--pd-ink);font-weight:600}
+  .pd-crumb-acts{display:flex;gap:8px}
+  .pd-crumb-acts button{border:1px solid var(--pd-line);background:#fff;color:var(--pd-ink);padding:8px 14px;border-radius:8px;font-size:.78rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .2s ease}
+  .pd-crumb-acts button:hover{border-color:var(--pd-gold);color:var(--pd-gold)}
+  .pd-crumb-acts button.saved{background:#fbeaea;border-color:#f2c8c8;color:#9B1C1C}
+  .pd-crumb-acts button.saved i{color:#9B1C1C}
+
+  /* ============ GALLERY MOSAIC ============ */
+  .pd-gal{background:#fff;padding:24px 0 8px}
+  .pd-gal-in{max-width:1360px;margin:0 auto;padding:0 32px;position:relative}
+  .pd-gal-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:10px;height:452px;border-radius:16px;overflow:hidden}
+  .pd-gal-grid > div{position:relative;overflow:hidden;cursor:pointer;background:#eef1f6}
+  .pd-gal-grid > div:first-child{grid-row:1/3}
+  .pd-gal-grid.pd-gal-solo{grid-template-columns:1fr;grid-template-rows:1fr}
+  .pd-gal-grid.pd-gal-solo > div:first-child{grid-row:auto}
+  .pd-gal-grid.pd-gal-half{grid-template-columns:2fr 1fr;grid-template-rows:1fr}
+  .pd-gal-grid.pd-gal-half > div:first-child{grid-row:auto}
+  .pd-gal-grid.pd-gal-trio{grid-template-columns:2fr 1fr;grid-template-rows:220px 220px}
+  .pd-gal-grid.pd-gal-trio > div:first-child{grid-row:1/3}
+  .pd-gal-grid.pd-gal-quad{grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px}
+  .pd-gal-grid.pd-gal-quad > div:first-child{grid-row:1/3}
+  .pd-gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .pd-gal-grid > div:hover img{transform:scale(1.05)}
+
+  /* Lightbox */
+  .pd-lb{position:fixed;inset:0;background:rgba(6,10,25,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .pd-lb.open{display:flex;animation:pdLbFade .25s ease}
+  @keyframes pdLbFade{from{opacity:0}to{opacity:1}}
+  body.pd-lb-open{overflow:hidden}
+  .pd-lb-stage{position:relative;max-width:min(1400px,96vw);max-height:88vh;width:100%;display:flex;align-items:center;justify-content:center}
+  .pd-lb-img{max-width:100%;max-height:88vh;object-fit:contain;border-radius:8px;box-shadow:0 40px 80px rgba(0,0,0,.5);animation:pdLbSlide .35s cubic-bezier(.22,1,.36,1)}
+  @keyframes pdLbSlide{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+  .pd-lb-btn{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.2rem;cursor:pointer;display:grid;place-items:center;transition:all .25s ease;backdrop-filter:blur(6px);z-index:2}
+  .pd-lb-btn:hover{background:var(--pd-gold);border-color:var(--pd-gold);color:var(--pd-ink)}
+  .pd-lb-prev{left:20px}
+  .pd-lb-next{right:20px}
+  .pd-lb-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.1rem;cursor:pointer;display:grid;place-items:center;transition:all .25s ease;z-index:3}
+  .pd-lb-close:hover{background:var(--pd-gold);border-color:var(--pd-gold);color:var(--pd-ink);transform:rotate(90deg)}
+  .pd-lb-count{position:absolute;top:24px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.75);font-size:.82rem;letter-spacing:.14em;font-weight:600;font-family:'Inter',sans-serif;background:rgba(0,0,0,.35);padding:8px 18px;border-radius:999px;backdrop-filter:blur(6px)}
+  .pd-lb-thumbs{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;max-width:96vw;overflow-x:auto;padding:6px 10px;background:rgba(0,0,0,.35);border-radius:12px;backdrop-filter:blur(6px)}
+  .pd-lb-thumbs::-webkit-scrollbar{height:6px}
+  .pd-lb-thumbs::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:3px}
+  .pd-lb-thumb{width:70px;height:52px;border-radius:6px;overflow:hidden;cursor:pointer;opacity:.55;border:2px solid transparent;transition:all .25s ease;flex-shrink:0}
+  .pd-lb-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .pd-lb-thumb:hover{opacity:.85}
+  .pd-lb-thumb.active{opacity:1;border-color:var(--pd-gold)}
+  @media (max-width:640px){
+    .pd-lb-btn{width:42px;height:42px;font-size:1rem}
+    .pd-lb-prev{left:8px}
+    .pd-lb-next{right:8px}
+    .pd-lb-thumb{width:54px;height:40px}
+  }
+  .pd-gal-badges{position:absolute;top:16px;left:16px;display:flex;gap:6px;z-index:2}
+  .pd-gal-badge{background:rgba(10,25,41,.72);color:#fff;padding:5px 11px;border-radius:999px;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(6px)}
+  .pd-gal-badge.gold{background:var(--pd-gold);color:#0a1929}
+  .pd-gal-view{position:absolute;bottom:16px;right:16px;z-index:3;background:rgba(255,255,255,.95);color:var(--pd-ink);padding:9px 14px;border-radius:8px;font-size:.78rem;font-weight:700;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:none;box-shadow:0 4px 12px rgba(10,25,41,.15);transition:all .2s ease}
+  .pd-gal-view:hover{background:var(--pd-ink);color:#fff}
+
+  /* ============ HEADLINE BAR ============ */
+  .pd-head{background:#fff;padding:34px 0 26px;border-bottom:1px solid var(--pd-line)}
+  .pd-head-in{max-width:1360px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:flex-end}
+  .pd-head-loc{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pd-gold);margin-bottom:10px;display:inline-flex;align-items:center;gap:8px}
+  .pd-head h1{font-family:'Inter',system-ui,sans-serif;font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:700;color:var(--pd-ink);line-height:1.1;margin:0 0 10px;letter-spacing:-.01em}
+  .pd-head-meta{display:flex;gap:14px;color:var(--pd-muted);font-size:.9rem;flex-wrap:wrap;align-items:center}
+  .pd-head-meta i{color:var(--pd-gold);margin-right:5px}
+  .pd-head-meta .dot{width:4px;height:4px;background:var(--pd-line);border-radius:50%}
+  .pd-head-meta .status{background:var(--pd-cream);color:var(--pd-gold);padding:4px 10px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.06em}
+  .pd-head-price{text-align:right}
+  .pd-head-price small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pd-muted);margin-bottom:4px}
+  .pd-head-price b{font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:2rem;font-weight:700;line-height:1;letter-spacing:-.015em}
+  .pd-head-price .permo{font-size:.78rem;color:var(--pd-muted);margin-top:6px;display:block}
+
+  /* ============ STATS BAR ============ */
+  .pd-stats{background:var(--pd-cream);padding:20px 0;border-bottom:1px solid var(--pd-line)}
+  .pd-stats-in{max-width:1360px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .pd-stat{display:flex;align-items:center;gap:12px;padding:6px 4px}
+  .pd-stat + .pd-stat{border-left:1px dashed rgba(197,155,81,.3);padding-left:20px}
+  .pd-stat-ico{width:38px;height:38px;border-radius:10px;background:#fff;color:var(--pd-gold);display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;box-shadow:0 4px 10px rgba(197,155,81,.15)}
+  .pd-stat b{display:block;font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:1.05rem;font-weight:700;line-height:1;margin-bottom:2px}
+  .pd-stat span{font-size:.7rem;color:var(--pd-muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+
+  /* ============ BODY LAYOUT ============ */
+  .pd-body{padding:44px 0 60px;background:#fff}
+  .pd-body-in{max-width:1360px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:flex-start}
+  .pd-main{min-width:0}
+
+  /* Tab bar */
+  .pd-tabs{display:flex;gap:6px;border-bottom:1px solid var(--pd-line);margin-bottom:26px;overflow-x:auto;scrollbar-width:none}
+  .pd-tabs::-webkit-scrollbar{display:none}
+  .pd-tab{background:transparent;border:none;padding:14px 20px;font-family:'Inter',sans-serif;font-size:.86rem;font-weight:700;color:var(--pd-muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s ease;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+  .pd-tab i{font-size:.8rem;opacity:.7}
+  .pd-tab:hover{color:var(--pd-ink)}
+  .pd-tab.active{color:var(--pd-ink);border-bottom-color:var(--pd-gold)}
+  .pd-tab.active i{opacity:1;color:var(--pd-gold)}
+
+  /* Section blocks (all inside main) */
+  .pd-block{padding:8px 0 40px;scroll-margin-top:20px}
+  .pd-block + .pd-block{border-top:1px solid var(--pd-line);padding-top:36px}
+  .pd-block-h{font-family:'Inter',system-ui,sans-serif;font-size:1.3rem;font-weight:700;color:var(--pd-ink);margin:0 0 8px;letter-spacing:-.005em;display:flex;align-items:center;gap:12px}
+  .pd-block-h i{color:var(--pd-gold);font-size:1rem;width:34px;height:34px;background:var(--pd-cream);border-radius:10px;display:inline-flex;align-items:center;justify-content:center}
+  .pd-block-sub{font-size:.85rem;color:var(--pd-muted);margin:0 0 20px 46px}
+  .pd-block p{color:var(--pd-text);font-size:.98rem;line-height:1.75;margin:0 0 14px}
+  .pd-block p:first-of-type{color:var(--pd-ink);font-weight:400;font-size:1.02rem}
+
+  /* Highlights */
+  .pd-hl{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:16px 0 6px}
+  .pd-hl span{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--pd-text);padding:6px 0}
+  .pd-hl i{color:var(--pd-gold);font-size:.7rem;width:20px;height:20px;background:var(--pd-cream);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+
+  /* Specs 2-col table */
+  .pd-specs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-top:6px}
+  .pd-specs > div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--pd-line);font-size:.9rem}
+  .pd-specs > div span{color:var(--pd-muted)}
+  .pd-specs > div b{color:var(--pd-ink);font-weight:700}
+
+  /* Amenities pills */
+  .pd-amen{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px}
+  .pd-amen > div{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border:1px solid var(--pd-line);border-radius:10px;font-size:.85rem;color:var(--pd-ink);font-weight:600;transition:all .2s ease}
+  .pd-amen > div:hover{border-color:var(--pd-gold);background:var(--pd-cream);transform:translateY(-2px)}
+  .pd-amen i{color:var(--pd-gold);font-size:.95rem;width:26px;text-align:center;flex-shrink:0}
+
+  /* Floor plan */
+  .pd-fp{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;margin-top:6px;background:var(--pd-cream);border-radius:14px;padding:24px;border:1px solid rgba(197,155,81,.18)}
+  .pd-fp-img{background:#fff;border-radius:10px;aspect-ratio:4/3;position:relative;overflow:hidden;box-shadow:0 8px 20px rgba(10,25,41,.06)}
+  .pd-fp-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .pd-fp-pdf{position:absolute;top:12px;right:12px;background:rgba(10,25,41,.85);color:#fff;padding:7px 12px;border-radius:8px;font-size:.72rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;backdrop-filter:blur(6px);transition:all .2s ease}
+  .pd-fp-pdf:hover{background:var(--pd-gold);color:#0a1929;transform:translateY(-2px)}
+  .pd-fp-info h4{font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:1.15rem;font-weight:700;margin:0 0 4px}
+  .pd-fp-info .sub{font-size:.72rem;color:var(--pd-muted);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:16px}
+  .pd-fp-info ul{list-style:none;padding:0;margin:0}
+  .pd-fp-info li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed rgba(197,155,81,.2);font-size:.86rem;color:var(--pd-ink)}
+  .pd-fp-info li:last-child{border-bottom:0}
+  .pd-fp-info li b{font-family:'Inter',system-ui,sans-serif;color:var(--pd-gold);font-size:.98rem;font-weight:700}
+
+  /* Payment plan steps */
+  .pd-plan{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px}
+  .pd-ps{background:#fff;border:1px solid var(--pd-line);border-radius:12px;padding:20px 16px;position:relative;transition:all .2s ease}
+  .pd-ps:hover{border-color:var(--pd-gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(10,25,41,.08)}
+  .pd-ps .num{position:absolute;top:-9px;left:16px;background:var(--pd-gold);color:#0a1929;font-size:.66rem;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:999px}
+  .pd-ps .pct{font-family:'Inter',system-ui,sans-serif;color:var(--pd-gold);font-size:1.85rem;font-weight:700;line-height:1;margin:6px 0 6px}
+  .pd-ps .when{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pd-muted);margin-bottom:4px}
+  .pd-ps .amt{font-size:.85rem;color:var(--pd-ink);font-weight:700}
+
+  /* Location map + nearby */
+  .pd-loc{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:6px}
+  .pd-loc-map{position:relative;min-height:340px;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#0a1929,#132752);box-shadow:0 16px 36px rgba(10,25,41,.2)}
+  .pd-loc-map::before{content:"";position:absolute;inset:0;background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),
+    radial-gradient(circle at 40% 50%,rgba(197,155,81,.2),transparent 45%);
+    background-size:50px 50px,50px 50px,100% 100%}
+  .pd-loc-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3}
+  .pd-loc-pin .ring{position:absolute;top:50%;left:50%;width:80px;height:80px;border:2px solid var(--pd-gold);border-radius:50%;transform:translate(-50%,-50%);opacity:.5;animation:pdPing 2.4s ease-out infinite}
+  @keyframes pdPing{0%{transform:translate(-50%,-50%) scale(.6);opacity:.6}100%{transform:translate(-50%,-50%) scale(2);opacity:0}}
+  .pd-loc-pin .core{width:56px;height:56px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--pd-gold),#d4b96a);transform:rotate(-45deg);box-shadow:0 12px 28px rgba(197,155,81,.55);display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
+  .pd-loc-pin .core i{color:#fff;font-size:1.15rem;transform:rotate(45deg)}
+  .pd-loc-plate{position:absolute;top:16px;left:16px;background:#fff;padding:12px 16px;border-radius:10px;box-shadow:0 8px 20px rgba(10,25,41,.15);z-index:4;max-width:70%}
+  .pd-loc-plate b{display:block;font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:.95rem;font-weight:700}
+  .pd-loc-plate span{font-size:.75rem;color:var(--pd-muted)}
+  .pd-loc-open{position:absolute;bottom:16px;right:16px;background:#fff;color:var(--pd-ink);padding:9px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.78rem;box-shadow:0 8px 18px rgba(10,25,41,.15);display:inline-flex;align-items:center;gap:6px;z-index:4;transition:all .2s ease}
+  .pd-loc-open:hover{background:var(--pd-ink);color:#fff}
+  .pd-nb-list{background:#fff;border:1px solid var(--pd-line);border-radius:14px;overflow:hidden}
+  .pd-nb{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--pd-line);font-size:.86rem;transition:all .2s ease}
+  .pd-nb:last-child{border-bottom:0}
+  .pd-nb:hover{background:var(--pd-cream)}
+  .pd-nb-ico{width:32px;height:32px;border-radius:8px;background:var(--pd-cream);color:var(--pd-gold);display:inline-flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0;transition:all .2s ease}
+  .pd-nb:hover .pd-nb-ico{background:var(--pd-gold);color:#fff}
+  .pd-nb-txt{flex:1}
+  .pd-nb-txt b{display:block;color:var(--pd-ink);font-size:.86rem;font-weight:700;font-family:'Inter',system-ui,sans-serif}
+  .pd-nb-txt span{color:var(--pd-muted);font-size:.72rem}
+  .pd-nb-time{font-family:'Inter',system-ui,sans-serif;color:var(--pd-gold);font-size:.85rem;font-weight:700;background:var(--pd-cream);padding:4px 9px;border-radius:6px;white-space:nowrap}
+
+  /* Investment simple */
+  .pd-inv{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+  .pd-inv > div{background:#fff;border:1px solid var(--pd-line);border-radius:12px;padding:16px 18px;transition:all .2s ease}
+  .pd-inv > div:hover{border-color:var(--pd-gold);transform:translateY(-3px);box-shadow:0 8px 20px rgba(10,25,41,.08)}
+  .pd-inv .lbl{font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pd-muted);margin-bottom:6px}
+  .pd-inv .val{font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:1.35rem;font-weight:700;line-height:1}
+  .pd-inv .val em{color:var(--pd-gold);font-style:normal}
+  .pd-inv .delta{margin-top:6px;font-size:.7rem;color:#1F5D42;font-weight:700}
+  .pd-inv-note{background:#0a1929;color:#fff;border-radius:12px;padding:16px 18px;margin-top:14px;display:flex;gap:14px;align-items:center;font-size:.85rem}
+  .pd-inv-note *{color:inherit}
+  .pd-inv-note i{color:var(--pd-gold);font-size:1.1rem;flex-shrink:0}
+
+  /* Journey simple 5-step */
+  .pd-jrny{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:6px;position:relative}
+  .pd-jrny::before{content:"";position:absolute;top:22px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,var(--pd-gold) 0 6px,transparent 6px 12px);z-index:0}
+  .pd-jstep{background:#fff;border:1px solid var(--pd-line);border-radius:12px;padding:16px 12px;text-align:center;position:relative;z-index:1;transition:all .2s ease}
+  .pd-jstep:hover{border-color:var(--pd-gold);transform:translateY(-3px);box-shadow:0 8px 20px rgba(10,25,41,.08)}
+  .pd-jstep-num{width:30px;height:30px;margin:0 auto 10px;border-radius:50%;background:linear-gradient(135deg,var(--pd-gold),#d4b96a);color:#0a1929;display:flex;align-items:center;justify-content:center;font-family:'Inter',system-ui,sans-serif;font-weight:700;font-size:.85rem}
+  .pd-jstep b{display:block;font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:.9rem;font-weight:700;margin-bottom:3px}
+  .pd-jstep span{font-size:.72rem;color:var(--pd-muted);line-height:1.4;display:block}
+
+  /* ============ SIDEBAR ============ */
+  .pd-side{position:sticky;top:20px;display:flex;flex-direction:column;gap:14px}
+  .pd-agent{background:#fff;border:1px solid var(--pd-line);border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(10,25,41,.08)}
+  .pd-agent-head{display:flex;align-items:center;gap:14px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--pd-line)}
+  .pd-agent-avatar{width:52px;height:52px;border-radius:50%;background:#ccc center/cover no-repeat;border:2px solid var(--pd-gold);flex-shrink:0}
+  .pd-agent-info b{display:block;font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:1rem;font-weight:700;line-height:1.1}
+  .pd-agent-info .role{font-size:.72rem;color:var(--pd-muted);margin-top:2px;display:block}
+  .pd-agent-info .stars{color:var(--pd-gold);font-size:.72rem;letter-spacing:2px;margin-top:4px;display:inline-flex;align-items:center;gap:6px}
+  .pd-agent-info .stars small{color:var(--pd-muted);letter-spacing:0;font-size:.7rem;font-weight:400}
+  .pd-quick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+  .pd-quick a{padding:11px;border:1px solid var(--pd-line);border-radius:8px;text-align:center;text-decoration:none;color:var(--pd-ink);font-weight:700;font-size:.78rem;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:all .2s ease}
+  .pd-quick a:hover{border-color:var(--pd-gold);color:var(--pd-gold)}
+  .pd-quick a.wa{background:#25D366;color:#fff;border-color:#25D366}
+  .pd-quick a.wa:hover{background:#1eb85a;color:#fff}
+  .pd-quick a i{color:var(--pd-gold)}
+  .pd-quick a.wa i{color:#fff}
+  .pd-form input,.pd-form select,.pd-form textarea{width:100%;padding:11px 12px;background:#fff;border:1px solid var(--pd-line);border-radius:8px;color:var(--pd-ink);font-family:'Inter',sans-serif;font-size:.86rem;margin-bottom:8px}
+  .pd-form input:focus,.pd-form select:focus,.pd-form textarea:focus{outline:none;border-color:var(--pd-gold)}
+  .pd-form textarea{min-height:70px;resize:vertical}
+  .pd-form button{width:100%;background:var(--pd-ink);color:#fff;padding:13px;border:none;border-radius:8px;font-weight:700;font-size:.88rem;cursor:pointer;margin-top:4px;transition:all .2s ease;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  .pd-form button:hover{background:var(--pd-gold)}
+
+  .pd-mort{background:var(--pd-cream);border:1px solid rgba(197,155,81,.2);border-radius:16px;padding:20px}
+  .pd-mort h4{font-family:'Inter',system-ui,sans-serif;font-size:1rem;font-weight:700;color:var(--pd-ink);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .pd-mort h4 i{color:var(--pd-gold)}
+  .pd-mort-row{display:flex;justify-content:space-between;padding:8px 0;font-size:.85rem;border-bottom:1px dashed rgba(197,155,81,.25)}
+  .pd-mort-row:last-of-type{border-bottom:0;margin-bottom:6px}
+  .pd-mort-row span{color:var(--pd-muted)}
+  .pd-mort-row b{color:var(--pd-ink);font-family:'Inter',system-ui,sans-serif}
+  .pd-mort a{display:block;text-align:center;padding:11px;background:var(--pd-ink);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.82rem;margin-top:8px;transition:background .2s ease}
+  .pd-mort a:hover{background:var(--pd-gold)}
+
+  .pd-trust{background:#fff;border:1px solid var(--pd-line);border-radius:16px;padding:20px}
+  .pd-trust h4{font-family:'Inter',system-ui,sans-serif;font-size:.95rem;font-weight:700;color:var(--pd-ink);margin:0 0 12px;display:flex;align-items:center;gap:8px}
+  .pd-trust h4 i{color:var(--pd-gold)}
+  .pd-trust ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  .pd-trust li{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--pd-text)}
+  .pd-trust li i{color:#1F5D42;font-size:.75rem;width:20px;height:20px;background:#eaf5ef;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+
+  /* ============ SIMILAR ============ */
+  .pd-sim{background:var(--pd-cream);padding:56px 0 70px;border-top:1px solid var(--pd-line)}
+  .pd-sim-in{max-width:1360px;margin:0 auto;padding:0 32px}
+  .pd-sim-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:26px}
+  .pd-sim-head h2{font-family:'Inter',system-ui,sans-serif;font-size:clamp(1.5rem,2.2vw,2rem);font-weight:700;color:var(--pd-ink);margin:0}
+  .pd-sim-head h2 em{color:var(--pd-gold);font-style:italic;font-weight:600}
+  .pd-sim-head small{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pd-gold);display:block;margin-bottom:6px}
+  .pd-sim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pd-simc{background:#fff;border-radius:14px;overflow:hidden;transition:all .3s ease;text-decoration:none;color:inherit;display:block;box-shadow:0 4px 14px rgba(10,25,41,.05)}
+  .pd-simc:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(10,25,41,.1)}
+  .pd-simc-img{height:180px;overflow:hidden;position:relative;background:#eef1f6}
+  .pd-simc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .pd-simc:hover .pd-simc-img img{transform:scale(1.06)}
+  .pd-simc-tag{position:absolute;top:12px;left:12px;background:rgba(10,25,41,.82);color:#fff;padding:4px 10px;border-radius:999px;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(6px)}
+  .pd-simc-body{padding:18px}
+  .pd-simc-loc{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pd-gold);margin-bottom:5px}
+  .pd-simc-body h4{font-family:'Inter',system-ui,sans-serif;font-size:1.02rem;font-weight:700;color:var(--pd-ink);margin:0 0 10px}
+  .pd-simc-meta{display:flex;gap:12px;font-size:.75rem;color:var(--pd-muted);margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed var(--pd-line)}
+  .pd-simc-meta i{color:var(--pd-gold);margin-right:4px;font-size:.7rem}
+  .pd-simc-foot{display:flex;justify-content:space-between;align-items:center}
+  .pd-simc-price{font-family:'Inter',system-ui,sans-serif;color:var(--pd-ink);font-size:1.05rem;font-weight:700}
+  .pd-simc-arrow{width:30px;height:30px;border-radius:50%;background:var(--pd-cream);color:var(--pd-gold);display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;transition:all .25s ease}
+  .pd-simc:hover .pd-simc-arrow{background:var(--pd-gold);color:#fff;transform:translateX(3px)}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1024px){
+    .pd-body-in{grid-template-columns:1fr;padding:0 24px}
+    .pd-crumb-in,.pd-gal-in,.pd-head-in,.pd-stats-in,.pd-sim-in{padding:0 24px}
+    .pd-gal-grid{grid-template-columns:1fr;grid-template-rows:280px auto;height:auto}
+    .pd-gal-grid > div:not(:first-child){display:none}
+    .pd-head-in{grid-template-columns:1fr;gap:20px}
+    .pd-head-price{text-align:left}
+    .pd-stats-in{grid-template-columns:1fr 1fr;gap:16px}
+    .pd-stat + .pd-stat{border-left:0;padding-left:4px}
+    .pd-side{position:static;order:2}
+    .pd-main{order:1}
+    .pd-hl,.pd-amen,.pd-specs,.pd-plan,.pd-loc,.pd-inv,.pd-sim-grid{grid-template-columns:1fr 1fr}
+    .pd-fp{grid-template-columns:1fr}
+    .pd-jrny{grid-template-columns:1fr 1fr}
+    .pd-jrny::before{display:none}
+  }
+  @media (max-width:640px){
+    .pd-crumb-in,.pd-gal-in,.pd-head-in,.pd-stats-in,.pd-body-in,.pd-sim-in{padding:0 18px}
+    .pd-stats-in{grid-template-columns:1fr 1fr;gap:14px 20px}
+    .pd-hl,.pd-amen,.pd-specs,.pd-plan,.pd-inv,.pd-sim-grid,.pd-loc,.pd-jrny{grid-template-columns:1fr}
+    .pd-crumb-acts{flex-wrap:wrap}
+  }
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent">Rent</a>
+      <a href="commercial">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<!-- BREADCRUMB + ACTIONS -->
+<div class="pd-crumb">
+  <div class="pd-crumb-in">
+    <div class="pd-crumb-nav">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="properties">Properties</a><span class="sep">/</span>
+      <a href="#" id="pdBcLoc">Dubai</a><span class="sep">/</span>
+      <b id="pdBcTitle">Property</b>
+    </div>
+    <div class="pd-crumb-acts">
+      <button id="pdSaveBtn"><i class="far fa-heart"></i> Save</button>
+      <button><i class="fas fa-share-alt"></i> Share</button>
+      <button><i class="fas fa-print"></i> Print</button>
+      <button><i class="fas fa-balance-scale"></i> Compare</button>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY MOSAIC -->
+<section class="pd-gal">
+  <div class="pd-gal-in">
+    <div class="pd-gal-grid" id="pdGallery">
+      <div>
+        <img id="pdHeroImg" src="assets/images/properties/mercedes-benz-places-new/00.png" alt="Property main">
+        <div class="pd-gal-badges">
+          <span class="pd-gal-badge gold">Verified</span>
+          <span class="pd-gal-badge" id="pdStatusBadge">Off-Plan</span>
+        </div>
+        <button class="pd-gal-view"><i class="fas fa-images"></i> <span id="pdPhotoCount">All photos</span></button>
+      </div>
+      <div style="display:none"><img alt="Interior"></div>
+      <div style="display:none"><img alt="View"></div>
+      <div style="display:none"><img alt="Amenity"></div>
+      <div style="display:none"><img alt="Living"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HEADLINE + PRICE -->
+<section class="pd-head">
+  <div class="pd-head-in">
+    <div>
+      <div class="pd-head-loc"><i class="fas fa-map-marker-alt"></i> <span id="pdLoc">Dubai, UAE</span></div>
+      <h1 id="pdTitle">Property Name</h1>
+      <div class="pd-head-meta">
+        <span><i class="fas fa-building"></i> <span id="pdDev">Developer</span></span>
+        <span class="dot"></span>
+        <span><i class="fas fa-th-large"></i> <span id="pdType">Apartment</span></span>
+        <span class="dot"></span>
+        <span class="status" id="pdStatus">Off-Plan</span>
+      </div>
+    </div>
+    <div class="pd-head-price">
+      <small>Starting from</small>
+      <b id="pdPrice">Price on request</b>
+      <span class="permo" id="pdPermo">Contact for full pricing</span>
+    </div>
+  </div>
+</section>
+
+<!-- KEY STATS -->
+<div class="pd-stats">
+  <div class="pd-stats-in">
+    <div class="pd-stat"><div class="pd-stat-ico"><i class="fas fa-bed"></i></div><div><b id="pdBeds">â€”</b><span>Bedrooms</span></div></div>
+    <div class="pd-stat"><div class="pd-stat-ico"><i class="fas fa-bath"></i></div><div><b id="pdBaths">â€”</b><span>Bathrooms</span></div></div>
+    <div class="pd-stat"><div class="pd-stat-ico"><i class="fas fa-ruler-combined"></i></div><div><b id="pdArea">â€”</b><span>Sq. Feet</span></div></div>
+    <div class="pd-stat"><div class="pd-stat-ico"><i class="far fa-calendar"></i></div><div><b id="pdHandover">TBC</b><span>Handover</span></div></div>
+    <div class="pd-stat"><div class="pd-stat-ico"><i class="fas fa-key"></i></div><div><b>Freehold</b><span>Ownership</span></div></div>
+  </div>
+</div>
+
+<!-- BODY: TABS + CONTENT + SIDEBAR -->
+<section class="pd-body">
+  <div class="pd-body-in">
+    <div class="pd-main">
+
+      <!-- TAB NAV -->
+      <div class="pd-tabs">
+        <button class="pd-tab active" data-t="overview"><i class="fas fa-file-alt"></i> Overview</button>
+        <button class="pd-tab" data-t="specs"><i class="fas fa-list"></i> Specifications</button>
+        <button class="pd-tab" data-t="amen"><i class="fas fa-swimming-pool"></i> Amenities</button>
+        <button class="pd-tab" data-t="floor"><i class="fas fa-drafting-compass"></i> Floor Plan</button>
+        <button class="pd-tab" data-t="pay"><i class="fas fa-hand-holding-usd"></i> Payment</button>
+        <button class="pd-tab" data-t="loc"><i class="fas fa-map-marker-alt"></i> Location</button>
+        <button class="pd-tab" data-t="inv"><i class="fas fa-chart-line"></i> Investment</button>
+      </div>
+
+      <!-- OVERVIEW -->
+      <div class="pd-block" id="overview">
+        <h2 class="pd-block-h"><i class="fas fa-file-alt"></i> About this property</h2>
+        <div class="pd-block-sub" id="pdOvSub">Full property overview and highlights.</div>
+        <div id="pdOvBody">
+          <p>A premium residential development in Dubai, delivering high-quality finishes, thoughtful floor plans and access to a full amenity deck. Priced for buyers who value transparent process and long-term value.</p>
+          <p>Every unit is verified before we list &mdash; escrow, service charge, and title are checked, and pricing is confirmed against live DLD transactions.</p>
+        </div>
+        <div class="pd-hl" id="pdHighlights">
+          <span><i class="fas fa-check"></i> RERA-verified listing</span>
+          <span><i class="fas fa-check"></i> Freehold ownership</span>
+          <span><i class="fas fa-check"></i> Golden Residency eligible</span>
+          <span><i class="fas fa-check"></i> Handled end to end</span>
+        </div>
+      </div>
+
+      <!-- SPECS -->
+      <div class="pd-block" id="specs">
+        <h2 class="pd-block-h"><i class="fas fa-list"></i> Specifications</h2>
+        <div class="pd-block-sub">Quick facts about the unit.</div>
+        <div class="pd-specs" id="pdSpecs">
+          <div><span>Property Type</span><b>Apartment</b></div>
+          <div><span>Developer</span><b>â€”</b></div>
+          <div><span>Location</span><b>Dubai, UAE</b></div>
+          <div><span>Status</span><b>Off-Plan</b></div>
+          <div><span>Handover</span><b>TBC</b></div>
+          <div><span>Bedrooms</span><b>â€”</b></div>
+          <div><span>Bathrooms</span><b>â€”</b></div>
+          <div><span>Area</span><b>â€”</b></div>
+          <div><span>Starting Price</span><b>On request</b></div>
+          <div><span>Ownership</span><b>Freehold</b></div>
+        </div>
+      </div>
+
+      <!-- AMENITIES -->
+      <div class="pd-block" id="amen">
+        <h2 class="pd-block-h"><i class="fas fa-swimming-pool"></i> Amenities</h2>
+        <div class="pd-block-sub">Facilities available in the development.</div>
+        <div class="pd-amen" id="pdAmenities">
+          <div><i class="fas fa-swimming-pool"></i>Swimming Pool</div>
+          <div><i class="fas fa-dumbbell"></i>Gym</div>
+          <div><i class="fas fa-shield-alt"></i>24/7 Security</div>
+          <div><i class="fas fa-parking"></i>Parking</div>
+          <div><i class="fas fa-child"></i>Kids Play Area</div>
+          <div><i class="fas fa-concierge-bell"></i>Concierge</div>
+          <div><i class="fas fa-utensils"></i>Retail &amp; F&amp;B</div>
+          <div><i class="fas fa-tree"></i>Landscaped Gardens</div>
+        </div>
+      </div>
+
+      <!-- FLOOR PLAN -->
+      <div class="pd-block" id="floor">
+        <h2 class="pd-block-h"><i class="fas fa-drafting-compass"></i> Floor Plan</h2>
+        <div class="pd-block-sub">Room breakdown and total area.</div>
+        <div class="pd-fp">
+          <div class="pd-fp-img">
+            <img alt="Property render">
+            <a href="#" class="pd-fp-pdf"><i class="fas fa-download"></i> PDF</a>
+          </div>
+          <div class="pd-fp-info">
+            <h4 id="pdFpArea">Total area <span style="color:var(--pd-gold)">TBC</span></h4>
+            <div class="sub">Indicative layout</div>
+            <ul>
+              <li>Living + Dining <b>~35%</b></li>
+              <li>Master bedroom <b>~20%</b></li>
+              <li>Second bedroom <b>~15%</b></li>
+              <li>Balcony <b>~15%</b></li>
+              <li>Kitchen <b>~10%</b></li>
+              <li>Bathrooms &amp; utility <b>~5%</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYMENT PLAN -->
+      <div class="pd-block" id="pay">
+        <h2 class="pd-block-h"><i class="fas fa-hand-holding-usd"></i> Payment Plan</h2>
+        <div class="pd-block-sub">Typical structure for this property type.</div>
+        <div class="pd-plan">
+          <div class="pd-ps">
+            <span class="num">STEP 01</span>
+            <div class="pct">10%</div>
+            <div class="when">On Booking</div>
+            <div class="amt">Reserve the unit</div>
+          </div>
+          <div class="pd-ps">
+            <span class="num">STEP 02</span>
+            <div class="pct">4%</div>
+            <div class="when">DLD Fee</div>
+            <div class="amt">Land Dept transfer</div>
+          </div>
+          <div class="pd-ps">
+            <span class="num">STEP 03</span>
+            <div class="pct">50%</div>
+            <div class="when">During Build</div>
+            <div class="amt">Construction milestones</div>
+          </div>
+          <div class="pd-ps">
+            <span class="num">STEP 04</span>
+            <div class="pct">36%</div>
+            <div class="when">On Handover</div>
+            <div class="amt">Keys &amp; snagging</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="pd-block" id="loc">
+        <h2 class="pd-block-h"><i class="fas fa-map-marker-alt"></i> Location &amp; Nearby</h2>
+        <div class="pd-block-sub">Prime address with everything within reach.</div>
+        <div class="pd-loc">
+          <div class="pd-loc-map">
+            <div class="pd-loc-plate" id="pdMapPlate">
+              <b>Property Address</b>
+              <span>Dubai, UAE</span>
+            </div>
+            <div class="pd-loc-pin">
+              <span class="ring"></span>
+              <div class="core"><i class="fas fa-map-marker-alt"></i></div>
+            </div>
+            <a href="#" class="pd-loc-open">Open in Maps <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="pd-nb-list">
+            <div class="pd-nb"><div class="pd-nb-ico"><i class="fas fa-subway"></i></div><div class="pd-nb-txt"><b>Metro Station</b><span>Public transit</span></div><span class="pd-nb-time">5 min</span></div>
+            <div class="pd-nb"><div class="pd-nb-ico"><i class="fas fa-shopping-bag"></i></div><div class="pd-nb-txt"><b>Shopping Mall</b><span>Retail &amp; dining</span></div><span class="pd-nb-time">8 min</span></div>
+            <div class="pd-nb"><div class="pd-nb-ico"><i class="fas fa-hospital"></i></div><div class="pd-nb-txt"><b>Hospital</b><span>Medical care</span></div><span class="pd-nb-time">10 min</span></div>
+            <div class="pd-nb"><div class="pd-nb-ico"><i class="fas fa-graduation-cap"></i></div><div class="pd-nb-txt"><b>International Schools</b><span>British / IB / American</span></div><span class="pd-nb-time">12 min</span></div>
+            <div class="pd-nb"><div class="pd-nb-ico"><i class="fas fa-city"></i></div><div class="pd-nb-txt"><b>Downtown Dubai</b><span>Burj &amp; Dubai Mall</span></div><span class="pd-nb-time">18 min</span></div>
+            <div class="pd-nb"><div class="pd-nb-ico"><i class="fas fa-plane"></i></div><div class="pd-nb-txt"><b>DXB Airport</b><span>Terminal 3</span></div><span class="pd-nb-time">25 min</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INVESTMENT -->
+      <div class="pd-block" id="inv">
+        <h2 class="pd-block-h"><i class="fas fa-chart-line"></i> Investment Snapshot</h2>
+        <div class="pd-block-sub">Indicative return metrics for this property.</div>
+        <div class="pd-inv">
+          <div><div class="lbl">Est. Rent / Year</div><div class="val"><em>~7% of price</em></div><div class="delta">Above Dubai avg</div></div>
+          <div><div class="lbl">Gross Yield</div><div class="val"><em>6.5&ndash;8%</em></div><div class="delta">Community range</div></div>
+          <div><div class="lbl">5-yr Appreciation</div><div class="val"><em>+25&ndash;30%</em></div><div class="delta">DLD benchmark</div></div>
+          <div><div class="lbl">Residency</div><div class="val"><em>Eligible</em></div><div class="delta">Golden Visa</div></div>
+        </div>
+        <div class="pd-inv-note">
+          <i class="fas fa-info-circle"></i>
+          <span>Numbers based on live 2026 DLD data and comparable rentals. Ask us for a full personalised ROI report.</span>
+        </div>
+      </div>
+
+      <!-- JOURNEY -->
+      <div class="pd-block">
+        <h2 class="pd-block-h"><i class="fas fa-route"></i> How the process works</h2>
+        <div class="pd-block-sub">Five clear steps from viewing to handover.</div>
+        <div class="pd-jrny">
+          <div class="pd-jstep"><div class="pd-jstep-num">1</div><b>Viewing</b><span>In-person or virtual</span></div>
+          <div class="pd-jstep"><div class="pd-jstep-num">2</div><b>Offer &amp; MoU</b><span>10% deposit</span></div>
+          <div class="pd-jstep"><div class="pd-jstep-num">3</div><b>NOC &amp; Mortgage</b><span>Developer NOC</span></div>
+          <div class="pd-jstep"><div class="pd-jstep-num">4</div><b>DLD Transfer</b><span>Title in your name</span></div>
+          <div class="pd-jstep"><div class="pd-jstep-num">5</div><b>Handover</b><span>Keys &amp; snagging</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="pd-side" id="book">
+      <div class="pd-agent">
+        <div class="pd-agent-head">
+          <div class="pd-agent-avatar" style="background-image:url('https://i.pravatar.cc/120?img=32')"></div>
+          <div class="pd-agent-info">
+            <b>Aditi Sharma</b>
+            <span class="role">Senior Advisor &middot; RERA #A-8842</span>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>4.9 &middot; 128 clients</small></span>
+          </div>
+        </div>
+        <div class="pd-quick">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i> Call</a>
+          <a href="https://wa.me/971555495276" target="_blank" rel="noopener" class="wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <form class="pd-form" onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=&quot;fas fa-check&quot;></i> Sent';this.querySelector('button').style.background='#1F5D42';">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Email address" required>
+          <input type="tel" placeholder="Phone / WhatsApp" required>
+          <select>
+            <option>Book a viewing</option>
+            <option>Get pricing details</option>
+            <option>Mortgage pre-approval</option>
+            <option>Golden Residency pathway</option>
+          </select>
+          <textarea placeholder="Message (optional)"></textarea>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
+        </form>
+      </div>
+
+      <div class="pd-mort">
+        <h4><i class="fas fa-university"></i> Mortgage in 5 minutes</h4>
+        <div class="pd-mort-row"><span>75% LTV @ 4.2%</span><b>25 yrs</b></div>
+        <div class="pd-mort-row"><span>Est. monthly</span><b id="pdMortMo">Get quote</b></div>
+        <div class="pd-mort-row"><span>Down payment</span><b id="pdMortDp">25% of price</b></div>
+        <a href="#">Get pre-approved &rarr;</a>
+      </div>
+
+      <div class="pd-trust">
+        <h4><i class="fas fa-shield-alt"></i> Verified by Kangar</h4>
+        <ul>
+          <li><i class="fas fa-check"></i> RERA-checked listing</li>
+          <li><i class="fas fa-check"></i> Live DLD price verification</li>
+          <li><i class="fas fa-check"></i> Escrow &amp; title verified</li>
+          <li><i class="fas fa-check"></i> No hidden commissions</li>
+          <li><i class="fas fa-check"></i> Handover snagging included</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- SIMILAR PROPERTIES -->
+<section class="pd-sim">
+  <div class="pd-sim-in">
+    <div class="pd-sim-head">
+      <div>
+        <small>You Might Also Like</small>
+        <h2>Similar <em>properties.</em></h2>
+      </div>
+      <a href="properties" class="k-btn k-btn-outline" style="padding:10px 20px;font-size:.82rem;">View All <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="pd-sim-grid" id="pdSimGrid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-user-tie"></i></div>
+      <div><b>Ready to take the next step?</b><span>Book a free consultation with our experts today.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="contact" class="k-btn k-btn-gold">Book a Consultation</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+
+<script>
+  // Tab scroll-navigation
+  document.querySelectorAll('.pd-tab').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.pd-tab').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const t=b.getAttribute('data-t');
+    const el=document.getElementById(t);
+    if(el) window.scrollTo({top:el.getBoundingClientRect().top + window.scrollY - 90, behavior:'smooth'});
+  }));
+
+  // Save toggle
+  const sv=document.getElementById('pdSaveBtn');
+  if(sv) sv.addEventListener('click',()=>{
+    sv.classList.toggle('saved');
+    if(sv.classList.contains('saved')) sv.innerHTML='<i class="fas fa-heart"></i> Saved';
+    else sv.innerHTML='<i class="far fa-heart"></i> Save';
+  });
+
+  // Dynamic loader: ?p=slug
+  (async function(){
+    const p=new URLSearchParams(location.search).get('p');
+    if(!p) return;
+    let data;
+    try{ data=await (await fetch('assets/js/properties.json',{cache:'no-cache'})).json(); }
+    catch(e){ return; }
+    const d=data[p]; if(!d) return;
+
+    const set=(id,val)=>{const el=document.getElementById(id);if(el && val!=null && val!=='') el.innerHTML=val;};
+    const setText=(id,val)=>{const el=document.getElementById(id);if(el && val!=null && val!=='') el.textContent=val;};
+    const title=(d.title||'').trim();
+
+    // Breadcrumbs + title
+    setText('pdBcTitle',title);
+    setText('pdBcLoc',(d.location||'').split(',')[0]||'Dubai');
+    setText('pdTitle',title);
+    setText('pdLoc',d.location||'Dubai, UAE');
+    setText('pdDev',d.developer||'â€”');
+    setText('pdType',d.type||'Apartment');
+    setText('pdStatus',d.status||'Off-Plan');
+    setText('pdStatusBadge',d.status||'Off-Plan');
+    setText('pdPrice',d.price||'Price on request');
+    setText('pdPermo',d.handover?'Handover '+d.handover:'Contact for full pricing');
+
+    // Stats
+    setText('pdBeds',d.beds||'â€”');
+    setText('pdBaths',d.baths||'â€”');
+    setText('pdArea',d.area||'â€”');
+    setText('pdHandover',d.handover||'TBC');
+
+    // Photo count in view button
+    const n=(d.images||[]).length;
+    setText('pdPhotoCount',n?('All '+n+' photos'):'View gallery');
+
+    // Gallery â€” main + 4 thumbs
+    if(d.images&&d.images.length){
+      const gal=document.getElementById('pdGallery');
+      if(gal){
+        const main=d.images[0];
+        const thumbs=d.images.slice(1,5);
+        // Update main img
+        document.getElementById('pdHeroImg').src=main;
+        // Update thumbs (order 1..4) — direct children only, hide empty slots
+        const thumbEls=Array.from(gal.children).slice(1);
+        thumbEls.forEach((slot,i)=>{
+          const im=slot.querySelector('img');
+          if(thumbs[i]){
+            if(im) im.src=thumbs[i];
+            slot.style.display='';
+          } else {
+            slot.style.display='none';
+          }
+        });
+        // Collapse grid when fewer than 4 thumbs so hero tile fills the space
+        gal.classList.remove('pd-gal-solo','pd-gal-half','pd-gal-trio','pd-gal-quad');
+        if(thumbs.length===0) gal.classList.add('pd-gal-solo');
+        else if(thumbs.length===1) gal.classList.add('pd-gal-half');
+        else if(thumbs.length===2) gal.classList.add('pd-gal-trio');
+        else if(thumbs.length===3) gal.classList.add('pd-gal-quad');
+      }
+    }
+
+    // Overview
+    const sub=document.getElementById('pdOvSub');
+    if(sub) sub.textContent=(d.developer||'Developer')+' &middot; '+(d.type||'Property')+' &middot; '+(d.status||'');
+    const ov=document.getElementById('pdOvBody');
+    if(ov){
+      let desc=(d.long_description||d.description||'').replace(/We are a leading agency[^.]+\./g,'').replace(/OFFICE-[^.]+\./g,'').replace(/\s+/g,' ').trim();
+      if(desc.length<60) desc='A '+(d.type||'residence').toLowerCase()+' project by '+(d.developer||'a leading developer')+' in '+(d.location||'Dubai')+'. Verified by our team with transparent pricing.';
+      const half=desc.length>350?desc.indexOf('.',desc.length/2)+1:desc.length;
+      ov.innerHTML='<p>'+desc.slice(0,half).trim()+'</p>'+(desc.length>half?'<p>'+desc.slice(half).trim()+'</p>':'');
+    }
+
+    // Highlights
+    const hl=document.getElementById('pdHighlights');
+    if(hl){
+      const items=[];
+      if(d.developer&&d.developer!=='Developer') items.push('Developed by '+d.developer);
+      if(d.location) items.push('Located in '+d.location);
+      if(d.type) items.push(d.type+' project');
+      if(d.status) items.push(d.status+' status');
+      if(d.handover) items.push('Handover: '+d.handover);
+      if(d.beds) items.push(d.beds+' bedroom options');
+      items.push('RERA-verified listing');
+      items.push('Golden Residency eligible');
+      hl.innerHTML=items.slice(0,8).map(x=>'<span><i class="fas fa-check"></i> '+x+'</span>').join('');
+    }
+
+    // Specs
+    const sp=document.getElementById('pdSpecs');
+    if(sp){
+      const rows=[['Property Type',d.type||'â€”'],['Developer',d.developer||'â€”'],['Location',d.location||'Dubai, UAE'],['Status',d.status||'â€”'],['Handover',d.handover||'TBC'],['Bedrooms',d.beds||'â€”'],['Bathrooms',d.baths||'â€”'],['Area',d.area?d.area+' ftÂ²':'â€”'],['Starting Price',d.price||'On request'],['Ownership','Freehold']];
+      sp.innerHTML=rows.map(([k,v])=>'<div><span>'+k+'</span><b>'+v+'</b></div>').join('');
+    }
+
+    // Amenities
+    const am=document.getElementById('pdAmenities');
+    if(am&&d.amenities&&d.amenities.length){
+      const ic=a=>{a=a.toLowerCase();
+        if(a.includes('pool'))return'fa-swimming-pool';
+        if(a.includes('gym')||a.includes('fitness'))return'fa-dumbbell';
+        if(a.includes('sauna')||a.includes('steam')||a.includes('spa'))return'fa-hot-tub';
+        if(a.includes('kids'))return'fa-child';
+        if(a.includes('bbq'))return'fa-fire';
+        if(a.includes('concierge')||a.includes('lobby'))return'fa-concierge-bell';
+        if(a.includes('security'))return'fa-shield-alt';
+        if(a.includes('parking'))return'fa-parking';
+        if(a.includes('beach'))return'fa-umbrella-beach';
+        if(a.includes('retail')||a.includes('restaurant'))return'fa-utensils';
+        if(a.includes('yoga'))return'fa-leaf';
+        if(a.includes('jog')||a.includes('cycl'))return'fa-running';
+        if(a.includes('garden')||a.includes('landscap'))return'fa-tree';
+        if(a.includes('cinema'))return'fa-film';
+        if(a.includes('game'))return'fa-gamepad';
+        if(a.includes('cowork')||a.includes('business'))return'fa-briefcase';
+        if(a.includes('prayer'))return'fa-mosque';
+        return'fa-check-circle';};
+      am.innerHTML=d.amenities.map(a=>'<div><i class="fas '+ic(a)+'"></i>'+a+'</div>').join('');
+    }
+
+    // Floor plan area
+    if(d.area){
+      const fp=document.getElementById('pdFpArea');
+      const areaTxt = /sq\.?\s*ft|sqft|ft²|m²/i.test(d.area) ? d.area : d.area + ' sq. ft.';
+      if(fp) fp.innerHTML='Total area <span style="color:var(--pd-gold)">'+areaTxt+'</span>';
+    }
+    // Floor plan image — use property's own render instead of the placeholder icon
+    const fpImg=document.querySelector('.pd-fp-img img');
+    if(fpImg){
+      const src = d.main_image || (d.images && d.images[0]) || '';
+      if(src){ fpImg.src = src; fpImg.style.display='block'; }
+    }
+
+    // Location plate
+    const mp=document.getElementById('pdMapPlate');
+    if(mp) mp.innerHTML='<b>'+title+'</b><span>'+(d.location||'Dubai, UAE')+'</span>';
+
+    // Mortgage estimate (if price parseable)
+    const priceNum=parseInt((d.price||'').replace(/[^0-9]/g,''),10);
+    if(priceNum && priceNum>100000){
+      const loan=priceNum*0.75;
+      const r=0.042/12;
+      const n=25*12;
+      const mo=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+      setText('pdMortMo','AED '+Math.round(mo).toLocaleString());
+      setText('pdMortDp','AED '+Math.round(priceNum*0.25).toLocaleString());
+    }
+
+    // Similar properties
+    const sim=document.getElementById('pdSimGrid');
+    if(sim){
+      const pool=Object.entries(data).filter(([k,v])=>k!==p&&v.main_image);
+      const sameDev=pool.filter(([,v])=>v.developer===d.developer);
+      const sameTy=pool.filter(([,v])=>v.type===d.type);
+      const src=sameDev.length>=3?sameDev:(sameTy.length>=3?sameTy:pool);
+      const pick=src.sort(()=>Math.random()-0.5).slice(0,3);
+      sim.innerHTML=pick.map(([k,v])=>`
+        <a href="property-detail?p=${k}" class="pd-simc">
+          <div class="pd-simc-img">
+            <img src="${v.main_image}" alt="${v.title}" loading="lazy">
+            <span class="pd-simc-tag">${v.status||'Off-Plan'}</span>
+          </div>
+          <div class="pd-simc-body">
+            <div class="pd-simc-loc">${v.location||'Dubai'}</div>
+            <h4>${v.title}</h4>
+            <div class="pd-simc-meta">
+              <span><i class="fas fa-building"></i>${v.developer||'â€”'}</span>
+              <span><i class="fas fa-bed"></i>${v.beds||'â€”'}</span>
+            </div>
+            <div class="pd-simc-foot">
+              <div class="pd-simc-price">${v.price||'On request'}</div>
+              <div class="pd-simc-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </a>`).join('');
+    }
+
+    // Page title
+    document.title=title+' | Kangar Dubai Experts';
+
+    // ===== LIGHTBOX =====
+    if(d.images && d.images.length){
+      const lb=document.createElement('div');
+      lb.className='pd-lb';
+      lb.innerHTML=`
+        <button class="pd-lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
+        <div class="pd-lb-count"><span id="pdLbCur">1</span> / <span id="pdLbTot">${d.images.length}</span></div>
+        <button class="pd-lb-btn pd-lb-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="pd-lb-stage"><img class="pd-lb-img" id="pdLbImg" alt=""></div>
+        <button class="pd-lb-btn pd-lb-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        <div class="pd-lb-thumbs" id="pdLbThumbs"></div>
+      `;
+      document.body.appendChild(lb);
+      const imgEl=lb.querySelector('#pdLbImg');
+      const curEl=lb.querySelector('#pdLbCur');
+      const thumbsEl=lb.querySelector('#pdLbThumbs');
+      // Build thumb strip
+      d.images.forEach((src,i)=>{
+        const t=document.createElement('div');
+        t.className='pd-lb-thumb';
+        t.dataset.i=i;
+        t.innerHTML=`<img src="${src}" alt="">`;
+        thumbsEl.appendChild(t);
+      });
+      let idx=0;
+      const show=(i)=>{
+        idx=(i+d.images.length)%d.images.length;
+        imgEl.src=d.images[idx];
+        curEl.textContent=idx+1;
+        thumbsEl.querySelectorAll('.pd-lb-thumb').forEach((t,ti)=>t.classList.toggle('active',ti===idx));
+        const active=thumbsEl.querySelector('.pd-lb-thumb.active');
+        if(active) active.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+      };
+      const open=(i)=>{show(i);lb.classList.add('open');document.body.classList.add('pd-lb-open');};
+      const close=()=>{lb.classList.remove('open');document.body.classList.remove('pd-lb-open');};
+      lb.querySelector('.pd-lb-prev').addEventListener('click',()=>show(idx-1));
+      lb.querySelector('.pd-lb-next').addEventListener('click',()=>show(idx+1));
+      lb.querySelector('.pd-lb-close').addEventListener('click',close);
+      lb.addEventListener('click',e=>{if(e.target===lb) close();});
+      thumbsEl.querySelectorAll('.pd-lb-thumb').forEach(t=>t.addEventListener('click',()=>show(+t.dataset.i)));
+      document.addEventListener('keydown',e=>{
+        if(!lb.classList.contains('open')) return;
+        if(e.key==='Escape') close();
+        else if(e.key==='ArrowRight') show(idx+1);
+        else if(e.key==='ArrowLeft') show(idx-1);
+      });
+      // Attach openers — main hero + each gallery tile + the "All photos" button
+      const gal=document.getElementById('pdGallery');
+      if(gal){
+        Array.from(gal.children).forEach((slot,i)=>{
+          slot.style.cursor='zoom-in';
+          slot.addEventListener('click',e=>{
+            // ignore clicks on badges / view button
+            if(e.target.closest('.pd-gal-badges,.pd-gal-view')) return;
+            open(i<d.images.length?i:0);
+          });
+        });
+      }
+      const viewBtn=document.querySelector('.pd-gal-view');
+      if(viewBtn) viewBtn.addEventListener('click',e=>{e.stopPropagation();open(0);});
+    }
+  })();
+</script>
+</body>
+</html>

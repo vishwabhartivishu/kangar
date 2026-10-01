@@ -1,0 +1,783 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AML & KYC Policy | Kangar Dubai Experts</title>
+<meta name="description" content="Kangar Real Estate's Anti-Money Laundering, KYC and sanctions-screening framework.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<style>
+  /* ---------- AML Policy page ---------- */
+
+  /* Hero */
+  .a-hero{position:relative;background:linear-gradient(135deg,#0a1929 0%,#132752 100%);color:#fff;overflow:hidden;padding:70px 0 90px}
+  .a-hero *{color:inherit}
+  .a-hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 88% 25%,rgba(197,155,81,.22),transparent 55%),
+    radial-gradient(circle at 8% 90%,rgba(255,255,255,.04),transparent 45%);
+    pointer-events:none}
+  .a-hero-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+  .a-hero .k-crumbs{margin-bottom:18px;color:rgba(255,255,255,.55)}
+  .a-hero .k-crumbs a{color:rgba(255,255,255,.75)}
+  .a-hero .k-crumbs a:hover{color:var(--gold-bright)}
+  .a-hero .k-crumbs .sep{color:rgba(255,255,255,.3)}
+  .a-hero-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(197,155,81,.16);color:var(--gold-bright);border:1px solid rgba(197,155,81,.35);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+  .a-hero h1{font-family:var(--font-serif);font-size:clamp(2.4rem,4.2vw,3.6rem);font-weight:700;line-height:1.05;margin:0 0 18px;letter-spacing:-.015em;color:#fff}
+  .a-hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:600}
+  .a-hero-lead{font-size:1.1rem;line-height:1.65;color:rgba(255,255,255,.78);margin:0 0 30px;max-width:56ch}
+  .a-hero-meta{display:flex;flex-wrap:wrap;gap:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+  .a-hero-meta div{display:flex;align-items:center;gap:10px;font-size:.86rem;color:rgba(255,255,255,.75)}
+  .a-hero-meta i{color:var(--gold-bright);font-size:1rem}
+
+  /* Compliance seal card */
+  .a-seal{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+  .a-seal::before{content:"";position:absolute;top:-1px;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-bright),transparent)}
+  .a-seal-crest{width:80px;height:80px;margin:0 auto 18px;border-radius:20px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));display:flex;align-items:center;justify-content:center;color:#0a1929;font-size:2rem;box-shadow:0 12px 28px rgba(197,155,81,.45);position:relative}
+  .a-seal-crest::after{content:"";position:absolute;inset:-8px;border-radius:24px;border:1px dashed rgba(197,155,81,.4)}
+  .a-seal h4{font-family:var(--font-serif);font-size:1.3rem;font-weight:700;margin:0 0 6px;color:#fff;text-align:center}
+  .a-seal-sub{font-size:.78rem;color:rgba(255,255,255,.55);text-align:center;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:22px}
+  .a-seal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .a-seal-grid div{padding:14px;background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.06);border-radius:12px;text-align:center}
+  .a-seal-grid b{display:block;font-family:var(--font-serif);color:var(--gold-bright);font-size:1.1rem;font-weight:700;margin-bottom:4px}
+  .a-seal-grid span{font-size:.7rem;color:rgba(255,255,255,.6);letter-spacing:.06em}
+
+  /* Compliance strip */
+  .a-strip{background:linear-gradient(90deg,#0a1929,#132752);padding:24px 0;border-top:1px solid rgba(255,255,255,.06);color:#fff}
+  .a-strip *{color:inherit}
+  .a-strip-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center}
+  .a-strip-item{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.85);font-size:.88rem;font-weight:500}
+  .a-strip-item i{width:40px;height:40px;flex-shrink:0;background:rgba(197,155,81,.14);color:var(--gold-bright);border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:1rem;border:1px solid rgba(197,155,81,.3)}
+  .a-strip-item b{display:block;font-family:var(--font-serif);color:#fff;font-size:1.05rem;font-weight:700;line-height:1;margin-bottom:2px}
+  .a-strip-item span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+  /* Body */
+  .a-body{padding:70px 0 40px;background:#fff}
+  .a-shell{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:flex-start}
+
+  /* TOC */
+  .a-toc{position:sticky;top:24px;background:var(--ivory);border-radius:16px;padding:28px 26px;border:1px solid var(--line)}
+  .a-toc-lbl{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .a-toc ol{list-style:none;padding:0;margin:0;counter-reset:toc}
+  .a-toc li{counter-increment:toc;margin-bottom:2px}
+  .a-toc a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:.85rem;font-weight:500;transition:all .2s ease;border-left:2px solid transparent}
+  .a-toc a::before{content:counter(toc,decimal-leading-zero);font-family:var(--font-serif);font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.05em}
+  .a-toc a:hover,.a-toc a.active{background:#fff;color:var(--ink);border-left-color:var(--gold);box-shadow:var(--shadow-sm)}
+  .a-toc a:hover::before,.a-toc a.active::before{color:var(--gold)}
+  .a-toc-foot{margin-top:20px;padding-top:20px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);line-height:1.5}
+  .a-toc-foot a{color:var(--gold);text-decoration:none;font-weight:600}
+
+  /* Main */
+  .a-main{max-width:820px}
+  .a-intro{padding:28px 32px;background:linear-gradient(135deg,#f7f0e4,#faf5ea);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;margin-bottom:44px;display:flex;gap:20px;align-items:flex-start}
+  .a-intro i{color:var(--gold);font-size:1.3rem;margin-top:2px}
+  .a-intro div{flex:1}
+  .a-intro strong{color:var(--ink);font-weight:700}
+  .a-intro p{margin:0;color:var(--ink-2);font-size:1rem;line-height:1.7}
+
+  .a-sec{margin-bottom:48px;scroll-margin-top:24px}
+  .a-sec-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .a-sec-icon{width:48px;height:48px;flex-shrink:0;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 8px 20px rgba(197,155,81,.3)}
+  .a-sec h2{font-family:var(--font-serif);font-size:1.7rem;font-weight:700;color:var(--ink);margin:0;line-height:1.2;letter-spacing:-.01em}
+  .a-sec p{color:var(--ink-2);font-size:1rem;line-height:1.75;margin:0 0 16px}
+  .a-sec ul{list-style:none;padding:0;margin:0 0 20px}
+  .a-sec ul li{position:relative;padding:8px 0 8px 28px;color:var(--ink-2);font-size:.96rem;line-height:1.6}
+  .a-sec ul li::before{content:"";position:absolute;left:6px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .a-sec ul li strong{color:var(--ink);font-weight:700}
+
+  /* Callout */
+  .a-callout{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:20px 0;display:flex;gap:16px;align-items:flex-start}
+  .a-callout i{font-size:1.15rem;margin-top:2px}
+  .a-callout.warn{border-left-color:#c9a961;background:linear-gradient(135deg,#fdf6e6,#fff)}
+  .a-callout.warn i{color:#c9a961}
+  .a-callout.info{border-left-color:#1F5D42;background:linear-gradient(135deg,#f0f7f4,#fff)}
+  .a-callout.info i{color:#1F5D42}
+  .a-callout.risk{border-left-color:#9B1C1C;background:linear-gradient(135deg,#fbeaea,#fff)}
+  .a-callout.risk i{color:#9B1C1C}
+  .a-callout div{flex:1}
+  .a-callout b{display:block;font-family:var(--font-serif);color:var(--ink);font-size:1rem;font-weight:700;margin-bottom:4px}
+  .a-callout p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.6}
+
+  /* KYC flow */
+  .a-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0 24px;position:relative}
+  .a-flow-step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 18px;position:relative;text-align:center;transition:all .3s ease}
+  .a-flow-step:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .a-flow-num{position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:26px;height:26px;background:#0a1929;color:var(--gold-bright);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;font-family:var(--font-serif)}
+  .a-flow-ico{width:44px;height:44px;margin:8px auto 12px;border-radius:12px;background:var(--ivory);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .a-flow-step b{display:block;font-family:var(--font-serif);color:var(--ink);font-size:.98rem;margin-bottom:4px;font-weight:700}
+  .a-flow-step span{color:var(--muted);font-size:.78rem;line-height:1.5;display:block}
+
+  /* Document checklist */
+  .a-docs{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:16px 0 20px}
+  .a-docs h5{display:flex;align-items:center;gap:10px;font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin:0 0 14px;color:var(--ink)}
+  .a-docs h5 i{color:var(--gold)}
+  .a-docs-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:0;padding:0;list-style:none}
+  .a-docs-list li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--ink-2);padding:6px 0}
+  .a-docs-list li::before{content:none}
+  .a-docs-list li i{color:var(--success);flex-shrink:0}
+
+  /* Chips */
+  .a-chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+  .a-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:var(--ivory);border:1px solid var(--line);border-radius:999px;font-size:.8rem;font-weight:600;color:var(--ink-2)}
+  .a-chip i{color:var(--gold);font-size:.75rem}
+
+  /* Sanctions grid */
+  .a-sanct{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0 20px}
+  .a-sanct-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center}
+  .a-sanct-card i{width:44px;height:44px;background:#fbeaea;color:#9B1C1C;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:12px}
+  .a-sanct-card b{display:block;font-family:var(--font-serif);color:var(--ink);font-size:1rem;margin-bottom:4px;font-weight:700}
+  .a-sanct-card span{color:var(--muted);font-size:.82rem;line-height:1.5;display:block}
+
+  /* Reporting timeline */
+  .a-timeline{position:relative;margin:20px 0 24px;padding-left:28px}
+  .a-timeline::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
+  .a-t-item{position:relative;padding:14px 0 14px 22px;margin-bottom:6px}
+  .a-t-item::before{content:"";position:absolute;left:-22px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid #fff;box-shadow:0 0 0 2px var(--gold)}
+  .a-t-item b{display:block;font-family:var(--font-serif);color:var(--ink);font-size:1rem;font-weight:700;margin-bottom:4px}
+  .a-t-item span{color:var(--muted);font-size:.9rem;line-height:1.6;display:block}
+
+  /* Compliance officer contact */
+  .a-officer{background:linear-gradient(135deg,#0a1929,#132752);color:#fff;border-radius:18px;padding:36px 34px;margin-top:20px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center}
+  .a-officer *{color:inherit}
+  .a-officer-avatar{width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));display:flex;align-items:center;justify-content:center;color:#0a1929;font-size:1.7rem;flex-shrink:0;box-shadow:0 10px 24px rgba(197,155,81,.4)}
+  .a-officer-copy h4{font-family:var(--font-serif);font-size:1.35rem;font-weight:700;margin:0 0 4px;color:#fff}
+  .a-officer-copy .role{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);font-weight:700;margin-bottom:8px;display:block}
+  .a-officer-copy p{margin:0;color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.55}
+  .a-officer-contact{display:flex;flex-direction:column;gap:10px}
+  .a-officer-contact a{display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;text-decoration:none;color:#fff;font-size:.86rem;font-weight:600;transition:all .2s ease}
+  .a-officer-contact a:hover{background:rgba(197,155,81,.14);border-color:rgba(197,155,81,.4)}
+  .a-officer-contact a i{color:var(--gold-bright)}
+
+  @media (max-width:960px){
+    .a-hero-inner{grid-template-columns:1fr;gap:36px}
+    .a-strip-inner{grid-template-columns:1fr 1fr;gap:16px}
+    .a-shell{grid-template-columns:1fr;gap:32px}
+    .a-toc{position:static;order:2}
+    .a-main{order:1;max-width:100%}
+    .a-flow{grid-template-columns:1fr 1fr}
+    .a-sanct,.a-docs-list{grid-template-columns:1fr}
+    .a-officer{grid-template-columns:1fr;text-align:center;padding:28px 22px}
+    .a-officer-avatar{margin:0 auto}
+  }
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent">Rent</a>
+      <a href="commercial">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<!-- Hero -->
+<section class="a-hero">
+  <div class="a-hero-inner">
+    <div>
+      <div class="k-crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>AML Policy</span></div>
+      <div class="a-hero-pill"><i class="fas fa-shield-alt"></i> Compliance &middot; RERA Certified</div>
+      <h1>AML &amp; <em>KYC Policy.</em></h1>
+      <p class="a-hero-lead">Our Anti-Money Laundering, Know-Your-Client and sanctions-screening framework &mdash; how we protect clients, transactions and the wider UAE property market.</p>
+      <div class="a-hero-meta">
+        <div><i class="far fa-calendar-alt"></i> Last updated: 14 September 2026</div>
+        <div><i class="fas fa-landmark"></i> Aligned with UAE Federal Law</div>
+        <div><i class="fas fa-file-signed"></i> MoE &amp; FIU compliant</div>
+      </div>
+    </div>
+    <div class="a-seal">
+      <div class="a-seal-crest"><i class="fas fa-shield-alt"></i></div>
+      <h4>Certified &amp; Registered</h4>
+      <div class="a-seal-sub">Kangar Real Estate L.L.C</div>
+      <div class="a-seal-grid">
+        <div><b>RERA</b><span>Certified</span></div>
+        <div><b>MoE</b><span>Registered</span></div>
+        <div><b>FIU</b><span>Reporting entity</span></div>
+        <div><b>UN</b><span>Sanctions screened</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance strip -->
+<div class="a-strip">
+  <div class="a-strip-inner">
+    <div class="a-strip-item">
+      <i class="fas fa-certificate"></i>
+      <div><b>100%</b><span>KYC Coverage</span></div>
+    </div>
+    <div class="a-strip-item">
+      <i class="fas fa-clock"></i>
+      <div><b>&lt;24h</b><span>Verification SLA</span></div>
+    </div>
+    <div class="a-strip-item">
+      <i class="fas fa-database"></i>
+      <div><b>5 yrs</b><span>Record Retention</span></div>
+    </div>
+    <div class="a-strip-item">
+      <i class="fas fa-eye"></i>
+      <div><b>24/7</b><span>Sanctions Screening</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<section class="a-body">
+  <div class="a-shell">
+
+    <!-- TOC -->
+    <aside class="a-toc">
+      <div class="a-toc-lbl">On This Page</div>
+      <ol>
+        <li><a href="#regulatory" class="active">Regulatory framework</a></li>
+        <li><a href="#kyc">KYC procedure</a></li>
+        <li><a href="#documents">Documents we collect</a></li>
+        <li><a href="#source">Source of funds</a></li>
+        <li><a href="#pep">PEP &amp; risk rating</a></li>
+        <li><a href="#sanctions">Sanctions screening</a></li>
+        <li><a href="#reporting">Suspicious activity reporting</a></li>
+        <li><a href="#retention">Record retention</a></li>
+        <li><a href="#officer">Compliance officer</a></li>
+      </ol>
+      <div class="a-toc-foot">
+        Prefer a signed copy?<br>
+        <a href="contact">Request the PDF <i class="fas fa-arrow-right" style="font-size:.7rem;margin-left:4px"></i></a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="a-main">
+      <div class="a-intro">
+        <i class="fas fa-quote-left"></i>
+        <div>
+          <p>Kangar Real Estate L.L.C is committed to preventing money laundering, terrorist financing and sanctions breaches across every transaction we facilitate. This policy explains, in <strong>plain English</strong>, the checks we run before, during and after any client engagement.</p>
+        </div>
+      </div>
+
+      <div class="a-sec" id="regulatory">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-landmark"></i></div>
+          <h2>Regulatory framework</h2>
+        </div>
+        <p>As a RERA-certified real-estate business operating in Dubai, Kangar complies with <strong>UAE Federal Decree Law No. 20 of 2018</strong> on Anti-Money Laundering and Counter-Terrorism Financing, together with the executive regulations and guidance issued by the Ministry of Economy (MoE), the Central Bank of the UAE and the Financial Intelligence Unit (FIU).</p>
+        <div class="a-chip-row">
+          <span class="a-chip"><i class="fas fa-gavel"></i> Federal Decree Law 20/2018</span>
+          <span class="a-chip"><i class="fas fa-university"></i> Ministry of Economy</span>
+          <span class="a-chip"><i class="fas fa-shield-alt"></i> Central Bank UAE</span>
+          <span class="a-chip"><i class="fas fa-fingerprint"></i> FIU-registered entity</span>
+        </div>
+      </div>
+
+      <div class="a-sec" id="kyc">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-id-card"></i></div>
+          <h2>KYC procedure</h2>
+        </div>
+        <p>Before executing any transaction, we verify the identity of the client and, where applicable, the ultimate beneficial owner (UBO) of any corporate entity involved. Our KYC process is a four-stage flow, typically completed within one business day.</p>
+        <div class="a-flow">
+          <div class="a-flow-step">
+            <div class="a-flow-num">1</div>
+            <div class="a-flow-ico"><i class="fas fa-user-plus"></i></div>
+            <b>Onboard</b>
+            <span>Client basic details &amp; declaration</span>
+          </div>
+          <div class="a-flow-step">
+            <div class="a-flow-num">2</div>
+            <div class="a-flow-ico"><i class="fas fa-passport"></i></div>
+            <b>Identify</b>
+            <span>Government-issued ID &amp; UBO check</span>
+          </div>
+          <div class="a-flow-step">
+            <div class="a-flow-num">3</div>
+            <div class="a-flow-ico"><i class="fas fa-search-dollar"></i></div>
+            <b>Screen</b>
+            <span>Sanctions, PEP &amp; adverse-media scan</span>
+          </div>
+          <div class="a-flow-step">
+            <div class="a-flow-num">4</div>
+            <div class="a-flow-ico"><i class="fas fa-lock"></i></div>
+            <b>Approve</b>
+            <span>Risk-rated file signed off &amp; stored</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-sec" id="documents">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-folder-open"></i></div>
+          <h2>Documents we collect</h2>
+        </div>
+        <p>Depending on your residency status and the nature of the transaction, we typically request the following:</p>
+        <div class="a-docs">
+          <h5><i class="fas fa-user"></i> Individual clients</h5>
+          <ul class="a-docs-list">
+            <li><i class="fas fa-check-circle"></i> Passport copy (bio page)</li>
+            <li><i class="fas fa-check-circle"></i> Emirates ID (UAE residents)</li>
+            <li><i class="fas fa-check-circle"></i> Proof of address (utility / bank)</li>
+            <li><i class="fas fa-check-circle"></i> Visa page (UAE residents)</li>
+          </ul>
+        </div>
+        <div class="a-docs">
+          <h5><i class="fas fa-building"></i> Corporate clients</h5>
+          <ul class="a-docs-list">
+            <li><i class="fas fa-check-circle"></i> Trade license / Certificate of Incorporation</li>
+            <li><i class="fas fa-check-circle"></i> Memorandum &amp; Articles of Association</li>
+            <li><i class="fas fa-check-circle"></i> Shareholder register &amp; UBO declaration</li>
+            <li><i class="fas fa-check-circle"></i> Board resolution authorising the transaction</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="a-sec" id="source">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h2>Source of funds</h2>
+        </div>
+        <p>For high-value or higher-risk transactions we require documentary evidence of the source of the funds being used. This protects both the client and the wider transaction chain from any downstream regulatory issue.</p>
+        <ul>
+          <li><strong>Salary income</strong> &mdash; 3-6 months of bank statements plus employer confirmation.</li>
+          <li><strong>Business income</strong> &mdash; audited financials, trade license and business bank statements.</li>
+          <li><strong>Sale of asset</strong> &mdash; the sale contract and settlement confirmation.</li>
+          <li><strong>Inheritance or gift</strong> &mdash; probate documents or a notarised gift deed.</li>
+          <li><strong>Investment returns</strong> &mdash; broker or fund statements evidencing the disposal.</li>
+        </ul>
+        <div class="a-callout warn">
+          <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <b>Cash transactions are restricted.</b>
+            <p>UAE regulation requires cash property transactions above AED 55,000 to be reported. Kangar's policy is to process settlements via regulated banking channels only.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-sec" id="pep">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-user-shield"></i></div>
+          <h2>PEP &amp; risk rating</h2>
+        </div>
+        <p>Every onboarded client is risk-rated as <strong>Low, Medium or High</strong> based on residency, source-of-funds profile, transaction structure and any PEP (Politically Exposed Person) exposure. Higher-risk files receive enhanced due diligence including senior-management sign-off and ongoing monitoring.</p>
+        <div class="a-callout info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <b>A PEP status is not a rejection.</b>
+            <p>It simply triggers additional documentation and internal approval. We welcome PEP clients who can evidence their source of funds transparently.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-sec" id="sanctions">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-ban"></i></div>
+          <h2>Sanctions screening</h2>
+        </div>
+        <p>Every new client and every counterparty in a transaction is screened against the following lists at onboarding and on an ongoing basis:</p>
+        <div class="a-sanct">
+          <div class="a-sanct-card">
+            <i class="fas fa-flag"></i>
+            <b>UAE Local Terrorist List</b>
+            <span>Executive Office for Sanctions</span>
+          </div>
+          <div class="a-sanct-card">
+            <i class="fas fa-globe"></i>
+            <b>UN Consolidated List</b>
+            <span>UN Security Council</span>
+          </div>
+          <div class="a-sanct-card">
+            <i class="fas fa-globe-europe"></i>
+            <b>OFAC / EU / UK Lists</b>
+            <span>International sanctions regimes</span>
+          </div>
+        </div>
+        <div class="a-callout risk">
+          <i class="fas fa-times-circle"></i>
+          <div>
+            <b>Zero tolerance.</b>
+            <p>Any positive match is escalated to our Compliance Officer, the transaction is halted, and a report is filed with the UAE FIU within the mandated timeframe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-sec" id="reporting">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-file-alt"></i></div>
+          <h2>Suspicious activity reporting</h2>
+        </div>
+        <p>Our team is trained to identify red flags &mdash; unusual transaction patterns, refusal to provide documentation, use of nominee structures or attempts to structure payments below reporting thresholds. Where a red flag is confirmed, we follow the FIU-mandated reporting timeline:</p>
+        <div class="a-timeline">
+          <div class="a-t-item">
+            <b>Detect</b>
+            <span>Front-line adviser or automated screening flags the concern to the Compliance Officer.</span>
+          </div>
+          <div class="a-t-item">
+            <b>Investigate</b>
+            <span>Internal review of the file, transaction chain and documentation within 48 hours.</span>
+          </div>
+          <div class="a-t-item">
+            <b>Report</b>
+            <span>Suspicious Transaction Report (STR) filed to the UAE FIU via the goAML portal.</span>
+          </div>
+          <div class="a-t-item">
+            <b>Preserve</b>
+            <span>Client is not tipped off; the file is preserved and monitored per FIU guidance.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="a-sec" id="retention">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-archive"></i></div>
+          <h2>Record retention</h2>
+        </div>
+        <p>KYC files, transaction records and supporting evidence are retained on encrypted infrastructure for a minimum of <strong>five years</strong> from the end of the client relationship, or longer where required by law or an active investigation. Access is restricted to trained staff and audited annually.</p>
+        <div class="a-chip-row">
+          <span class="a-chip"><i class="fas fa-lock"></i> Encrypted at rest</span>
+          <span class="a-chip"><i class="fas fa-user-lock"></i> Role-based access</span>
+          <span class="a-chip"><i class="fas fa-clipboard-check"></i> Annually audited</span>
+        </div>
+      </div>
+
+      <div class="a-sec" id="officer">
+        <div class="a-sec-head">
+          <div class="a-sec-icon"><i class="fas fa-user-tie"></i></div>
+          <h2>Compliance officer</h2>
+        </div>
+        <p>All AML, KYC and sanctions matters are overseen by our dedicated Compliance Officer, who is the direct point of contact for regulators, auditors and clients with a compliance query.</p>
+        <div class="a-officer">
+          <div class="a-officer-avatar"><i class="fas fa-user-tie"></i></div>
+          <div class="a-officer-copy">
+            <span class="role">Compliance Officer</span>
+            <h4>Compliance Desk &mdash; Kangar Real Estate</h4>
+            <p>Responds to compliance queries within one business day. All communications treated in strict confidence.</p>
+          </div>
+          <div class="a-officer-contact">
+            <a href="mailto:compliance@kangarrealestate.com"><i class="fas fa-envelope"></i> compliance@kangarrealestate.com</a>
+            <a href="tel:+971555495276"><i class="fas fa-phone"></i> +971 55 549 5276</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-user-tie"></i></div>
+      <div><b>Ready to take the next step?</b><span>Book a free consultation with our experts today.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="contact" class="k-btn k-btn-gold">Book a Consultation</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+
+<script>
+  const links=document.querySelectorAll('.a-toc a');
+  const sections=[...document.querySelectorAll('.a-sec')];
+  links.forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)window.scrollTo({top:t.offsetTop-24,behavior:'smooth'});
+  }));
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY+120;
+    let cur=sections[0];
+    sections.forEach(s=>{if(s.offsetTop<=y)cur=s;});
+    links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id));
+  });
+</script>
+</body>
+</html>

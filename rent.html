@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rent Property in Dubai &amp; UAE | Ejari, DEWA &amp; Move-in Support | Kangar</title>
+<meta name="description" content="Rent apartments and villas across Dubai with Kangar. Ejari, DEWA, tenancy contract and 24/7 tenant support handled end-to-end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<style>
+/* Rent-page polish */
+.rent-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f9fafc 0%,#eef2f8 100%);padding:60px 0 80px;}
+.rent-hero::before{content:"";position:absolute;top:-30%;left:-8%;width:520px;height:520px;background:radial-gradient(circle,rgba(201,169,97,.12),transparent 70%);border-radius:50%;}
+.rent-hero-grid{position:relative;max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:center;z-index:2;}
+.rent-hero .k-crumbs{margin-bottom:16px;}
+.rent-hero h1{font-family:'Inter',system-ui,sans-serif;font-size:clamp(2rem,3.8vw,3rem);color:var(--k-navy);font-weight:700;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em;}
+.rent-hero h1 .accent{color:var(--k-gold);}
+.rent-hero .k-lead{color:#3a4b6b;font-size:1.05rem;line-height:1.6;margin:0 0 28px;max-width:520px;}
+.rent-hero .k-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+.rent-hero-inclusions{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-top:24px;border-top:1px solid var(--k-line);max-width:520px;}
+.rhi{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:#3a4b6b;}
+.rhi i{color:var(--k-gold);margin-top:3px;flex-shrink:0;}
+.rent-hero-media{position:relative;height:520px;}
+.rhm-back{position:absolute;top:0;left:0;width:78%;height:82%;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px rgba(10,21,48,.22);}
+.rhm-back img{width:100%;height:100%;object-fit:cover;}
+.rhm-front{position:absolute;bottom:0;right:0;width:56%;height:44%;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px rgba(10,21,48,.2);border:6px solid #fff;}
+.rhm-front img{width:100%;height:100%;object-fit:cover;}
+.rhm-chip{position:absolute;top:22px;right:22px;background:#fff;padding:14px 20px;border-radius:12px;box-shadow:0 12px 26px rgba(10,21,48,.14);display:flex;align-items:center;gap:12px;z-index:2;}
+.rhm-chip .avs{display:flex;}
+.rhm-chip .avs span{width:28px;height:28px;border-radius:50%;background:#ccc center/cover no-repeat;border:2px solid #fff;margin-left:-6px;}
+.rhm-chip .avs span:first-child{margin-left:0;}
+.rhm-chip .txt{font-size:.78rem;color:var(--k-navy);line-height:1.2;}
+.rhm-chip .txt b{display:block;color:var(--k-navy);}
+.rhm-chip .txt span{color:var(--k-muted);font-size:.72rem;}
+
+/* Rent search bar */
+.rent-search{background:#fff;border-radius:16px;padding:22px;box-shadow:0 14px 40px rgba(10,21,48,.08);border:1px solid var(--k-line);max-width:1280px;margin:-50px auto 40px;position:relative;z-index:10;}
+.rent-search-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
+.rst{padding:8px 18px;background:transparent;border:0;border-radius:999px;font-weight:600;font-size:.88rem;color:var(--k-muted);cursor:pointer;font-family:'Inter',sans-serif;}
+.rst.active{background:var(--k-gold);color:#fff;}
+.rst:not(.active):hover{background:#f4f7fc;color:var(--k-navy);}
+
+/* Category quick pick */
+.rent-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px;}
+.rc{background:#fff;border:1px solid var(--k-line);border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--k-navy);transition:all .25s;}
+.rc:hover{border-color:var(--k-gold);transform:translateY(-4px);box-shadow:0 16px 32px rgba(10,21,48,.08);}
+.rc-icon{width:56px;height:56px;border-radius:14px;background:rgba(201,169,97,.12);color:var(--k-gold);display:grid;place-items:center;margin:0 auto 12px;font-size:22px;}
+.rc h4{font-size:.98rem;margin:0 0 4px;font-weight:700;}
+.rc small{color:var(--k-muted);font-size:.78rem;}
+
+/* Listing enhancements */
+.rent-listings{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.rent-listings .k-prop-card{border-radius:12px;}
+.rent-listings .k-prop-img{height:220px;}
+.rent-listings .k-prop-body{padding:20px;}
+.rent-listings .k-prop-body h3{font-size:1.05rem;margin-bottom:4px;}
+.k-prop-tag.blue{background:var(--k-navy);}
+.k-prop-tag.green{background:#16a34a;}
+
+/* Included services grid */
+.rent-included{background:#fff;border:1px solid var(--k-line);border-radius:16px;padding:38px;}
+.rent-included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.ri-item{display:flex;gap:16px;}
+.ri-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--k-navy) 0%,#1a2b52 100%);color:var(--k-gold);display:grid;place-items:center;flex-shrink:0;font-size:20px;}
+.ri-item h4{color:var(--k-navy);font-family:'Inter',system-ui,sans-serif;font-size:1.05rem;margin:0 0 6px;font-weight:700;}
+.ri-item p{color:#4a5a7a;font-size:.88rem;line-height:1.55;margin:0;}
+
+/* Timeline (rent process) */
+.rent-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:36px;}
+.rent-timeline::before{content:"";position:absolute;top:26px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--k-gold),var(--k-line),var(--k-gold));z-index:0;}
+.rt-step{text-align:center;padding:0 8px;position:relative;z-index:1;}
+.rt-dot{width:54px;height:54px;border-radius:50%;background:#fff;border:2px solid var(--k-gold);color:var(--k-gold);display:grid;place-items:center;font-size:20px;margin:0 auto 14px;box-shadow:0 8px 20px rgba(201,169,97,.25);}
+.rt-step h4{color:var(--k-navy);font-family:'Inter',sans-serif;font-size:.95rem;margin:0 0 6px;font-weight:700;}
+.rt-step p{color:#4a5a7a;font-size:.82rem;line-height:1.5;margin:0;}
+
+/* Landlord CTA */
+.rent-landlord{background:linear-gradient(135deg,var(--k-navy) 0%,#1a2b52 100%);border-radius:16px;padding:44px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;position:relative;overflow:hidden;}
+.rent-landlord::before{content:"";position:absolute;bottom:-40%;right:-10%;width:450px;height:450px;background:radial-gradient(circle,rgba(201,169,97,.15),transparent 70%);border-radius:50%;}
+.rent-landlord img{width:100%;border-radius:12px;position:relative;z-index:2;}
+.rent-landlord-copy{position:relative;z-index:2;}
+.rent-landlord h3{font-family:'Inter',system-ui,sans-serif;font-size:1.8rem;margin:12px 0;color:#fff;}
+.rent-landlord p{color:#a8b2c8;margin:0 0 20px;line-height:1.6;font-size:.98rem;}
+
+/* Areas by budget */
+.rent-budget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.rb-card{position:relative;height:200px;border-radius:12px;overflow:hidden;cursor:pointer;}
+.rb-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.rb-card:hover img{transform:scale(1.05);}
+.rb-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,21,48,.9));}
+.rb-info{position:absolute;left:16px;right:16px;bottom:14px;color:#fff;z-index:2;}
+.rb-info small{color:var(--k-gold);font-size:.7rem;letter-spacing:.15em;font-weight:700;text-transform:uppercase;}
+.rb-info h4{color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:1.1rem;margin:2px 0 2px;}
+.rb-info .rb-range{color:#e6ebf2;font-size:.82rem;}
+
+/* FAQ mini */
+.rent-faqs{background:#fff;border:1px solid var(--k-line);border-radius:12px;overflow:hidden;}
+.rent-faqs .k-acc-head{padding:18px 22px;font-size:.95rem;}
+.rent-faqs .k-acc-body{padding:0 22px 20px;}
+
+@media (max-width:1024px){
+  .rent-hero-grid{grid-template-columns:1fr;gap:30px;}
+  .rent-hero-media{height:360px;}
+  .rent-cats,.rent-listings,.rent-budget-grid{grid-template-columns:repeat(2,1fr);}
+  .rent-included-grid{grid-template-columns:1fr;}
+  .rent-timeline{grid-template-columns:repeat(2,1fr);gap:24px 12px;}
+  .rent-timeline::before{display:none;}
+  .rent-landlord{grid-template-columns:1fr;padding:28px;}
+}
+@media (max-width:640px){
+  .rent-cats,.rent-listings,.rent-budget-grid,.rent-timeline{grid-template-columns:1fr;}
+}
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent" style="color:var(--gold);">Rent</a>
+      <a href="commercial">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<!-- HERO -->
+<section class="rent-hero">
+  <div class="rent-hero-grid">
+    <div>
+      <div class="k-crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Rent Property</span></div>
+      <h1>Rent UAE homes <span class="accent">without the runaround.</span></h1>
+      <p class="k-lead">Family homes, apartments and short-term rentals across Dubai. Kangar handles negotiations, Ejari registration, DEWA setup and move-in checks &mdash; so you can just settle in.</p>
+      <div class="k-actions">
+        <a href="#rentals" class="k-btn k-btn-primary">Browse Rentals <i class="fas fa-arrow-right"></i></a>
+        <a href="contact" class="k-btn k-btn-outline"><i class="fab fa-whatsapp"></i> Talk to an Adviser</a>
+      </div>
+      <div class="rent-hero-inclusions">
+        <div class="rhi"><i class="fas fa-file-contract"></i> Ejari registration included</div>
+        <div class="rhi"><i class="fas fa-plug"></i> DEWA &amp; utilities setup</div>
+        <div class="rhi"><i class="fas fa-clipboard-check"></i> Move-in snagging report</div>
+        <div class="rhi"><i class="fas fa-headset"></i> 24/7 tenant support</div>
+      </div>
+    </div>
+    <div class="rent-hero-media">
+      <div class="rhm-chip">
+        <div class="avs">
+          <span style="background-image:url('https://i.pravatar.cc/60?img=25')"></span>
+          <span style="background-image:url('https://i.pravatar.cc/60?img=32')"></span>
+          <span style="background-image:url('https://i.pravatar.cc/60?img=48')"></span>
+        </div>
+        <div class="txt"><b>2,400+ tenants</b><span>housed by Kangar</span></div>
+      </div>
+      <div class="rhm-back"><img src="assets/images/properties/binghatti-pinnacle/00.png" alt="Dubai apartment"></div>
+      <div class="rhm-front"><img src="assets/images/properties/tilal-binghatti/00.png" alt="Modern interior"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH BAR -->
+<div class="rent-search">
+  <div class="rent-search-tabs">
+    <button class="rst" onclick="location.href='buy.html'">Buy</button>
+    <button class="rst active">Rent</button>
+    <button class="rst" onclick="location.href='commercial.html'">Commercial</button>
+    <button class="rst" onclick="location.href='rent.html#short'">Short-term</button>
+  </div>
+  <div class="k-filter-row">
+    <div><div class="k-label">Location</div><select class="k-select"><option>Any area</option><option>Dubai Marina</option><option>JLT</option><option>Business Bay</option><option>Downtown</option><option>JVC</option><option>Arabian Ranches</option><option>Dubai Hills</option><option>Damac Hills</option></select></div>
+    <div><div class="k-label">Property Type</div><select class="k-select"><option>Any</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Studio</option></select></div>
+    <div><div class="k-label">Bedrooms</div><select class="k-select"><option>Any</option><option>Studio</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+    <div><div class="k-label">Annual Rent (AED)</div><select class="k-select"><option>Any</option><option>Under 75K</option><option>75K &ndash; 120K</option><option>120K &ndash; 200K</option><option>200K &ndash; 350K</option><option>350K+</option></select></div>
+    <button class="k-btn k-btn-primary" type="button"><i class="fas fa-search"></i> Search</button>
+  </div>
+</div>
+
+<!-- CATEGORY QUICK PICK -->
+<section class="k-section" style="padding-top:0;">
+  <div class="k-container">
+    <div class="k-eyebrow" style="text-align:left;">Browse By Type</div>
+    <h2 class="k-h2" style="text-align:left;margin-bottom:22px;">What kind of place are you looking for?</h2>
+    <div class="rent-cats">
+      <a class="rc" href="#rentals"><div class="rc-icon"><i class="fas fa-building"></i></div><h4>Apartments</h4><small>Studio to 3BR</small></a>
+      <a class="rc" href="#rentals"><div class="rc-icon"><i class="fas fa-home"></i></div><h4>Villas</h4><small>Family-friendly</small></a>
+      <a class="rc" href="#rentals"><div class="rc-icon"><i class="fas fa-city"></i></div><h4>Townhouses</h4><small>Community living</small></a>
+      <a class="rc" href="#rentals"><div class="rc-icon"><i class="fas fa-key"></i></div><h4>Short-Term</h4><small>Furnished monthly</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="k-section" id="rentals" style="padding-top:20px;">
+  <div class="k-container">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;flex-wrap:wrap;gap:12px;">
+      <div>
+        <div class="k-eyebrow" style="text-align:left;">Available Now</div>
+        <h2 class="k-h2" style="text-align:left;margin:0;">Homes for rent in Dubai right now.</h2>
+      </div>
+      <a href="properties" class="k-btn k-btn-outline" style="padding:10px 22px;font-size:.85rem;">View All <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="rent-listings">
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/tilal-binghatti/00.png" alt=""><span class="k-prop-tag">FEATURED</span></div><div class="k-prop-body"><h3>2BR Marina Apartment</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Dubai Marina</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 2</span><span><i class="fas fa-bath"></i> 2</span><span><i class="fas fa-ruler-combined"></i> 1,100</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 145,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/binghatti-hillside/01.png" alt=""><span class="k-prop-tag green">FAMILY</span></div><div class="k-prop-body"><h3>3BR Ranches Villa</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Arabian Ranches</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 3</span><span><i class="fas fa-bath"></i> 4</span><span><i class="fas fa-ruler-combined"></i> 2,400</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 220,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/binghatti-pinnacle/00.png" alt=""><span class="k-prop-tag">FEATURED</span></div><div class="k-prop-body"><h3>1BR JLT Apartment</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> JLT</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 1</span><span><i class="fas fa-bath"></i> 1</span><span><i class="fas fa-ruler-combined"></i> 750</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 78,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/binghatti-amberhall/00.webp" alt=""><span class="k-prop-tag blue">FURNISHED</span></div><div class="k-prop-body"><h3>Downtown Studio</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 1</span><span><i class="fas fa-bath"></i> 1</span><span><i class="fas fa-ruler-combined"></i> 480</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 65,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/tilal-binghatti/03.webp" alt=""><span class="k-prop-tag green">FAMILY</span></div><div class="k-prop-body"><h3>4BR Dubai Hills Townhouse</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Dubai Hills</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 4</span><span><i class="fas fa-bath"></i> 4</span><span><i class="fas fa-ruler-combined"></i> 2,800</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 260,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/the-heights-by-emaar/01.png" alt=""><span class="k-prop-tag">FEATURED</span></div><div class="k-prop-body"><h3>2BR Business Bay Apartment</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Business Bay</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 2</span><span><i class="fas fa-bath"></i> 3</span><span><i class="fas fa-ruler-combined"></i> 1,200</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 130,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/azizi-lina/00.png" alt=""><span class="k-prop-tag blue">FURNISHED</span></div><div class="k-prop-body"><h3>1BR JVC Apartment</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> JVC</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 1</span><span><i class="fas fa-bath"></i> 1</span><span><i class="fas fa-ruler-combined"></i> 680</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 62,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+      <div class="k-prop-card"><div class="k-prop-img"><img src="assets/images/properties/binghatti-hillviews/00.png" alt=""><span class="k-prop-tag green">FAMILY</span></div><div class="k-prop-body"><h3>3BR Damac Villa</h3><div class="k-prop-loc"><i class="fas fa-map-marker-alt"></i> Damac Hills</div><div class="k-prop-meta"><span><i class="fas fa-bed"></i> 3</span><span><i class="fas fa-bath"></i> 4</span><span><i class="fas fa-ruler-combined"></i> 2,600</span></div><div class="k-prop-foot"><span class="k-prop-price">AED 195,000/yr</span><a class="k-btn k-btn-primary" style="padding:7px 14px;font-size:.75rem;" href="#">View</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED SERVICES -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">Included With Every Rental</div>
+    <h2 class="k-h2">More than just handing you the keys.</h2>
+    <p class="k-h2-sub">Kangar tenants get a real handover experience &mdash; not just a signed contract and a shrug.</p>
+    <div class="rent-included" style="margin-top:24px;">
+      <div class="rent-included-grid">
+        <div class="ri-item"><div class="ri-icon"><i class="fas fa-file-contract"></i></div><div><h4>Ejari &amp; Contract</h4><p>Tenancy contract drafted in your favour, negotiated with the landlord and registered with Ejari &mdash; the legal requirement in Dubai.</p></div></div>
+        <div class="ri-item"><div class="ri-icon"><i class="fas fa-plug"></i></div><div><h4>DEWA &amp; Utilities</h4><p>Move-in coordination with DEWA, chiller providers, internet and gas so services are on the day you get the keys.</p></div></div>
+        <div class="ri-item"><div class="ri-icon"><i class="fas fa-clipboard-check"></i></div><div><h4>Snagging Report</h4><p>Detailed pre-move-in inspection so you don&rsquo;t inherit someone else&rsquo;s damage on your security deposit.</p></div></div>
+        <div class="ri-item"><div class="ri-icon"><i class="fas fa-tools"></i></div><div><h4>Maintenance Support</h4><p>One number for AC, plumbing, appliance and building issues throughout the lease.</p></div></div>
+        <div class="ri-item"><div class="ri-icon"><i class="fas fa-passport"></i></div><div><h4>Visa &amp; Residency</h4><p>Coordination for family visas and residency-linked documents needing Ejari or tenancy proof.</p></div></div>
+        <div class="ri-item"><div class="ri-icon"><i class="fas fa-sync-alt"></i></div><div><h4>Renewal &amp; Exit</h4><p>Rental cap negotiation at renewal and clean deposit refund at handover exit.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="k-eyebrow">How Renting Works</div>
+    <h2 class="k-h2">From shortlist to keys &mdash; usually within 7 days.</h2>
+    <div class="rent-timeline">
+      <div class="rt-step"><div class="rt-dot"><i class="fas fa-search"></i></div><h4>1. Enquire</h4><p>Share your area, budget and move date.</p></div>
+      <div class="rt-step"><div class="rt-dot"><i class="fas fa-list-ul"></i></div><h4>2. Shortlist</h4><p>Curated matches within 24 hours.</p></div>
+      <div class="rt-step"><div class="rt-dot"><i class="fas fa-eye"></i></div><h4>3. View</h4><p>In-person or virtual property tours.</p></div>
+      <div class="rt-step"><div class="rt-dot"><i class="fas fa-file-signature"></i></div><h4>4. Offer &amp; Ejari</h4><p>Contract drafted, negotiated, registered.</p></div>
+      <div class="rt-step"><div class="rt-dot"><i class="fas fa-key"></i></div><h4>5. Move In</h4><p>Keys, snagging and utilities on day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR AREAS BY BUDGET -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">Popular Rental Areas</div>
+    <h2 class="k-h2">Where our tenants live.</h2>
+    <p class="k-h2-sub">Approximate annual rent ranges &mdash; final price depends on view, floor and furnishing.</p>
+    <div class="rent-budget-grid" style="margin-top:26px;">
+      <div class="rb-card"><img src="assets/images/properties/mercedes-benz-places-new/00.png" alt=""><div class="rb-info"><small>WATERFRONT</small><h4>Dubai Marina</h4><div class="rb-range">AED 80K &ndash; 220K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/the-heights-by-emaar/00.png" alt=""><div class="rb-info"><small>CENTRAL</small><h4>Downtown Dubai</h4><div class="rb-range">AED 90K &ndash; 250K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/tilal-binghatti/00.png" alt=""><div class="rb-info"><small>FAMILY</small><h4>Arabian Ranches</h4><div class="rb-range">AED 180K &ndash; 320K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/azizi-venice-new/00.png" alt=""><div class="rb-info"><small>AFFORDABLE</small><h4>JVC</h4><div class="rb-range">AED 45K &ndash; 90K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/tilal-binghatti/00.png" alt=""><div class="rb-info"><small>URBAN</small><h4>Business Bay</h4><div class="rb-range">AED 70K &ndash; 180K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/binghatti-hillside/00.png" alt=""><div class="rb-info"><small>LIFESTYLE</small><h4>Dubai Hills</h4><div class="rb-range">AED 120K &ndash; 300K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/tilal-binghatti/03.webp" alt=""><div class="rb-info"><small>MODERN</small><h4>JLT</h4><div class="rb-range">AED 60K &ndash; 160K</div></div></div>
+      <div class="rb-card"><img src="assets/images/properties/azizi-riviera/00.png" alt=""><div class="rb-info"><small>LUXURY</small><h4>Palm Jumeirah</h4><div class="rb-range">AED 150K &ndash; 500K</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LANDLORD CTA -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="rent-landlord">
+      <div class="rent-landlord-copy">
+        <span class="k-badge" style="background:rgba(201,169,97,.22);color:var(--k-gold);">LANDLORDS</span>
+        <h3>Renting out your Dubai property?</h3>
+        <p>Kangar handles the full landlord lifecycle &mdash; tenant sourcing, KYC screening, Ejari, rent collection, maintenance and monthly reporting. One point of contact, one dashboard.</p>
+        <ul class="k-check-list" style="color:#a8b2c8;">
+          <li style="color:#e6ebf2;">Tenant sourcing across our qualified enquiry pipeline.</li>
+          <li style="color:#e6ebf2;">Full KYC and reference checks before signing.</li>
+          <li style="color:#e6ebf2;">Ejari registration and DEWA/utility coordination.</li>
+          <li style="color:#e6ebf2;">Monthly reporting on rent, maintenance and occupancy.</li>
+        </ul>
+        <a href="contact" class="k-btn k-btn-gold" style="margin-top:16px;">List Your Property <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <img src="assets/images/properties/azizi-wares/00.jpeg" alt="Landlord services">
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">Rental FAQs</div>
+    <h2 class="k-h2">Common questions from Dubai tenants.</h2>
+    <div class="rent-faqs k-accordion" style="margin-top:26px;">
+      <div class="k-acc-item open"><div class="k-acc-head">Do I need Ejari? <i class="fas fa-chevron-down"></i></div><div class="k-acc-body">Yes &mdash; Ejari registration is mandatory in Dubai and required for DEWA activation, visa applications and dispute resolution. Kangar handles the registration for you as part of the rental service.</div></div>
+      <div class="k-acc-item"><div class="k-acc-head">How many cheques for annual rent? <i class="fas fa-chevron-down"></i></div><div class="k-acc-body">Commonly 1, 2 or 4 cheques &mdash; sometimes 6 or 12 depending on the landlord. Fewer cheques usually secure a better price. We negotiate on your behalf.</div></div>
+      <div class="k-acc-item"><div class="k-acc-head">What&rsquo;s the security deposit? <i class="fas fa-chevron-down"></i></div><div class="k-acc-body">Typically 5% of annual rent for unfurnished, 10% for furnished. Fully refundable at end of tenancy subject to property condition &mdash; which is why our move-in snagging report matters.</div></div>
+      <div class="k-acc-item"><div class="k-acc-head">Can the landlord raise the rent at renewal? <i class="fas fa-chevron-down"></i></div><div class="k-acc-body">Only within RERA rental index caps and after giving 90 days&rsquo; written notice. We monitor your renewal date and negotiate on your behalf if an unlawful increase is proposed.</div></div>
+      <div class="k-acc-item"><div class="k-acc-head">Are pets allowed in Dubai rentals? <i class="fas fa-chevron-down"></i></div><div class="k-acc-body">Building- and community-specific. We check pet policies upfront so you don&rsquo;t discover a restriction after moving.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="k-eyebrow">Tenant Stories</div>
+    <h2 class="k-h2">What renters say about Kangar.</h2>
+    <div class="k-testimonials" style="margin-top:30px;">
+      <div class="k-testimonial"><div class="k-t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="k-t-text">Kangar found us a Marina apartment in 4 days and handled Ejari, DEWA and move-in inspection end-to-end. Zero hassle.</p><div class="k-t-who"><div class="k-t-avatar" style="background-image:url('https://i.pravatar.cc/80?img=25')"></div><div><div class="k-t-name">Meera K.</div><div class="k-t-role">Tenant &middot; 2BR Marina</div></div></div></div>
+      <div class="k-testimonial"><div class="k-t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="k-t-text">As a landlord, monthly reporting is genuinely useful. Kangar handles maintenance and tenant queries so I don&rsquo;t have to.</p><div class="k-t-who"><div class="k-t-avatar" style="background-image:url('https://i.pravatar.cc/80?img=52')"></div><div><div class="k-t-name">Tom H.</div><div class="k-t-role">Landlord &middot; Melbourne</div></div></div></div>
+      <div class="k-testimonial"><div class="k-t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="k-t-text">The move-in snagging report saved us from a bad handover. Small details noted that we&rsquo;d have missed. Worth every dirham.</p><div class="k-t-who"><div class="k-t-avatar" style="background-image:url('https://i.pravatar.cc/80?img=30')"></div><div><div class="k-t-name">Nisha P.</div><div class="k-t-role">Tenant &middot; JLT</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP + FOOTER -->
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-user-tie"></i></div>
+      <div><b>Ready to find your next home?</b><span>Book a free consultation with a Kangar rental adviser today.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="contact" class="k-btn k-btn-gold">Book a Consultation</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+<script>
+document.querySelectorAll('.k-acc-head').forEach(h=>{h.addEventListener('click',()=>{h.parentElement.classList.toggle('open');});});
+</script>
+</body>
+</html>

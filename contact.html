@@ -1,0 +1,752 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Kangar Dubai Experts | UAE, Australia, India, New Zealand</title>
+<meta name="description" content="Talk to Kangar in Dubai, Melbourne, Auckland or Noida. Book a consultation, WhatsApp us, or send your property or business enquiry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<style>
+/* Contact page distinct design */
+.ct-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#f9fafc 0%,#eef2f8 100%);padding:70px 0 60px;}
+.ct-hero::before{content:"";position:absolute;top:-15%;right:-8%;width:600px;height:600px;background:radial-gradient(circle,rgba(201,169,97,.14),transparent 70%);border-radius:50%;}
+.ct-hero::after{content:"";position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(13,27,61,.06),transparent 70%);border-radius:50%;}
+.ct-hero-inner{position:relative;max-width:1000px;margin:0 auto;padding:0 24px;text-align:center;z-index:2;}
+.ct-hero .k-crumbs{justify-content:center;margin-bottom:14px;}
+.ct-hero .k-badge{background:rgba(201,169,97,.15);color:var(--k-gold);margin:0 auto 16px;}
+.ct-hero h1{font-family:'Inter',system-ui,sans-serif;font-size:clamp(2.2rem,4.4vw,3.4rem);color:var(--k-navy);font-weight:700;line-height:1.05;margin:0 0 20px;letter-spacing:-.015em;}
+.ct-hero h1 .accent{color:var(--k-gold);font-style:italic;}
+.ct-hero .lead{color:#3a4b6b;font-size:1.08rem;line-height:1.6;margin:0 auto 32px;max-width:660px;}
+
+/* Quick-connect chips row */
+.ct-quick{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.ct-quick a{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;background:#fff;border:1px solid var(--k-line);border-radius:999px;color:var(--k-navy);text-decoration:none;font-weight:600;font-size:.9rem;box-shadow:0 6px 18px rgba(10,21,48,.06);transition:all .2s;}
+.ct-quick a:hover{border-color:var(--k-gold);transform:translateY(-2px);box-shadow:0 12px 24px rgba(10,21,48,.1);}
+.ct-quick a i{width:32px;height:32px;border-radius:50%;color:#fff;display:grid;place-items:center;font-size:.85rem;}
+.ct-quick a i.wa{background:#25d366;}
+.ct-quick a i.call{background:var(--k-navy);}
+.ct-quick a i.mail{background:var(--k-gold);}
+.ct-quick a i.cal{background:#6366f1;}
+@media (max-width:640px){
+  .ct-quick{flex-direction:column;gap:10px;margin-top:22px;padding:0 12px;align-items:stretch;}
+  .ct-quick a{width:100%;justify-content:center;padding:13px 18px;font-size:.92rem;border-radius:12px;}
+  .ct-quick a i{width:30px;height:30px;font-size:.82rem;}
+}
+
+/* MAIN CARDS: Form + Sidebar */
+.ct-main{max-width:1280px;margin:-40px auto 0;padding:0 24px 40px;position:relative;z-index:5;}
+.ct-main-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;}
+
+/* Form card - large */
+.ct-form-card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 20px 50px rgba(10,21,48,.08);border:1px solid var(--k-line);position:relative;overflow:hidden;}
+.ct-form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--k-gold),transparent);}
+.ct-form-head{margin-bottom:26px;}
+.ct-form-head .k-eyebrow{text-align:left;margin-bottom:6px;}
+.ct-form-head h2{font-family:'Inter',system-ui,sans-serif;font-size:1.7rem;color:var(--k-navy);margin:0 0 8px;font-weight:700;}
+.ct-form-head p{color:var(--k-muted);font-size:.95rem;margin:0;}
+
+.ct-form-tabs{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap;padding:6px;background:#f4f7fc;border-radius:12px;}
+.ctt{padding:10px 18px;background:transparent;border:0;border-radius:8px;font-weight:600;font-size:.85rem;color:var(--k-muted);cursor:pointer;font-family:'Inter',sans-serif;flex:1;text-align:center;transition:all .2s;}
+.ctt.active{background:#fff;color:var(--k-navy);box-shadow:0 4px 12px rgba(10,21,48,.08);}
+.ctt i{margin-right:6px;color:var(--k-gold);}
+@media (max-width:640px){
+  .ct-form-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;border-radius:12px;}
+  .ctt{flex:none;width:100%;padding:12px 8px;font-size:.78rem;display:inline-flex;align-items:center;justify-content:center;gap:6px;line-height:1.15;min-height:52px;}
+  .ctt i{margin-right:0;font-size:.85rem;}
+  .ct-form-card{padding:22px 18px;border-radius:16px;}
+  .ct-form-head h2{font-size:1.4rem;line-height:1.2;}
+  .ct-form-head p{font-size:.9rem;line-height:1.5;}
+  .ct-form{gap:14px;}
+  .ct-field label{font-size:.82rem;}
+  .ct-field input,.ct-field select,.ct-field textarea{font-size:.92rem;padding:12px 14px;}
+  .ct-form-submit{flex-direction:column;align-items:stretch;gap:12px;}
+  .ct-form-submit .k-btn{width:100%;justify-content:center;}
+}
+
+.ct-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.ct-form .k-full{grid-column:1/-1;}
+.ct-field{display:flex;flex-direction:column;gap:6px;}
+.ct-field label{font-size:.82rem;color:var(--k-navy);font-weight:600;}
+.ct-field label .req{color:#dc2626;}
+.ct-field input,.ct-field select,.ct-field textarea{padding:13px 16px;border:1px solid var(--k-line);border-radius:8px;font-size:.92rem;font-family:'Inter',sans-serif;color:var(--k-navy);background:#fff;outline:none;transition:all .2s;}
+.ct-field input:focus,.ct-field select:focus,.ct-field textarea:focus{border-color:var(--k-gold);box-shadow:0 0 0 3px rgba(201,169,97,.12);}
+.ct-field textarea{min-height:120px;resize:vertical;}
+.ct-check{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:#4a5a7a;line-height:1.5;padding-top:6px;}
+.ct-check input{margin-top:3px;accent-color:var(--k-gold);}
+.ct-check a{color:var(--k-gold);text-decoration:none;font-weight:600;}
+.ct-form-submit{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:8px;border-top:1px solid var(--k-line);flex-wrap:wrap;}
+.ct-form-note{color:var(--k-muted);font-size:.82rem;display:flex;align-items:center;gap:8px;}
+.ct-form-note i{color:var(--k-gold);}
+
+/* Sidebar */
+.ct-sidebar{display:flex;flex-direction:column;gap:20px;}
+.ct-info-card{background:#fff;border-radius:16px;padding:26px;box-shadow:0 10px 28px rgba(10,21,48,.06);border:1px solid var(--k-line);}
+.ct-info-card.dark{background:linear-gradient(135deg,var(--k-navy) 0%,#1a2b52 100%);color:#fff;border:0;position:relative;overflow:hidden;}
+.ct-info-card.dark::before{content:"";position:absolute;top:-40%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,169,97,.18),transparent 70%);border-radius:50%;}
+.ct-info-card h3{font-family:'Inter',system-ui,sans-serif;font-size:1.15rem;color:var(--k-navy);margin:0 0 4px;font-weight:700;position:relative;z-index:2;}
+.ct-info-card.dark h3{color:#fff;}
+.ct-info-card .sub{color:var(--k-muted);font-size:.85rem;margin:0 0 20px;position:relative;z-index:2;}
+.ct-info-card.dark .sub{color:#a8b2c8;}
+
+.ct-info-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--k-line);position:relative;z-index:2;}
+.ct-info-card.dark .ct-info-row{border-bottom-color:rgba(255,255,255,.08);}
+.ct-info-row:last-child{border-bottom:0;padding-bottom:0;}
+.ct-info-row:first-of-type{padding-top:0;}
+.ct-info-icon{width:38px;height:38px;border-radius:10px;background:rgba(201,169,97,.12);color:var(--k-gold);display:grid;place-items:center;flex-shrink:0;font-size:15px;}
+.ct-info-card.dark .ct-info-icon{background:rgba(201,169,97,.18);}
+.ct-info-body b{display:block;font-size:.88rem;color:var(--k-navy);margin-bottom:2px;font-weight:700;}
+.ct-info-card.dark .ct-info-body b{color:#fff;}
+.ct-info-body a,.ct-info-body span{color:#4a5a7a;font-size:.85rem;text-decoration:none;display:block;line-height:1.5;}
+.ct-info-card.dark .ct-info-body a,.ct-info-card.dark .ct-info-body span{color:#c8d1e3;}
+.ct-info-body a:hover{color:var(--k-gold);}
+
+.ct-hours{display:grid;grid-template-columns:1fr auto;gap:8px 14px;position:relative;z-index:2;}
+.ct-hours .day{color:#c8d1e3;font-size:.85rem;}
+.ct-hours .time{color:#fff;font-size:.85rem;font-weight:600;}
+.ct-hours .now{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;background:rgba(22,163,74,.2);color:#4ade80;border-radius:999px;font-size:.72rem;font-weight:700;margin-left:8px;}
+.ct-hours .now::before{content:"";width:6px;height:6px;background:#4ade80;border-radius:50%;}
+
+/* Offices worldwide grid */
+.ct-offices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.ct-office{background:#fff;border:1px solid var(--k-line);border-radius:16px;overflow:hidden;transition:all .3s;position:relative;}
+.ct-office:hover{transform:translateY(-6px);box-shadow:0 24px 40px rgba(10,21,48,.1);border-color:var(--k-gold);}
+.ct-office.hq::before{content:"HEADQUARTERS";position:absolute;top:16px;right:16px;background:var(--k-gold);color:#fff;padding:4px 10px;border-radius:999px;font-size:.65rem;font-weight:700;letter-spacing:.1em;z-index:3;}
+.ct-office-photo{height:160px;position:relative;overflow:hidden;}
+.ct-office-photo img{width:100%;height:100%;object-fit:cover;}
+.ct-office-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,21,48,.7));}
+.ct-office-flag{position:absolute;bottom:16px;left:16px;display:flex;align-items:center;gap:10px;z-index:2;}
+.ct-office-flag img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid #fff;}
+.ct-office-flag b{color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:1.05rem;font-weight:700;}
+.ct-office-flag small{display:block;color:var(--k-gold);font-size:.7rem;letter-spacing:.15em;font-weight:700;text-transform:uppercase;}
+.ct-office-body{padding:20px;}
+.ct-office-row{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:.85rem;color:#4a5a7a;line-height:1.5;}
+.ct-office-row i{color:var(--k-gold);width:14px;margin-top:3px;flex-shrink:0;font-size:.85rem;}
+.ct-office-cta{display:flex;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--k-line);}
+.ct-office-cta a{flex:1;padding:9px;border:1px solid var(--k-line);border-radius:8px;font-size:.78rem;font-weight:600;color:var(--k-navy);text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:5px;transition:all .2s;}
+.ct-office-cta a:hover{background:var(--k-navy);color:#fff;border-color:var(--k-navy);}
+.ct-office-cta a.wa:hover{background:#25d366;color:#fff;border-color:#25d366;}
+
+/* Support types row */
+.ct-support{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.ct-sup{background:#fff;border:1px solid var(--k-line);border-radius:14px;padding:24px;text-align:center;transition:all .25s;}
+.ct-sup:hover{border-color:var(--k-gold);transform:translateY(-4px);}
+.ct-sup-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(201,169,97,.18) 0%,rgba(201,169,97,.06) 100%);color:var(--k-gold);display:grid;place-items:center;margin:0 auto 14px;font-size:22px;}
+.ct-sup h4{font-family:'Inter',system-ui,sans-serif;font-size:1.05rem;color:var(--k-navy);margin:0 0 6px;font-weight:700;}
+.ct-sup p{color:var(--k-muted);font-size:.82rem;margin:0 0 12px;line-height:1.5;}
+.ct-sup a{color:var(--k-gold);font-size:.8rem;font-weight:700;text-decoration:none;letter-spacing:.02em;}
+.ct-sup a:hover{color:var(--k-navy);}
+
+/* MAP */
+.ct-map{background:#fff;border:1px solid var(--k-line);border-radius:16px;overflow:hidden;position:relative;}
+.ct-map-frame{width:100%;height:420px;border:0;display:block;}
+.ct-map-overlay{position:absolute;top:24px;left:24px;background:#fff;border-radius:12px;padding:22px;box-shadow:0 16px 40px rgba(10,21,48,.15);max-width:320px;z-index:5;border:1px solid var(--k-line);}
+.ct-map-overlay small{color:var(--k-gold);font-size:.7rem;letter-spacing:.16em;font-weight:700;text-transform:uppercase;}
+.ct-map-overlay h4{font-family:'Inter',system-ui,sans-serif;font-size:1.15rem;color:var(--k-navy);margin:4px 0 10px;font-weight:700;}
+.ct-map-overlay p{color:#4a5a7a;font-size:.85rem;margin:0 0 14px;line-height:1.55;}
+.ct-map-overlay .k-btn{width:100%;justify-content:center;padding:10px;font-size:.82rem;}
+
+/* FAQ mini */
+.ct-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.ct-faq-item{background:#fff;border:1px solid var(--k-line);border-radius:12px;padding:22px;transition:all .2s;}
+.ct-faq-item:hover{border-color:var(--k-gold);}
+.ct-faq-item h4{font-family:'Inter',system-ui,sans-serif;font-size:1.02rem;color:var(--k-navy);margin:0 0 8px;line-height:1.3;display:flex;gap:10px;align-items:flex-start;}
+.ct-faq-item h4 i{color:var(--k-gold);flex-shrink:0;margin-top:2px;font-size:.9rem;}
+.ct-faq-item p{color:#4a5a7a;font-size:.87rem;line-height:1.6;margin:0;padding-left:26px;}
+
+/* Social row */
+.ct-social{background:linear-gradient(135deg,var(--k-navy) 0%,#132752 100%);border-radius:20px;padding:44px;color:#fff;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;position:relative;overflow:hidden;}
+.ct-social::before{content:"";position:absolute;top:-40%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(201,169,97,.15),transparent 70%);border-radius:50%;}
+.ct-social h3{font-family:'Inter',system-ui,sans-serif;font-size:1.9rem;color:#fff;margin:0 0 10px;position:relative;z-index:2;letter-spacing:-.01em;}
+.ct-social p{color:#c8d1e3;margin:0 0 6px;line-height:1.6;font-size:1rem;position:relative;z-index:2;}
+.ct-social-links{position:relative;z-index:2;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.ct-social-links a{display:flex;align-items:center;gap:14px;padding:16px 20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;text-decoration:none;color:#fff;transition:all .2s;backdrop-filter:blur(6px);}
+.ct-social-links a:hover{background:rgba(255,255,255,.12);border-color:var(--k-gold);transform:translateY(-2px);}
+.ct-social-links a i{width:40px;height:40px;border-radius:10px;background:var(--k-gold);color:#fff;display:grid;place-items:center;font-size:1rem;flex-shrink:0;}
+.ct-social-links a i.fb{background:#1877f2;}
+.ct-social-links a i.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.ct-social-links a i.li{background:#0a66c2;}
+.ct-social-links a i.yt{background:#ff0000;}
+.ct-social-links a b{display:block;font-size:.9rem;font-weight:700;}
+.ct-social-links a small{color:#a8b2c8;font-size:.75rem;}
+
+@media (max-width:1024px){
+  .ct-main-grid{grid-template-columns:1fr;}
+  .ct-offices,.ct-support,.ct-faq-grid,.ct-social,.ct-social-links{grid-template-columns:repeat(2,1fr);}
+  .ct-social{grid-template-columns:1fr;}
+  .ct-map-overlay{position:relative;max-width:100%;top:auto;left:auto;margin:20px;}
+  .ct-map-frame{height:340px;}
+}
+@media (max-width:640px){
+  .ct-form,.ct-offices,.ct-support,.ct-faq-grid,.ct-social-links{grid-template-columns:1fr;}
+  .ct-form-card{padding:26px;}
+}
+</style>
+<!-- ==== SYNCED HEADER/FOOTER FROM INDEX.HTML ==== -->
+<style>
+:root{--navy:#0d1b3d;--navy-2:#132752;--gold:#c9a961;--gold-2:#b8974f;--text:#1a2540;--muted:#6b7a99;--line:#e6ebf2;--bg:#f7f9fc;--az-gold:#c9a961;--az-navy:#0a1530;}
+
+/* ============ HEADER ============ */
+.header{background:var(--navy);border-bottom:1px solid rgba(201,169,97,.25);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(10,21,48,.15);}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;}
+.header .nav a{color:#e6ebf2;}
+.header .nav a:hover{color:var(--gold);}
+.header .nav a i{color:var(--gold);opacity:.7;}
+.header .btn-book{background:var(--gold);color:var(--navy);}
+.header .btn-book:hover{background:#d9b876;color:var(--navy);}
+.logo{display:inline-flex;align-items:center;}
+.logo img{display:block;height:72px;width:auto;object-fit:contain;}
+.header{padding:6px 0;}
+.header-inner{padding:8px 24px;display:flex;align-items:center;}
+.nav-toggle{display:none;background:var(--gold);border:1px solid var(--gold);width:46px;height:46px;border-radius:10px;margin-left:auto;color:#0a1530;align-items:center;justify-content:center;cursor:pointer;font-size:1.15rem;transition:all .2s;box-shadow:0 6px 16px rgba(201,155,81,.35)}
+.nav-toggle:hover{background:#b8974f;border-color:#b8974f;color:#fff}
+.nav-toggle .fa-times{display:none}
+body.nav-open{overflow:hidden}
+body.nav-open .nav-toggle .fa-bars{display:none}
+body.nav-open .nav-toggle .fa-times{display:inline}
+.nav-backdrop{display:none;position:fixed;inset:0;background:rgba(5,10,25,.72);z-index:998}
+body.nav-open .nav-backdrop{display:block}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto;}
+.nav a{color:var(--text);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;}
+.nav a:hover{color:var(--gold);}
+.nav a i{font-size:.65rem;color:var(--muted);}
+.btn-book{background:var(--navy);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;font-size:.88rem;}
+.btn-book:hover{background:var(--navy-2);}
+
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  body.nav-open .header{position:static!important;z-index:auto!important;overflow:visible!important}
+  .header .nav,.nav{position:fixed!important;top:0!important;right:-100%;bottom:0;width:min(340px,88vw)!important;background:#0a1530!important;background-image:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:90px 26px 40px!important;z-index:10000!important;transition:right .35s cubic-bezier(.2,.9,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.6)!important;overflow-y:auto;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;pointer-events:auto!important}
+  body.nav-open .nav-backdrop{z-index:9998!important;pointer-events:auto}
+  body.nav-open .nav a,body.nav-open .header .nav a{pointer-events:auto!important;cursor:pointer!important;position:relative!important;z-index:2!important}
+  body.nav-open .header .nav,body.nav-open .nav{right:0!important}
+  .nav-backdrop{z-index:999}
+  body.nav-open .header .nav a,
+  body.nav-open .nav a,
+  .header .nav a,
+  .nav a{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-family:'Inter',system-ui,-apple-system,sans-serif!important;font-size:1.05rem!important;font-weight:600!important;padding:16px 6px!important;border-bottom:1px solid rgba(255,255,255,.18)!important;gap:0!important;display:block!important;width:100%!important;text-align:left!important;letter-spacing:normal!important;line-height:1.3!important;opacity:1!important;text-shadow:none!important;filter:none!important;background:transparent!important;text-decoration:none!important}
+  body.nav-open .header .nav a:hover,
+  body.nav-open .nav a:hover,
+  .header .nav a:hover,
+  .nav a:hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  .header .nav a i,.nav a i{display:none!important}
+  body.nav-open .header .nav a.btn-book,
+  body.nav-open .nav a.btn-book,
+  .header .nav a.btn-book,
+  .nav a.btn-book{margin-top:22px!important;background:#c9a961!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important;border-radius:10px!important;padding:14px 18px!important;text-align:center!important;border:none!important;border-bottom:none!important;font-size:.88rem!important;font-weight:600!important;letter-spacing:normal!important}
+  body.nav-open .header .nav a.btn-book:hover,
+  body.nav-open .nav a.btn-book:hover,
+  .header .nav a.btn-book:hover,
+  .nav a.btn-book:hover{background:#b8974f!important;color:#0a1530!important;-webkit-text-fill-color:#0a1530!important}
+}
+
+/* ============ LIGHT CLEAN HEADER (overrides earlier header styles) ============ */
+/* PAGE-PADDING-TOP-FIX */
+body{padding-top:130px}
+@media (max-width:960px){body{padding-top:96px}}
+html body .header{position:fixed!important;top:0;left:0;right:0;background:rgba(247,247,245,.86)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,35,33,.07)!important;box-shadow:none!important;padding:6px 0!important;transition:padding .4s ease,box-shadow .4s ease,background .4s ease!important}
+html body .header.shrunk{background:rgba(247,247,245,.9)!important;box-shadow:0 10px 30px -18px rgba(20,30,25,.35)!important;padding:0!important}
+html body .header .header-inner{max-width:1280px;padding:14px 32px!important;gap:32px}
+html body .header .logo img{height:96px!important;width:auto!important;transition:height .4s ease;filter:contrast(1.08) saturate(1.05) drop-shadow(0 2px 6px rgba(20,30,25,.18))}
+html body .header.shrunk .logo img{height:78px!important}
+html body .header .header-inner .nav{gap:30px;margin-left:auto}
+/* ACTIVE-NAV-HIGHLIGHT */
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book){color:#c9a961!important;-webkit-text-fill-color:#c9a961!important;font-weight:600!important}
+html body .header .header-inner .nav a[style*="gold"]:not(.btn-book)::after{transform:scaleX(1)!important;transform-origin:left!important;background:#c9a961!important}
+html body .header .header-inner .nav a{white-space:nowrap!important;font-family:'Jost','Inter',sans-serif!important;font-size:.9rem!important;font-weight:400!important;letter-spacing:.01em!important;text-transform:none!important;color:#2d3532!important;-webkit-text-fill-color:#2d3532!important;position:relative;padding:6px 0!important;transition:color .3s ease}
+html body .header .header-inner .nav a:not(.btn-book)::before{display:none!important}
+html body .header .header-inner .nav a:not(.btn-book)::after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:1px;background:#1c2321;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+html body .header .header-inner .nav a:not(.btn-book):hover{color:#1c2321!important;-webkit-text-fill-color:#1c2321!important}
+html body .header .header-inner .nav a:not(.btn-book):hover::after,
+html body .header .header-inner .nav a.active::after{transform:scaleX(1);transform-origin:left}
+html body .header .header-inner .nav a.btn-book{margin-left:14px;background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border:1px solid #2b3330!important;border-radius:999px!important;padding:12px 26px!important;font-family:'Inter',sans-serif!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:.01em!important;text-transform:none!important;box-shadow:none!important;transform:none!important;position:relative;overflow:hidden;isolation:isolate}
+html body .header .header-inner .nav a.btn-book::before{content:""!important;display:block!important;position:absolute;inset:0;background:#c9a961;transform:translateY(101%);transition:transform .5s cubic-bezier(.22,1,.36,1);z-index:-1;border-radius:inherit}
+html body .header .header-inner .nav a.btn-book::after{display:none!important}
+html body .header .header-inner .nav a.btn-book:hover,
+html body .header .header-inner .nav a.btn-book:focus{background:#2b3330!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c9a961!important;letter-spacing:.01em!important;box-shadow:0 14px 30px -12px rgba(201,169,97,.7)!important}
+html body .header .header-inner .nav a.btn-book:hover::before{transform:translateY(0)}
+html body .header .nav-toggle{background:#2b3330!important;border:0!important;border-radius:50%!important;width:44px;height:44px;color:#fff!important;box-shadow:none!important}
+@media (max-width:1200px){html body .header .header-inner .nav{gap:22px}html body .header .header-inner .nav a{font-size:.84rem!important}}
+@media (max-width:960px){
+  html body .header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.9)!important}
+  html body .header.shrunk{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(247,247,245,.96)!important}
+  html body.nav-open .header{position:fixed!important;z-index:10000!important}
+  html body .header .header-inner{padding:8px 16px!important}
+  html body .header .logo img{height:70px!important}
+  html body .header .header-inner .nav{background:#f7f7f5!important;box-shadow:-20px 0 60px rgba(0,0,0,.25)!important;gap:0}
+  html body .header .header-inner .nav a{font-size:1.2rem!important;padding:16px 4px!important;border-bottom:1px solid #e5e6e2!important;width:100%}
+  html body .header .header-inner .nav a:not(.btn-book)::after{display:none!important}
+  html body .header .header-inner .nav a:not(.btn-book):hover{color:#c9a961!important;-webkit-text-fill-color:#c9a961!important}
+  html body .header .header-inner .nav a.btn-book{margin:24px 0 0!important;text-align:center!important;padding:15px 20px!important;font-size:.9rem!important;border-bottom:1px solid #2b3330!important}
+  html body .nav-backdrop{background:rgba(20,26,24,.45)!important}
+  html body.nav-open .header .nav-toggle{position:relative;z-index:10001!important}
+}
+
+/* ============ SIDE RAIL ============ */
+.side-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.85,.25,1)}
+.side-rail.on{opacity:1;pointer-events:auto;transform:translateY(-50%)}
+.side-rail a{position:relative;width:50px;height:50px;border-radius:50%;background:#0a1530;color:#fff;display:grid;place-items:center;font-size:1rem;box-shadow:0 12px 26px rgba(10,21,48,.35),0 2px 6px rgba(10,21,48,.25),0 1px 0 rgba(255,255,255,.05) inset;border:1px solid rgba(201,169,97,.35);transition:all .35s cubic-bezier(.2,.85,.25,1)}
+.side-rail a::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(201,169,97,.35);opacity:0;transform:scale(1);transition:transform .5s ease,opacity .5s ease}
+.side-rail a:hover{background:var(--gold);color:#0a1530;transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px rgba(201,169,97,.45)}
+.side-rail a:hover::after{opacity:1;transform:scale(1.2)}
+.side-rail a.whatsapp{background:#25D366;border-color:#25D366}
+.side-rail a.whatsapp:hover{background:#1ebe5a;color:#fff;border-color:#1ebe5a;box-shadow:0 16px 30px rgba(37,211,102,.45)}
+.side-rail .tip{position:absolute;right:60px;top:50%;transform:translate(6px,-50%);white-space:nowrap;background:#0a1530;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 12px;border-radius:6px;pointer-events:none;opacity:0;transition:all .3s ease;border:1px solid rgba(201,169,97,.25)}
+.side-rail a:hover .tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width:640px){.side-rail{right:14px;gap:10px}.side-rail a{width:46px;height:46px;font-size:.95rem}.side-rail .tip{display:none}}
+
+/* ============ FOOTER (KF) ============ */
+.kf{background:#050b1c;color:rgba(255,255,255,.66);font-size:.9rem;line-height:1.55;position:relative;overflow:hidden}
+.kf::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 15% 0%,rgba(201,169,97,.08),transparent 60%),radial-gradient(900px 350px at 90% 100%,rgba(201,169,97,.05),transparent 60%);pointer-events:none}
+.kf a{color:inherit;text-decoration:none;transition:color .25s ease}
+.kf a:hover{color:var(--az-gold,#c9a961)}
+.kf-wrap{max-width:1240px;margin:0 auto;padding:0 40px 0 32px;position:relative;z-index:1}
+@media (min-width:1100px){ .kf-wrap{padding-right:96px} }
+.kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kf-brand{display:flex;align-items:center;gap:24px}
+.kf-brand img{height:64px;width:auto;display:block;flex:none}
+.kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
+.kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.kf-news form{display:flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(255,255,255,.04);transition:border-color .25s ease}
+.kf-news form:focus-within{border-color:var(--az-gold,#c9a961)}
+.kf-news input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit;font-size:.9rem;padding:10px 18px}
+.kf-news input::placeholder{color:rgba(255,255,255,.4)}
+.kf-news button{border:0;border-radius:999px;background:var(--az-gold,#c9a961);color:#050b1c;font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease;white-space:nowrap}
+.kf-news button:hover{background:#fff}
+.kf-mid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:56px;padding:48px 0}
+.kf h5{margin:0 0 18px;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--az-gold,#c9a961)}
+.kf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.kf-links a{font-size:.9rem}
+.kf-contact{display:grid;gap:12px}
+.kf-contact a,.kf-contact span{display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.kf-contact i{color:var(--az-gold,#c9a961);width:14px;margin-top:5px;font-size:.85rem;flex:none}
+.kf-contact b{color:#fff;font-weight:600}
+.kf-social{display:flex;gap:10px;margin-top:18px}
+.kf-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,169,97,.4);background:rgba(201,169,97,.08);display:grid;place-items:center;font-size:1.05rem;color:#fff;transition:all .25s ease}
+.kf-social a:hover{background:var(--az-gold,#c9a961);border-color:var(--az-gold,#c9a961);color:#050b1c;transform:translateY(-2px)}
+.kf-bot{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.5)}
+.kf-badges{display:flex;gap:22px;flex-wrap:wrap}
+.kf-badges span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.72)}
+.kf-badges i{color:var(--az-gold,#c9a961)}
+.kf-legal{display:flex;gap:20px}
+@media (max-width:1024px){
+  .kf-top{grid-template-columns:1fr;gap:32px}
+  .kf-news{justify-self:start;max-width:100%}
+  .kf-mid{grid-template-columns:1fr 1fr;gap:40px}
+  .kf-mid > :last-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .kf-wrap{padding:0 20px}
+  .kf-top{padding:40px 0 32px}
+  .kf-brand{flex-direction:column;align-items:flex-start;gap:16px}
+  .kf-brand p{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);max-width:100%}
+  .kf-mid{grid-template-columns:1fr;gap:32px;padding:36px 0}
+  .kf-links{gap:10px 20px}
+  .kf-bot{flex-direction:column;align-items:flex-start;gap:14px}
+  .kf-news button{padding:0 16px;font-size:.68rem}
+  .kf-news input{padding:10px 14px;font-size:.86rem}
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Kangar Dubai Experts">
+      <img src="assets/images/logo-dark.png" alt="Kangar Dubai Experts">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+      <i class="fas fa-bars"></i><i class="fas fa-times"></i>
+    </button>
+    <nav class="nav">
+      <a href="buy">Buy</a>
+      <a href="rent">Rent</a>
+      <a href="commercial">Commercial</a>
+      <a href="business-setup">Business Setup</a>
+      <a href="services">Services</a>
+      <a href="blog">Resources</a>
+      <a href="about">About Us</a>
+      <a href="events">Events</a>
+      <a href="contact" style="color:var(--gold);">Contact</a>
+      <a href="contact" class="btn-book">Book a Consultation</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
+
+
+<!-- HERO -->
+<section class="ct-hero">
+  <div class="ct-hero-inner">
+    <div class="k-crumbs" style="display:flex;justify-content:center;"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+    <span class="k-badge">WE REPLY IN &lt; 24H</span>
+    <h1>Start with the right <span class="accent">Kangar team.</span></h1>
+    <p class="lead">Tell us what you&rsquo;re trying to achieve and where you&rsquo;re based. We&rsquo;ll route your enquiry to the right property, business or support adviser &mdash; usually within one business day.</p>
+    <div class="ct-quick">
+      <a href="tel:+971555495276"><i class="call"><i class="fas fa-phone"></i></i> Call Dubai HQ</a>
+      <a href="#"><i class="wa"><i class="fab fa-whatsapp"></i></i> WhatsApp</a>
+      <a href="mailto:sales@kangarrealestate.com"><i class="mail"><i class="fas fa-envelope"></i></i> Email Sales</a>
+      <a href="#book"><i class="cal"><i class="fas fa-calendar-alt"></i></i> Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FORM + SIDEBAR -->
+<section class="ct-main">
+  <div class="ct-main-grid">
+    <div class="ct-form-card" id="book">
+      <div class="ct-form-head">
+        <div class="k-eyebrow">Send An Enquiry</div>
+        <h2>Tell us about your goal.</h2>
+        <p>One accountable adviser will reply within one business day &mdash; no auto-response, no drip campaign.</p>
+      </div>
+      <div class="ct-form-tabs">
+        <button class="ctt active"><i class="fas fa-city"></i> Property</button>
+        <button class="ctt"><i class="fas fa-briefcase"></i> Business Setup</button>
+        <button class="ctt"><i class="fas fa-passport"></i> Visas &amp; PRO</button>
+        <button class="ctt"><i class="fas fa-question-circle"></i> Other</button>
+      </div>
+      <form class="ct-form" onsubmit="event.preventDefault();this.querySelector('button[type=submit]').innerHTML='<i class=&quot;fas fa-check&quot;></i> Enquiry sent';">
+        <div class="ct-field"><label>Full name <span class="req">*</span></label><input type="text" placeholder="Your full name" required></div>
+        <div class="ct-field"><label>Country of residence <span class="req">*</span></label>
+          <select required>
+            <option value="">Select country</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>United Arab Emirates</option>
+            <option>United Kingdom</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="ct-field"><label>Email <span class="req">*</span></label><input type="email" placeholder="you@example.com" required></div>
+        <div class="ct-field"><label>Phone (with country code)</label><input type="tel" placeholder="+61 400 000 000"></div>
+        <div class="ct-field k-full"><label>What are you looking for? <span class="req">*</span></label>
+          <select required>
+            <option value="">Select an interest</option>
+            <option>Buy property (residential)</option>
+            <option>Buy property (commercial)</option>
+            <option>Off-plan investment</option>
+            <option>Rent an apartment or villa</option>
+            <option>Sell my property</option>
+            <option>Setup a UAE company</option>
+            <option>PRO / Visa services</option>
+            <option>Property management</option>
+            <option>Mortgage &amp; finance</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="ct-field"><label>Approximate budget</label>
+          <select>
+            <option value="">Prefer not to say</option>
+            <option>Under AED 750K</option>
+            <option>AED 750K &ndash; 1.5M</option>
+            <option>AED 1.5M &ndash; 3M</option>
+            <option>AED 3M &ndash; 5M</option>
+            <option>AED 5M &ndash; 10M</option>
+            <option>AED 10M+</option>
+          </select>
+        </div>
+        <div class="ct-field"><label>Preferred contact method</label>
+          <select>
+            <option>Email</option>
+            <option>Phone call</option>
+            <option>WhatsApp</option>
+            <option>Video call (Zoom / Google Meet)</option>
+          </select>
+        </div>
+        <div class="ct-field k-full"><label>Tell us more</label><textarea placeholder="Areas of interest, timeline, questions you want answered on our call..."></textarea></div>
+        <div class="ct-check k-full">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">I agree to be contacted by Kangar Real Estate about my enquiry, in line with the <a href="privacy-policy">privacy policy</a>. I understand I can unsubscribe at any time.</label>
+        </div>
+        <div class="ct-form-submit">
+          <div class="ct-form-note"><i class="fas fa-shield-alt"></i> We reply within one business day &mdash; no auto-responder.</div>
+          <button type="submit" class="k-btn k-btn-primary">Send Enquiry <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="ct-sidebar">
+      <div class="ct-info-card">
+        <div class="k-eyebrow" style="text-align:left;">Direct Line</div>
+        <h3>Skip the form &mdash; talk to us now.</h3>
+        <p class="sub">Prefer a real conversation? Pick your closest office.</p>
+        <div class="ct-info-row">
+          <div class="ct-info-icon"><i class="fas fa-phone"></i></div>
+          <div class="ct-info-body">
+            <b>Call Dubai HQ</b>
+            <a href="tel:+971555495276">+971 55 549 5276</a>
+          </div>
+        </div>
+        <div class="ct-info-row">
+          <div class="ct-info-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="ct-info-body">
+            <b>WhatsApp Us</b>
+            <a href="#">+971 55 549 5276 &mdash; chat now</a>
+          </div>
+        </div>
+        <div class="ct-info-row">
+          <div class="ct-info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="ct-info-body">
+            <b>Email Sales</b>
+            <a href="mailto:sales@kangarrealestate.com">sales@kangarrealestate.com</a>
+          </div>
+        </div>
+        <div class="ct-info-row">
+          <div class="ct-info-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="ct-info-body">
+            <b>Book a 30-min Call</b>
+            <a href="#">Reserve a time that suits you</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ct-info-card dark">
+        <div class="k-eyebrow" style="text-align:left;color:var(--k-gold);">Working Hours</div>
+        <h3>When you can reach us.</h3>
+        <p class="sub">Gulf Standard Time (GST) &middot; UTC+4</p>
+        <div class="ct-hours">
+          <span class="day">Monday &ndash; Friday</span><span class="time">9:00 &ndash; 19:00 <span class="now">Open</span></span>
+          <span class="day">Saturday</span><span class="time">9:00 &ndash; 17:00</span>
+          <span class="day">Sunday</span><span class="time">Closed &middot; email OK</span>
+          <span class="day">Public Holidays</span><span class="time">Closed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT TYPES -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">How Can We Help?</div>
+    <h2 class="k-h2">Route your enquiry to the right desk.</h2>
+    <p class="k-h2-sub">Pick the closest fit and we&rsquo;ll route your file to the specialist who owns that area.</p>
+    <div class="ct-support" style="margin-top:30px;">
+      <div class="ct-sup">
+        <div class="ct-sup-icon"><i class="fas fa-city"></i></div>
+        <h4>Property Enquiries</h4>
+        <p>Buying, renting, off-plan or investment across UAE property.</p>
+        <a href="mailto:sales@kangarrealestate.com">sales@kangarrealestate.com &rarr;</a>
+      </div>
+      <div class="ct-sup">
+        <div class="ct-sup-icon"><i class="fas fa-briefcase"></i></div>
+        <h4>Business Setup</h4>
+        <p>Mainland, free-zone, banking and PRO/visa questions.</p>
+        <a href="mailto:setup@kangarrealestate.com">setup@kangarrealestate.com &rarr;</a>
+      </div>
+      <div class="ct-sup">
+        <div class="ct-sup-icon"><i class="fas fa-headset"></i></div>
+        <h4>Existing Clients</h4>
+        <p>Tenants, landlords or founders with active engagements.</p>
+        <a href="mailto:support@kangarrealestate.com">support@kangarrealestate.com &rarr;</a>
+      </div>
+      <div class="ct-sup">
+        <div class="ct-sup-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Partnerships</h4>
+        <p>Developer, broker, referral partner or press enquiries.</p>
+        <a href="mailto:partners@kangarrealestate.com">partners@kangarrealestate.com &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP WITH OVERLAY -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="k-eyebrow">Find Us in Dubai</div>
+    <h2 class="k-h2">Kangar HQ &mdash; Fahidi Heights, Bur Dubai.</h2>
+    <p class="k-h2-sub">Walk-ins welcome during working hours. Prefer a scheduled meeting? Book a slot below.</p>
+    <div class="ct-map" style="margin-top:24px;">
+      <div class="ct-map-overlay">
+        <small>DUBAI HQ</small>
+        <h4>Kangar Real Estate L.L.C</h4>
+        <p>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai, Dubai, UAE Â· PO Box: 42858</p>
+        <a href="https://maps.google.com/?q=Fahidi+Heights+Al+Hamriya+Bur+Dubai" target="_blank" class="k-btn k-btn-primary">Open in Google Maps <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <iframe class="ct-map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9!2d55.2953!3d25.2557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBur%20Dubai!5e0!3m2!1sen!2sae!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK FAQs -->
+<section class="k-section alt">
+  <div class="k-container">
+    <div class="k-eyebrow">Before You Reach Out</div>
+    <h2 class="k-h2">Quick answers you might need first.</h2>
+    <div class="ct-faq-grid" style="margin-top:30px;">
+      <div class="ct-faq-item">
+        <h4><i class="fas fa-clock"></i>How fast do you reply?</h4>
+        <p>Within one business day &mdash; usually within a few hours during UAE working hours. A real adviser reads and responds, not an auto-responder.</p>
+      </div>
+      <div class="ct-faq-item">
+        <h4><i class="fas fa-user-secret"></i>Is my enquiry confidential?</h4>
+        <p>Yes. Enquiries are handled by one adviser and never sold to third parties. Full details in our <a href="privacy-policy" style="color:var(--k-gold);">privacy policy</a>.</p>
+      </div>
+      <div class="ct-faq-item">
+        <h4><i class="fas fa-money-bill-wave"></i>Is a consultation free?</h4>
+        <p>Yes &mdash; the first 30-minute discovery call is free, whether for property or business setup. Scoping happens before any engagement fee.</p>
+      </div>
+      <div class="ct-faq-item">
+        <h4><i class="fas fa-plane-departure"></i>Do I need to fly to Dubai?</h4>
+        <p>Not for the first conversation. Video calls, WhatsApp and email work fine. Some steps (bank account opening) usually need one in-person visit &mdash; we schedule around your travel.</p>
+      </div>
+      <div class="ct-faq-item">
+        <h4><i class="fas fa-language"></i>What languages do you speak?</h4>
+        <p>English, Hindi, Arabic and Urdu across the team. Let us know a preference in the form and we&rsquo;ll route accordingly.</p>
+      </div>
+      <div class="ct-faq-item">
+        <h4><i class="fas fa-globe"></i>Do you work with international clients?</h4>
+        <p>Yes &mdash; most of our clients are based in Australia, New Zealand, India, the UK or the UAE. Cross-border coordination is standard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL FOLLOW -->
+<section class="k-section">
+  <div class="k-container">
+    <div class="ct-social">
+      <div>
+        <span class="k-badge" style="background:rgba(201,169,97,.2);color:var(--k-gold);">STAY CONNECTED</span>
+        <h3>Follow Kangar for daily insights.</h3>
+        <p style="position:relative;z-index:2;">Market updates, new listings, business setup explainers and behind-the-scenes from the Dubai team &mdash; short-form, no spam.</p>
+      </div>
+      <div class="ct-social-links">
+        <a href="#"><i class="fb"><i class="fab fa-facebook-f"></i></i><div><b>Facebook</b><small>@KangarDubaiExperts</small></div></a>
+        <a href="#"><i class="ig"><i class="fab fa-instagram"></i></i><div><b>Instagram</b><small>@kangar.dubai</small></div></a>
+        <a href="#"><i class="li"><i class="fab fa-linkedin-in"></i></i><div><b>LinkedIn</b><small>/kangar-real-estate</small></div></a>
+        <a href="#"><i class="yt"><i class="fab fa-youtube"></i></i><div><b>YouTube</b><small>Kangar Insights</small></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP + FOOTER -->
+<section class="k-cta-strip">
+  <div class="k-cta-inner">
+    <div class="k-cta-copy">
+      <div class="k-cta-icon"><i class="fas fa-comments"></i></div>
+      <div><b>Still thinking about it?</b><span>Grab a 30-minute discovery call &mdash; no obligation, honest advice.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;">
+      <a href="#book" class="k-btn k-btn-gold">Book Discovery Call</a>
+      <a href="#" class="k-btn-outline-white"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="kf">
+  <div class="kf-wrap">
+    <div class="kf-top">
+      <div class="kf-brand">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
+        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+      </div>
+      <div class="kf-news">
+        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
+          <input id="kfEmail" type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="kf-mid">
+      <div>
+        <h5>Explore</h5>
+        <nav class="kf-links" aria-label="Footer">
+          <a href="properties">All Properties</a>
+          <a href="buy">Buy Property</a>
+          <a href="blog">Blog</a>
+          <a href="rent">Rent Property</a>
+          <a href="guides">Guides</a>
+          <a href="commercial">Commercial</a>
+          <a href="market-reports">Market Reports</a>
+          <a href="business-setup">Business Setup</a>
+          <a href="faqs">FAQs</a>
+          <a href="about">About Us</a>
+          <a href="events">News &amp; Events</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.88)">Market insights, new launches &amp; client stories.</p>
+        <div class="kf-social">
+          <a href="https://www.facebook.com/share/Ag9A55gA2B6VPrdu/?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/kangar_realestate/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kangar-real-estate/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Get In Touch</h5>
+        <div class="kf-contact">
+          <a href="tel:+971555495276"><i class="fas fa-phone"></i><span><b>+971 55 549 5276</b> &nbsp;&middot; Dubai</span></a>
+          <a href="tel:+919667660766"><i class="fas fa-phone"></i><span><b>+91 96676 60766</b> &nbsp;&middot; India</span></a>
+          <a href="mailto:sales@kangarrealestate.com"><i class="fas fa-envelope"></i><span><b>sales@kangarrealestate.com</b></span></a>
+          <span><i class="fas fa-location-dot"></i><span>Office-05, Fahidi Heights, Al Hamriya, Bur Dubai &middot; PO Box 42858</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kf-bot">
+      <div>&copy; 2026 Kangar Real Estate L.L.C &mdash; All Rights Reserved.</div>
+      <div class="kf-badges">
+        <span><i class="fas fa-award"></i>RERA Certified Broker</span>
+        <span><i class="fas fa-shield-halved"></i>AML Compliant</span>
+        <span><i class="fas fa-headset"></i>24/7 Support</span>
+      </div>
+      <div class="kf-legal">
+        <a href="privacy-policy">Privacy</a>
+        <a href="terms">Terms</a>
+        <a href="cookie-policy">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating side action rail -->
+<aside class="side-rail" id="sideRail" aria-label="Quick contact">
+  <a href="https://wa.me/971555495276" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">WhatsApp</span>
+  </a>
+  <a href="tel:+971555495276" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+    <span class="tip">Call</span>
+  </a>
+  <a href="mailto:sales@kangarrealestate.com" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+    <span class="tip">Email</span>
+  </a>
+  <a href="contact" aria-label="Book a consultation">
+    <i class="fas fa-calendar-check"></i>
+    <span class="tip">Book</span>
+  </a>
+</aside>
+
+<script>
+(function(){
+  var header=document.querySelector('.header');
+  var rail=document.getElementById('sideRail');
+  function onScroll(){
+    var y=window.scrollY||window.pageYOffset;
+    if(header){header.classList.toggle('shrunk',y>40);}
+    if(rail){rail.classList.toggle('on',y>400);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+<script>
+document.querySelectorAll('.ctt').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.ctt').forEach(x=>x.classList.remove('active'));b.classList.add('active');});});
+</script>
+</body>
+</html>

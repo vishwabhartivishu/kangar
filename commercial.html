@@ -377,7 +377,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
       <div><div class="k-label">Type</div><select class="k-select"><option>Any</option><option>Office</option><option>Retail</option><option>F&amp;B</option><option>Warehouse</option><option>Showroom</option></select></div>
       <div><div class="k-label">Size (sq.ft)</div><select class="k-select"><option>Any</option><option>Under 500</option><option>500 &ndash; 1,500</option><option>1,500 &ndash; 5,000</option><option>5,000 &ndash; 10,000</option><option>10,000+</option></select></div>
       <div><div class="k-label">Annual Budget</div><select class="k-select"><option>Any</option><option>Under AED 200K</option><option>AED 200K &ndash; 500K</option><option>AED 500K &ndash; 1M</option><option>AED 1M+</option></select></div>
-      <button class="k-btn k-btn-primary" type="button"><i class="fas fa-search"></i> Search</button>
+      <button class="k-btn k-btn-primary" id="cmSearchBtn" type="button"><i class="fas fa-search"></i> Search</button>
     </div>
   </div>
 </div>
@@ -624,6 +624,88 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+})();
+
+(function(){
+  var tabs=document.querySelectorAll('.cm-filter-tabs .cmt');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active');
+    });
+  });
+
+  var btn=document.getElementById('cmSearchBtn');
+  if(!btn) return;
+  var selects=document.querySelectorAll('.cm-filter .k-select');
+  var listings=document.querySelector('.cm-listings');
+  if(!listings) return;
+  var cards=listings.querySelectorAll('.k-prop-card');
+  var emptyMsg=document.createElement('p');
+  emptyMsg.textContent='No matching units. Try widening your filters, or request a custom shortlist.';
+  emptyMsg.style.cssText='grid-column:1/-1;text-align:center;color:#64748b;padding:40px 20px;margin:0;';
+  emptyMsg.style.display='none';
+  listings.appendChild(emptyMsg);
+
+  function parseSize(txt){
+    // returns [min,max] in sqft, or null if "Any"
+    if(!txt||/any/i.test(txt)) return null;
+    if(/under\s*500/i.test(txt)) return [0,500];
+    if(/500/.test(txt)&&/1,?500/.test(txt)) return [500,1500];
+    if(/1,?500/.test(txt)&&/5,?000/.test(txt)) return [1500,5000];
+    if(/5,?000/.test(txt)&&/10,?000/.test(txt)) return [5000,10000];
+    if(/10,?000\+/.test(txt)) return [10000,Infinity];
+    return null;
+  }
+  function parseBudget(txt){
+    if(!txt||/any/i.test(txt)) return null;
+    if(/under\s*AED\s*200K/i.test(txt)) return [0,200000];
+    if(/200K/i.test(txt)&&/500K/i.test(txt)) return [200000,500000];
+    if(/500K/i.test(txt)&&/1M/i.test(txt)) return [500000,1000000];
+    if(/1M\+/i.test(txt)) return [1000000,Infinity];
+    return null;
+  }
+
+  btn.addEventListener('click',function(){
+    var tab=document.querySelector('.cm-filter-tabs .cmt.active');
+    var tabLabel=tab?tab.textContent.trim().toLowerCase():'';
+    var loc=selects[0]?selects[0].value.trim().toLowerCase():'';
+    var type=selects[1]?selects[1].value.trim().toLowerCase():'';
+    var sizeRange=selects[2]?parseSize(selects[2].value):null;
+    var budgetRange=selects[3]?parseBudget(selects[3].value):null;
+
+    var shown=0;
+    cards.forEach(function(c){
+      var text=c.textContent.toLowerCase();
+      var ok=true;
+      if(loc && loc!=='any area' && text.indexOf(loc)===-1) ok=false;
+      if(ok && type && type!=='any' && text.indexOf(type)===-1) ok=false;
+      // Lease/Sale/Shell & Core/Fitted: only filter when card text mentions the term
+      if(ok && tabLabel && (tabLabel==='shell & core'||tabLabel==='fitted')){
+        if(text.indexOf(tabLabel)===-1) ok=false;
+      }
+      if(ok && sizeRange){
+        var m=text.match(/([\d,]+)\s*(?:-|–|to)\s*([\d,]+)\s*sq\.?\s*ft/i)
+            ||text.match(/([\d,]+)\s*sq\.?\s*ft/i);
+        if(m){
+          var v=parseInt((m[2]||m[1]).replace(/,/g,''),10);
+          if(isNaN(v)||v<sizeRange[0]||v>sizeRange[1]) ok=false;
+        }
+      }
+      if(ok && budgetRange){
+        var pm=text.match(/aed\s*([\d,]+)/i);
+        if(pm){
+          var p=parseInt(pm[1].replace(/,/g,''),10);
+          if(isNaN(p)||p<budgetRange[0]||p>budgetRange[1]) ok=false;
+        }
+      }
+      c.style.display=ok?'':'none';
+      if(ok) shown++;
+    });
+    emptyMsg.style.display=shown?'none':'';
+    var listingsSection=document.getElementById('listings');
+    if(listingsSection) listingsSection.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 })();
 </script>
 

@@ -301,7 +301,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   <div class="buy-hero-grid">
     <div>
       <div class="k-crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Buy Property</span></div>
-      <h1>Buy UAE property with clarity, <span class="accent">not pressure.</span></h1>
+      <h1>Buy UAE Property with Confidence, Clarity <span class="accent">and Purpose.</span></h1>
       <p class="k-lead">Ready-to-move apartments, villas and off-plan homes across Dubai and the UAE &mdash; every listing verified, every price transparent, every fee itemised upfront.</p>
       <div class="k-actions">
         <a href="#listings" class="k-btn k-btn-primary">Browse Listings <i class="fas fa-arrow-right"></i></a>
@@ -316,7 +316,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
     <div class="buy-hero-collage">
       <div class="bhc-tag"><i class="fas fa-star"></i> 4.9/5 &middot; 1,200+ Happy Clients</div>
       <div class="bhc-main"><img src="assets/images/properties/mercedes-benz-places-new/00.png" alt="Dubai skyline"></div>
-      <div class="bhc-sub"><img src="assets/images/properties/tilal-binghatti/00.png" alt="Modern interior"></div>
+      <div class="bhc-sub"><img src="assets/images/properties/tilal-binghatti/01.jpg" alt="Tilal Al Ghaf community"></div>
     </div>
   </div>
 </section>
@@ -334,7 +334,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
     <div><div class="k-label">Property Type</div><select class="k-select"><option>Any</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Penthouse</option><option>Duplex</option></select></div>
     <div><div class="k-label">Bedrooms</div><select class="k-select"><option>Any</option><option>Studio</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
     <div><div class="k-label">Budget (AED)</div><select class="k-select"><option>Any</option><option>Under 1M</option><option>1M - 3M</option><option>3M - 5M</option><option>5M - 10M</option><option>10M+</option></select></div>
-    <button class="k-btn k-btn-primary" type="button"><i class="fas fa-search"></i> Search</button>
+    <button class="k-btn k-btn-primary" id="buySearchBtn" type="button"><i class="fas fa-search"></i> Search</button>
   </div>
 </div>
 
@@ -554,6 +554,99 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+})();
+
+(function(){
+  var btn=document.getElementById('buySearchBtn');
+  if(!btn) return;
+  var selects=document.querySelectorAll('.buy-search .k-select');
+  var grid=document.getElementById('buyListings');
+  if(!grid) return;
+  var cards=grid.querySelectorAll('.k-prop-card');
+  var emptyMsg=document.createElement('p');
+  emptyMsg.textContent='No matching homes. Try widening your filters, or request a custom shortlist.';
+  emptyMsg.style.cssText='grid-column:1/-1;text-align:center;color:#64748b;padding:40px 20px;margin:0;';
+  emptyMsg.style.display='none';
+  grid.appendChild(emptyMsg);
+
+  function parseBudget(txt){
+    if(!txt||/any/i.test(txt)) return null;
+    if(/under\s*1m/i.test(txt)) return [0,1000000];
+    if(/1m\s*-\s*3m/i.test(txt)) return [1000000,3000000];
+    if(/3m\s*-\s*5m/i.test(txt)) return [3000000,5000000];
+    if(/5m\s*-\s*10m/i.test(txt)) return [5000000,10000000];
+    if(/10m\+/i.test(txt)) return [10000000,Infinity];
+    return null;
+  }
+  function priceToNum(txt){
+    // "AED 808,000" or "AED 1,500,000" or "From AED 1,500,000"
+    var m=txt.replace(/,/g,'').match(/aed\s*(\d+)/i);
+    return m?parseInt(m[1],10):null;
+  }
+
+  btn.addEventListener('click',function(){
+    var loc=selects[0]?selects[0].value.trim().toLowerCase():'';
+    var type=selects[1]?selects[1].value.trim().toLowerCase():'';
+    var beds=selects[2]?selects[2].value.trim().toLowerCase():'';
+    var budget=selects[3]?parseBudget(selects[3].value):null;
+
+    var shown=0;
+    cards.forEach(function(c){
+      var text=c.textContent.toLowerCase();
+      var ok=true;
+      if(loc && loc!=='any area' && text.indexOf(loc)===-1) ok=false;
+      if(ok && type && type!=='any'){
+        if(type==='apartment'){
+          if(/villa|townhouse|penthouse|duplex/.test(text)) ok=false;
+        }else{
+          if(text.indexOf(type)===-1) ok=false;
+        }
+      }
+      if(ok && beds && beds!=='any'){
+        if(beds==='studio'){
+          if(text.indexOf('studio')===-1) ok=false;
+        }else if(beds==='5+'){
+          var m=text.match(/(\d+)\s*(?:–|-|\s)?\s*(?:bed|br)/i);
+          if(!m||parseInt(m[1],10)<5){
+            // also allow "5BR+" formats
+            if(!/5\s*\+/.test(text)) ok=false;
+          }
+        }else{
+          // match "N Bed", "N–MBR", "StudioMBR" ranges inclusive
+          var n=parseInt(beds,10);
+          var range=text.match(/(\d+)\s*(?:–|-)\s*(\d+)\s*(?:bed|br)/i);
+          var single=text.match(/(\d+)\s*(?:bed|br)/i);
+          var hasStudio=/studio/.test(text);
+          var inRange=false;
+          if(range){
+            var lo=parseInt(range[1],10),hi=parseInt(range[2],10);
+            if(n>=lo&&n<=hi) inRange=true;
+          }else if(single){
+            if(parseInt(single[1],10)===n) inRange=true;
+          }
+          if(hasStudio && /studio\s*(?:–|-)\s*(\d+)/i.test(text)){
+            var m2=text.match(/studio\s*(?:–|-)\s*(\d+)/i);
+            if(m2 && n<=parseInt(m2[1],10)) inRange=true;
+          }
+          if(!inRange) ok=false;
+        }
+      }
+      if(ok && budget){
+        var price=priceToNum(text);
+        if(price!==null){
+          if(price<budget[0]||price>budget[1]) ok=false;
+        }
+      }
+      c.style.display=ok?'':'none';
+      if(ok) shown++;
+    });
+    emptyMsg.style.display=shown?'none':'';
+    var sec=document.getElementById('listings');
+    if(sec){
+      var y=sec.getBoundingClientRect().top+window.pageYOffset-80;
+      window.scrollTo({top:y,behavior:'smooth'});
+    }
+  });
 })();
 </script>
 

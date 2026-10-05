@@ -352,23 +352,8 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   </div>
 </section>
 
-<!-- TOPIC PILLS OVERLAP -->
-<div class="bl-topics">
-  <div class="bl-topics-inner">
-    <span class="bl-topics-lbl">Browse:</span>
-    <a href="#" class="bl-topic active"><i class="fas fa-star"></i> All</a>
-    <a href="#" class="bl-topic">Market Updates</a>
-    <a href="#" class="bl-topic">Buyer Guides</a>
-    <a href="#" class="bl-topic">Business Setup</a>
-    <a href="#" class="bl-topic">Residency &amp; Visas</a>
-    <a href="#" class="bl-topic">Finance &amp; Mortgage</a>
-    <a href="#" class="bl-topic">Neighbourhoods</a>
-    <a href="#" class="bl-topic">Investment</a>
-  </div>
-</div>
-
 <!-- FEATURED + SIDE MINI STORIES -->
-<section class="k-section" style="padding-top:0;">
+<section class="k-section" style="padding-top:60px;">
   <div class="k-container">
     <div class="bl-featured">
       <a href="#" class="bl-feat-main" style="text-decoration:none;">
@@ -476,7 +461,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
             </div>
           </a>
           <a class="bl-post" href="#">
-            <div class="bl-post-img"><img src="https://images.unsplash.com/photo-1580749893917-f43fc2f75ea9?auto=format&fit=crop&w=800&q=80" alt=""><span class="bl-post-cat gold">LUXURY</span><span class="bl-post-read">6 min</span></div>
+            <div class="bl-post-img"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt=""><span class="bl-post-cat gold">LUXURY</span><span class="bl-post-read">6 min</span></div>
             <div class="bl-post-body">
               <h3>Palm Jumeirah vs Emirates Hills &mdash; which luxury address?</h3>
               <p>Two very different luxury profiles &mdash; waterfront vs golf estate. Yields, resale liquidity and lifestyle compared.</p>
@@ -715,6 +700,49 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+})();
+
+(function(){
+  var map={
+    'all':null,
+    'market updates':['market'],
+    'buyer guides':['luxury','rent'],
+    'business setup':['setup'],
+    'residency & visas':['visas'],
+    'finance & mortgage':['finance','tax'],
+    'neighbourhoods':['areas'],
+    'investment':['invest']
+  };
+  var pills=document.querySelectorAll('.bl-topics .bl-topic');
+  var grid=document.querySelector('.bl-latest');
+  if(!pills.length||!grid) return;
+  var cards=grid.querySelectorAll('.bl-post');
+  var emptyMsg=document.createElement('p');
+  emptyMsg.textContent='No posts in this topic yet.';
+  emptyMsg.style.cssText='grid-column:1/-1;text-align:center;color:#64748b;padding:40px 20px;margin:0;';
+  emptyMsg.style.display='none';
+  grid.appendChild(emptyMsg);
+
+  pills.forEach(function(p){
+    p.addEventListener('click',function(e){
+      e.preventDefault();
+      pills.forEach(function(x){x.classList.remove('active');});
+      p.classList.add('active');
+      var label=p.textContent.trim().toLowerCase().replace(/\s+/g,' ');
+      var tags=map[label];
+      var shown=0;
+      cards.forEach(function(c){
+        var cat=c.querySelector('.bl-post-cat');
+        var txt=cat?cat.textContent.trim().toLowerCase():'';
+        var ok=!tags||tags.indexOf(txt)!==-1;
+        c.style.display=ok?'':'none';
+        if(ok) shown++;
+      });
+      emptyMsg.style.display=shown?'none':'';
+      var y=grid.getBoundingClientRect().top+window.pageYOffset-100;
+      window.scrollTo({top:y,behavior:'smooth'});
+    });
+  });
 })();
 </script>
 

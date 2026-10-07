@@ -427,7 +427,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
         <label>Price range (AED)</label>
         <select><option>Any budget</option><option>Under 1M</option><option>1M &ndash; 2.5M</option><option>2.5M &ndash; 5M</option><option>5M &ndash; 10M</option><option>10M+</option></select>
       </div>
-      <button class="pr-search-btn"><i class="fas fa-search"></i> Search</button>
+      <button class="pr-search-btn" id="prSearchBtn" type="button"><i class="fas fa-search"></i> Search</button>
     </div>
 
     <div class="pr-hero-stats">
@@ -2329,6 +2329,82 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
     i.classList.toggle('far',!on);
     if(on)i.style.color='#9B1C1C';else i.style.color='';
   }));
+
+  // Hero search
+  (function(){
+    var btn=document.getElementById('prSearchBtn');
+    if(!btn) return;
+    var selects=document.querySelectorAll('.pr-search .pr-search-field select');
+    var typeMap={apartment:'apt',villa:'villa',townhouse:'villa',penthouse:'apt',commercial:'com'};
+    function parseBudget(txt){
+      if(!txt||/any/i.test(txt)) return null;
+      if(/under\s*1m/i.test(txt)) return [0,1000000];
+      if(/1m\s*(?:–|-)\s*2\.5m/i.test(txt)) return [1000000,2500000];
+      if(/2\.5m\s*(?:–|-)\s*5m/i.test(txt)) return [2500000,5000000];
+      if(/5m\s*(?:–|-)\s*10m/i.test(txt)) return [5000000,10000000];
+      if(/10m\+/i.test(txt)) return [10000000,Infinity];
+      return null;
+    }
+    function priceToNum(txt){
+      var m=txt.replace(/,/g,'').match(/aed\s*(\d+)/i);
+      return m?parseInt(m[1],10):null;
+    }
+    btn.addEventListener('click',function(){
+      var type=selects[0]?selects[0].value.trim().toLowerCase():'';
+      var loc=selects[1]?selects[1].value.trim().toLowerCase():'';
+      var beds=selects[2]?selects[2].value.trim().toLowerCase():'';
+      var budget=selects[3]?parseBudget(selects[3].value):null;
+
+      var shown=0;
+      document.querySelectorAll('.pr-card').forEach(function(card){
+        var text=card.textContent.toLowerCase();
+        var ok=true;
+        if(type && !/any/.test(type)){
+          var want=typeMap[type];
+          if(want && card.getAttribute('data-type')!==want){
+            if(text.indexOf(type)===-1) ok=false;
+          }
+        }
+        if(ok && loc && !/any/.test(loc) && text.indexOf(loc)===-1) ok=false;
+        if(ok && beds && !/any/.test(beds)){
+          if(/studio/.test(beds)){
+            if(text.indexOf('studio')===-1) ok=false;
+          }else if(/4\+/.test(beds)){
+            var m=text.match(/(\d+)\s*(?:–|-|\s)?\s*(?:br|bed)/i);
+            if(!m||parseInt(m[1],10)<4) ok=false;
+          }else{
+            var n=parseInt(beds,10);
+            var range=text.match(/(\d+)\s*(?:–|-|to)\s*(\d+)\s*(?:br|bed)/i);
+            var single=text.match(/(\d+)\s*(?:br|bed)/i);
+            var inRange=false;
+            if(range){
+              var lo=parseInt(range[1],10),hi=parseInt(range[2],10);
+              if(n>=lo&&n<=hi) inRange=true;
+            }else if(single && parseInt(single[1],10)===n){
+              inRange=true;
+            }
+            if(!inRange) ok=false;
+          }
+        }
+        if(ok && budget){
+          var price=priceToNum(text);
+          if(price!==null){
+            if(price<budget[0]||price>budget[1]) ok=false;
+          }
+        }
+        card.style.display=ok?'':'none';
+        if(ok) shown++;
+      });
+      document.querySelectorAll('.pr-chip').forEach(function(c){c.classList.toggle('active',(c.getAttribute('data-filter')||'')==='all');});
+      var countEl=document.querySelector('.pr-listings-count');
+      if(countEl) countEl.innerHTML='<b>'+shown+'</b> shown &middot; filtered';
+      var listings=document.querySelector('.pr-listings')||document.querySelector('.pr-filters');
+      if(listings){
+        var y=listings.getBoundingClientRect().top+window.pageYOffset-80;
+        window.scrollTo({top:y,behavior:'smooth'});
+      }
+    });
+  })();
 </script>
 
 <section class="k-section"><div class="k-container"><div class="k-newsletter"><h3>Stay in the loop.</h3><p>Quarterly UAE property market updates and new-launch alerts &mdash; straight to your inbox.</p><form onsubmit="event.preventDefault();this.querySelector('button').innerText='Subscribed';"><input type="email" placeholder="your@email.com" required><button type="submit">Subscribe</button></form></div></div></section><section class="k-cta-strip">

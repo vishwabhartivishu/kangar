@@ -355,7 +355,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
     <div><div class="k-label">Property Type</div><select class="k-select"><option>Any</option><option>Apartment</option><option>Villa</option><option>Townhouse</option><option>Studio</option></select></div>
     <div><div class="k-label">Bedrooms</div><select class="k-select"><option>Any</option><option>Studio</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
     <div><div class="k-label">Annual Rent (AED)</div><select class="k-select"><option>Any</option><option>Under 75K</option><option>75K &ndash; 120K</option><option>120K &ndash; 200K</option><option>200K &ndash; 350K</option><option>350K+</option></select></div>
-    <button class="k-btn k-btn-primary" type="button"><i class="fas fa-search"></i> Search</button>
+    <button class="k-btn k-btn-primary" id="rentSearchBtn" type="button"><i class="fas fa-search"></i> Search</button>
   </div>
 </div>
 
@@ -617,6 +617,93 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
 
 <script>
 document.querySelectorAll('.k-acc-head').forEach(h=>{h.addEventListener('click',()=>{h.parentElement.classList.toggle('open');});});
+</script>
+
+<script>
+(function(){
+  var btn=document.getElementById('rentSearchBtn');
+  if(!btn) return;
+  var selects=document.querySelectorAll('.rent-search .k-select');
+  var grid=document.querySelector('.rent-listings');
+  if(!grid) return;
+  var cards=grid.querySelectorAll('.k-prop-card');
+  var emptyMsg=document.createElement('p');
+  emptyMsg.textContent='No matching rentals. Try widening your filters, or request a custom shortlist.';
+  emptyMsg.style.cssText='grid-column:1/-1;text-align:center;color:#64748b;padding:40px 20px;margin:0;';
+  emptyMsg.style.display='none';
+  grid.appendChild(emptyMsg);
+
+  function parseRent(txt){
+    if(!txt||/any/i.test(txt)) return null;
+    if(/under\s*75k/i.test(txt)) return [0,75000];
+    if(/75k/i.test(txt)&&/120k/i.test(txt)) return [75000,120000];
+    if(/120k/i.test(txt)&&/200k/i.test(txt)) return [120000,200000];
+    if(/200k/i.test(txt)&&/350k/i.test(txt)) return [200000,350000];
+    if(/350k\+/i.test(txt)) return [350000,Infinity];
+    return null;
+  }
+  function priceToNum(txt){
+    var m=txt.replace(/,/g,'').match(/aed\s*(\d+)/i);
+    return m?parseInt(m[1],10):null;
+  }
+
+  btn.addEventListener('click',function(){
+    var loc=selects[0]?selects[0].value.trim().toLowerCase():'';
+    var type=selects[1]?selects[1].value.trim().toLowerCase():'';
+    var beds=selects[2]?selects[2].value.trim().toLowerCase():'';
+    var rent=selects[3]?parseRent(selects[3].value):null;
+
+    var shown=0;
+    cards.forEach(function(c){
+      var text=c.textContent.toLowerCase();
+      var ok=true;
+      if(loc && loc!=='any area' && text.indexOf(loc)===-1) ok=false;
+      if(ok && type && type!=='any'){
+        if(type==='apartment'){
+          if(/villa|townhouse|penthouse|duplex/.test(text)) ok=false;
+        }else{
+          if(text.indexOf(type)===-1) ok=false;
+        }
+      }
+      if(ok && beds && beds!=='any'){
+        if(beds==='studio'){
+          if(text.indexOf('studio')===-1) ok=false;
+        }else if(beds==='4+'){
+          var m=text.match(/(\d+)\s*(?:–|-|\s)?\s*(?:bed|br)/i);
+          if(!m||parseInt(m[1],10)<4){
+            if(!/4\s*\+/.test(text)) ok=false;
+          }
+        }else{
+          var n=parseInt(beds,10);
+          var range=text.match(/(\d+)\s*(?:–|-)\s*(\d+)\s*(?:bed|br)/i);
+          var single=text.match(/(\d+)\s*(?:bed|br)/i);
+          var inRange=false;
+          if(range){
+            var lo=parseInt(range[1],10),hi=parseInt(range[2],10);
+            if(n>=lo&&n<=hi) inRange=true;
+          }else if(single){
+            if(parseInt(single[1],10)===n) inRange=true;
+          }
+          if(!inRange) ok=false;
+        }
+      }
+      if(ok && rent){
+        var price=priceToNum(text);
+        if(price!==null){
+          if(price<rent[0]||price>rent[1]) ok=false;
+        }
+      }
+      c.style.display=ok?'':'none';
+      if(ok) shown++;
+    });
+    emptyMsg.style.display=shown?'none':'';
+    var sec=document.getElementById('rentals');
+    if(sec){
+      var y=sec.getBoundingClientRect().top+window.pageYOffset-80;
+      window.scrollTo({top:y,behavior:'smooth'});
+    }
+  });
+})();
 </script>
 </body>
 </html>

@@ -253,6 +253,15 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
   .pr-view-toggle{display:inline-flex;background:var(--k-line);padding:4px;border-radius:10px}
   .pr-view-toggle button{border:none;background:transparent;padding:8px 14px;border-radius:6px;font-size:.78rem;font-weight:700;color:var(--k-muted);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
   .pr-view-toggle button.active{background:#fff;color:var(--k-navy);box-shadow:0 2px 6px rgba(10,25,41,.1)}
+  .pr-grid.view-list{grid-template-columns:1fr;gap:16px}
+  .pr-grid.view-list .pr-card{flex-direction:row;align-items:stretch}
+  .pr-grid.view-list .pr-card-img{width:320px;height:auto;min-height:220px;flex-shrink:0}
+  .pr-grid.view-list .pr-card-body{flex:1}
+  @media (max-width:720px){.pr-grid.view-list .pr-card{flex-direction:column}.pr-grid.view-list .pr-card-img{width:100%;height:220px}}
+  .pr-map{display:none;height:560px;border-radius:16px;overflow:hidden;border:1px solid var(--k-line);margin-top:4px}
+  .pr-map iframe{width:100%;height:100%;border:0;display:block}
+  .pr-grid.view-map{display:none}
+  .pr-map.on{display:block}
 
   /* Featured listings â€” enhanced */
   .pr-listings{padding:60px 0;background:#fff}
@@ -452,9 +461,9 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
       <button class="pr-chip" data-filter="ready"><i class="fas fa-check-circle"></i> Ready</button>
     </div>
     <div class="pr-view-toggle">
-      <button class="active"><i class="fas fa-th"></i> Grid</button>
-      <button><i class="fas fa-list"></i> List</button>
-      <button><i class="fas fa-map-marker-alt"></i> Map</button>
+      <button class="active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+      <button data-view="list"><i class="fas fa-list"></i> List</button>
+      <button data-view="map"><i class="fas fa-map-marker-alt"></i> Map</button>
     </div>
   </div>
 </div>
@@ -2250,6 +2259,10 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
       </div>
     </div>
 
+    <div class="pr-map" id="prMap" aria-hidden="true">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Dubai,UAE&output=embed" title="UAE property locations"></iframe>
+    </div>
+
     <div class="pr-more"><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top <i class="fas fa-arrow-down"></i></a></div>
 
   </div>
@@ -2317,10 +2330,15 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
     const countEl=document.querySelector('.pr-listings-count');
     if(countEl) countEl.innerHTML = '<b>'+shown+'</b> shown &middot; filter: '+c.textContent.trim();
   }));
-  // View toggle
+  // View toggle (grid / list / map)
   document.querySelectorAll('.pr-view-toggle button').forEach(b=>b.addEventListener('click',()=>{
     document.querySelectorAll('.pr-view-toggle button').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');
+    var view=b.getAttribute('data-view')||'grid';
+    var grid=document.querySelector('.pr-grid');
+    var map=document.getElementById('prMap');
+    if(grid){grid.classList.remove('view-list','view-map');if(view==='list') grid.classList.add('view-list');if(view==='map') grid.classList.add('view-map');}
+    if(map){map.classList.toggle('on',view==='map');map.setAttribute('aria-hidden',view==='map'?'false':'true');}
   }));
   // Favorite heart toggle
   document.querySelectorAll('.pr-card-fav').forEach(b=>b.addEventListener('click',()=>{

@@ -2302,7 +2302,8 @@ body.nav-open .nav-backdrop{display:block}
     transition:all .5s cubic-bezier(.2,.85,.25,1)!important;
   }
   .btn-primary,.btn-book,.hero-cta .btn-primary{background:var(--az-gold)!important;color:var(--az-navy)!important;border:1px solid var(--az-gold)!important;box-shadow:none!important}
-  .btn-primary:hover,.btn-book:hover,.hero-cta .btn-primary:hover{background:transparent!important;color:var(--az-navy)!important;border-color:var(--az-navy)!important;letter-spacing:.26em!important;transform:none!important}
+  .btn-primary:hover,.btn-book:hover{background:transparent!important;color:var(--az-navy)!important;border-color:var(--az-navy)!important;letter-spacing:.26em!important;transform:none!important}
+  .hero-cta .btn-primary:hover{background:transparent!important;color:#fff!important;border-color:#fff!important;letter-spacing:.26em!important;transform:none!important}
   .hero-cta .btn-ghost,.btn-outline{background:transparent!important;color:#fff!important;border:1px solid rgba(255,255,255,.5)!important;border-radius:2px!important;letter-spacing:.22em!important;text-transform:uppercase!important;font-weight:600!important;font-size:.74rem!important;padding:16px 32px!important;box-shadow:none!important}
   .hero-cta .btn-ghost:hover,.btn-outline:hover{background:#fff!important;color:var(--az-navy)!important;border-color:#fff!important;letter-spacing:.26em!important;transform:none!important}
   .fp-all,.svc-banner-btn,.hp-see,.bx-cta{background:transparent!important;color:var(--az-navy)!important;border:1px solid var(--az-navy)!important;box-shadow:none!important}
@@ -3228,7 +3229,7 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
 
   .kf-top{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;padding:56px 0 40px;border-bottom:1px solid rgba(255,255,255,.08)}
   .kf-brand{display:flex;align-items:center;gap:24px}
-  .kf-brand img{height:64px;width:auto;display:block;flex:none}
+  .kf-brand img{height:88px;width:auto;display:block;flex:none}
   .kf-brand p{margin:0;max-width:320px;font-size:.88rem;padding-left:24px;border-left:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
   .kf-news{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px;justify-self:end}
   .kf-news label{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff}
@@ -3280,10 +3281,10 @@ html body .header .nav-toggle{background:#2b3330!important;border:0!important;bo
     <div class="kf-top">
       <div class="kf-brand">
         <a href="index.html"><img src="assets/images/logo.png" alt="Kangar Dubai Experts"></a>
-        <p>Your trusted UAE property &amp; business partner for clients from Australia, India &amp; the UAE.</p>
+        <p>Your trusted UAE property &amp; business partner.</p>
       </div>
       <div class="kf-news">
-        <label for="kfEmail">Stay in the loop &mdash; listings &amp; market updates</label>
+        <label for="kfEmail">Stay in Touch</label>
         <form onsubmit="event.preventDefault();this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i> Subscribed'">
           <input id="kfEmail" type="email" placeholder="Enter your email" required>
           <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
